@@ -76,21 +76,21 @@ crashlytics-build.properties
 ## ---------------- ##
 
 # project stuff
-WWiseProject/.cache/
-WWiseProject/*.prof
-WwiseProject/*_WwiseProject.*.validationcache
-WwiseProject/*_WwiseProject.*.wsettings
-WwiseProject/**/*.akd
+GameOff2023/GameOff2023_WWiseProject/.cache/
+GameOff2023/GameOff2023_WWiseProject/*.prof
+GameOff2023/GameOff2023_WwiseProject/*_WwiseProject.*.validationcache
+GameOff2023/GameOff2023_WwiseProject/*_WwiseProject.*.wsettings
+GameOff2023/GameOff2023_WwiseProject/**/*.akd
 
 # build stuff (unsure?)
-# Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
+# GameOff2023/Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
 
 # WWise Picker (editor)
 # from https://www.audiokinetic.com/library/edge/?source=Unity&id=unity__troubleshooting.html
 # >> Do not keep AkWwiseProjectData.asset under version control! 
 # >> This is a temporary cache file for the Wwise project data, 
 # >> so as to avoid having the Wwise Picker continuously parse the Work Unit files.
-Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
+GameOff2023/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 
 # notes:
 # 1) if any other files go in Assets/Wwise/Editor/ProjectData/ besides AkWwiseProjectData.asset*,
@@ -104,4 +104,4 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 ## --------------- ##
 
 # temp install files
-WwiseUnityIntegration_*_Src.zip
+GameOff2023/WwiseUnityIntegration_*_Src.zip
