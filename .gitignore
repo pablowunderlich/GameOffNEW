@@ -76,11 +76,12 @@ crashlytics-build.properties
 ## ---------------- ##
 
 # project stuff
-GameOff2023/GameOff2023_WWiseProject/.cache/
-GameOff2023/GameOff2023_WWiseProject/*.prof
-GameOff2023/GameOff2023_WwiseProject/*_WwiseProject.*.validationcache
-GameOff2023/GameOff2023_WwiseProject/*_WwiseProject.*.wsettings
-GameOff2023/GameOff2023_WwiseProject/**/*.akd
+GameOff2023_WWiseProject/.cache/
+GameOff2023_WWiseProject/*.prof
+GameOff2023_WwiseProject/*_WwiseProject.*.validationcache
+GameOff2023_WwiseProject/*_WwiseProject.*.wsettings
+GameOff2023_WwiseProject/**/*.akd
+
 
 # build stuff (unsure?)
 # GameOff2023/Assets/Wwise/Deployment/Plugins/Windows/**/*.meta
@@ -104,4 +105,4 @@ GameOff2023/Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset*
 ## --------------- ##
 
 # temp install files
-GameOff2023/WwiseUnityIntegration_*_Src.zip
+WwiseUnityIntegration_*_Src.zip
