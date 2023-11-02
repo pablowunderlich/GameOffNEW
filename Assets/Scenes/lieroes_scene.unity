@@ -133,6 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 435246564}
   - component: {fileID: 435246563}
+  - component: {fileID: 435246565}
+  - component: {fileID: 435246566}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -207,6 +209,131 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &435246565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435246562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70547776739cc9946929cd5b50f55c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runMaxSpeed:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: bcd17d84f32224f49b25b4e40219f246, type: 2}
+  runAcceleration:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: b408fa2394211754bbdf3d40d578d86f, type: 2}
+  runDecceleration:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: bedb778ee3ca14e4e9377c79221349e5, type: 2}
+  runLerpValue:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: f037661074dd807499bf138d427d44e3, type: 2}
+  timeToMaxHeight:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: cb45c76dafee2044ba089f5e1a4b437c, type: 2}
+  maxJumpHeight:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 93becd9cc36286142abcd182c0042cdc, type: 2}
+  jumpHangTimeThreshold:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: ea6adf2dc97eded42b3686e0aab1df85, type: 2}
+  fastFallMultiplier:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: aa6d2267c745b06429e5a2777b4d5820, type: 2}
+  maxFastFallSpeed:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 9aca75de9b65f70489ff735c86a82120, type: 2}
+  maxFallSpeed:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: d20683fa10b37b34dbcb84c58021d59a, type: 2}
+  gravityScale:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 9410a3c595390e74581bffc2dbac8122, type: 2}
+  jumpHangGravityMult:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: a1a5d478210a87944a72d946c4f103b3, type: 2}
+  jumpHangAccelerationMult:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: c79aa97ff683fea4f98eda00dcb468ac, type: 2}
+  jumpHangMaxSpeedMult:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 4020d8de41e929d419c1e0634513c31a, type: 2}
+  accelInAir:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 2882ecefa03363045885faa96059e9dd, type: 2}
+  deccelInAir:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: b96d69984466b4c4fab9bc995b7c0e44, type: 2}
+  conserveMomentum:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: a2fd3a380b7a2a348a4823768a65585f, type: 2}
+  maxHealth:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: bfd0bdf41342d4f48b8f1c1c5c30f743, type: 2}
+  jumpInputBufferTime:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 0bf2230f69f0aca4b9f5655cb66f4da6, type: 2}
+  coyoteTime:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: b327e9713e8617146ab82e219ec90e35, type: 2}
+  _groundCheckPoint: {fileID: 0}
+  _groundCheckSize: {x: 0.49, y: 0.03}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _spriteReference: {fileID: 0}
+--- !u!50 &435246566
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435246562}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &842818898
 GameObject:
   m_ObjectHideFlags: 0
