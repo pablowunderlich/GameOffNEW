@@ -50,13 +50,14 @@ public class Player : MonoBehaviour
     [Tooltip("Maximum fast fall speed")]
     public FloatReference maxFastFallSpeed; // Maximum fast fall speed
 
+    [Tooltip("the speed downwards gets multiplied by this multiplier")]
+    public FloatReference fallMultiplier; // If the player presses down they can fall faster
+
     [Tooltip("Maximum fall speed")]
     public FloatReference maxFallSpeed; // Maximum fall speed
     
     [Space(5)]
     [Header("Gravity")]
-    [Tooltip("Gravity Scale")]
-    public FloatReference gravityScale; // Gravity scale
 
     [Tooltip("Multiplier that changes gravity scale so that Jump hang time threshold can be achieved")]
     public FloatReference jumpHangGravityMult; // Multiplier that changes gravity scale so that Jump hang time threshold can be achieved
@@ -123,6 +124,7 @@ public class Player : MonoBehaviour
     private float _jumpForce;
     private float _runAccelAmount; // Acceleration value for running
     private float _runDeccelAmount; // Decceleration value for running
+    private float _gravityScale; // Gravity scale
     #endregion
     private void Awake()
     {
@@ -139,17 +141,19 @@ public class Player : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
 
         _gravityStrength = -(2 * maxJumpHeight.Value) / Mathf.Pow(timeToMaxHeight.Value, 2);
-        _jumpForce = Mathf.Abs(RB.velocity.x);
+        _jumpForce = Mathf.Abs(_gravityStrength) * timeToMaxHeight.Value;
         runAcceleration.Value = Mathf.Clamp(runAcceleration.Value, 0.01f, runMaxSpeed.Value);
         runDecceleration.Value = Mathf.Clamp(runDecceleration.Value, 0.01f, runMaxSpeed.Value);
 
         _runAccelAmount = (50 * runAcceleration.Value) / runMaxSpeed.Value;
         _runDeccelAmount = (50 * runDecceleration.Value) / runMaxSpeed.Value;
         conserveMomentum.Value = true;
+        _gravityScale = _gravityStrength / Physics2D.gravity.y;
+       // isJumping = false;
     }
     void Start()
     {
-        SetGravityScale(gravityScale.Value); // Set the gravity scale
+        SetGravityScale(_gravityScale); // Set the gravity scale
         isFacingRight = true; //Start game with player facing right
     }
 
@@ -191,7 +195,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            OnJumpInput();
+           // OnJumpInput();
         }
     }
     private void HandleCollision()
@@ -207,9 +211,10 @@ public class Player : MonoBehaviour
     }
     private void HandleJump()
     {
-        if (isJumping && RB.velocity.y < 0) // if player is not jumping 
+        if (isJumping && RB.velocity.y < 0) // if player is falling 
         {
             isJumping = false;
+          
         }
 
         if (CanJump())
@@ -232,21 +237,22 @@ public class Player : MonoBehaviour
         if (RB.velocity.y < 0 && _moveInput.y < 0)
         {
             //increase gravitational pull when holding down
-            SetGravityScale(gravityScale.Value * fastFallMultiplier.Value);
+            SetGravityScale(_gravityScale * fastFallMultiplier.Value);
             RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFastFallSpeed.Value));// Ensure the player falls faster but not infinitely
         }
         else if ((isJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value) // check if jumping and the value is smaller than threshold
         {
-            SetGravityScale(gravityScale.Value * jumpHangGravityMult.Value);
+            SetGravityScale(_gravityScale * jumpHangGravityMult.Value);
         }
         else if (RB.velocity.y < 0)
         {
             //Higher gravity when falling
-            SetGravityScale(gravityScale.Value * jumpHangGravityMult.Value);
+            SetGravityScale(_gravityScale * fallMultiplier.Value);
+            RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFallSpeed.Value));
         }
         else
         {
-            SetGravityScale(gravityScale.Value);
+            SetGravityScale(_gravityScale);
         }
 
     }
@@ -285,6 +291,7 @@ public class Player : MonoBehaviour
             force -= RB.velocity.y;
         }
         RB.AddForce(Vector2.up * force, ForceMode2D.Impulse); // add force as an impulse to the rb
+
     }
 
     private void Run(float lerpValue)
@@ -332,15 +339,15 @@ public class Player : MonoBehaviour
     {
         return LastOnGroundTime > 0 && !isJumping;
     }
+
+#region GIZMOS
+private void OnDrawGizmosSelected()
+{
+    Gizmos.color = Color.green;
+    Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
+}
+    #endregion
 }
 
-//    #region GIZMOS
-//    private void OnDrawGizmosSelected()
-//    {
-//        Gizmos.color = Color.green;
-//        Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
-//    }
-//    #endregion
-//}
 
 
