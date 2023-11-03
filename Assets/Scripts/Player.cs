@@ -41,7 +41,19 @@ public class Player : MonoBehaviour
 
     [Tooltip("Determine how long the jump can hang in the hair")]
     public FloatReference jumpHangTimeThreshold; //Determine how long the jump can hang in the hair
-   
+
+    [Space(5)]
+    [Header("Wall Jumping")]
+    [Tooltip("The force applied to the player when walljumping")]
+    public Vector2Reference wallJumpForce;
+
+    [Tooltip("Reduces the force of the player movement while wall jumping for a better feel (VALUE BETWEEN 0 AND 1")]
+    public FloatReference wallJumpReduceMovement;
+
+    [Tooltip("The time that the movement is reduced after waljumping (BETWEEN 0 AND 1.5)")]
+    public FloatReference wallJumpTime;
+    
+
     [Space(5)]
     [Header("Falling")]
     [Tooltip(" If the player presses down, their speed downwards gets multiplied by this multiplier")]
@@ -55,7 +67,15 @@ public class Player : MonoBehaviour
 
     [Tooltip("Maximum fall speed")]
     public FloatReference maxFallSpeed; // Maximum fall speed
-    
+
+    [Space(5)]
+    [Header("Sliding")]
+    [Tooltip("Determine how fast the player slides down")]
+    public FloatReference slideSpeed;
+
+    [Tooltip("Determine the acceleration for the slide")]
+    public FloatReference slideAcceleration;
+
     [Space(5)]
     [Header("Gravity")]
 
@@ -68,11 +88,17 @@ public class Player : MonoBehaviour
     [Tooltip("MaxSpeed multiplier when max height is reached")]
     public FloatReference jumpHangMaxSpeedMult; //MaxSpeed multiplier when max height is reached
 
-    [Tooltip(" Acceleration value in air. Recommend Between 0f, and 1f)\"")]
+    [Tooltip("Acceleration value in air. Recommend Between 0f, and 1f)\"")]
     public FloatReference accelInAir; // Acceleration value in air
 
-    [Tooltip(" Decceleration value in air. Recommend Between 0f, and 1f)\"")]
+    [Tooltip("Decceleration value in air. Recommend Between 0f, and 1f)\"")]
     public FloatReference deccelInAir; // Decceleration value in air
+
+    [Tooltip("Enable if the player should jump be able to jump cut")]
+    public BoolReference canJumpCut;
+
+    [Tooltip("This multiplier increases (or decrease) gravity if the player releases the jump button")]
+    public FloatReference jumpCutMultiplier;
 
     [Tooltip("do we want to conserve momentum??")]
     public BoolReference conserveMomentum; //do we want to conserve momentum??
@@ -80,6 +106,9 @@ public class Player : MonoBehaviour
     [Header("Health")]
     [Tooltip("Maximum Health")]
     public IntReference maxHealth; // Maximum health for the player
+
+    [Tooltip("Current Health")]
+    public IntReference currentHealth; // Current player health
 
     [Header("Timing")]
     // This is a short time lapse where the player can jump even if they pressed jump just before the player hits ground.
@@ -98,6 +127,10 @@ public class Player : MonoBehaviour
     // the value is based on character size, might make this dynamic later
     [SerializeField] private Vector2 _groundCheckSize = new Vector2(0.49f, 0.03f);
 
+    [SerializeField] private Transform _frontWallCheckPoint;
+    [SerializeField] private Transform _backWallCheckPoint;
+    [SerializeField] private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
+
     [Header("Layers and Tags")]
     [SerializeField] private LayerMask _groundLayer; //this is for if we want different layers
 
@@ -109,13 +142,15 @@ public class Player : MonoBehaviour
 
     public Rigidbody2D RB { get; private set; } // Player rigidbody
 
-
-    private float _currentHealth; // Current player health
-
     public bool isFacingRight { get; private set; } // Check the direction the character is facing
     public bool isJumping { get; private set; } // check if character is jumping (Usefull if we wanna do things in the air)
+    public bool isWallJumping { get; private set; } // check if character is walljumping
+    public bool isSliding { get; private set; } // check if player is sliding of the wall
     public float LastOnGroundTime { get; private set; } //Timer to check when the player has been in the air
-    private bool _isJumpFalling;
+    public float LastOnWallTime { get; private set; }
+    public float LastOnRightWallTime { get; private set; }
+    public float LastOnLeftWallTime { get; private set; }
+   
 
     private Vector2 _moveInput; // Vector to determine 2D movement direction
     public float LastPressedJumpTime { get; private set; }
@@ -125,6 +160,13 @@ public class Player : MonoBehaviour
     private float _runAccelAmount; // Acceleration value for running
     private float _runDeccelAmount; // Decceleration value for running
     private float _gravityScale; // Gravity scale
+    private bool _isJumpFalling; // is falling down after jump?
+    private bool _isJumpCut; // is cutting the jump by releasing the jump button early
+
+    //Wall jump variables
+    private float _wallJumpStartTime;
+    private int _lastWallJumpDir; // check which direction the player was facing at the last wall jump
+
     #endregion
     private void Awake()
     {
@@ -162,7 +204,11 @@ public class Player : MonoBehaviour
     {
         #region TIMERS
         LastOnGroundTime -= Time.deltaTime;
+        LastOnWallTime -= Time.deltaTime;
+        LastOnLeftWallTime -= Time.deltaTime;
+        LastOnRightWallTime -= Time.deltaTime;
         LastPressedJumpTime -= Time.deltaTime;
+
         #endregion
 
         HandleInput();
@@ -173,8 +219,20 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Handle running
-        Run(runLerpValue.Value);
+        // Handle running (moving along the x axis), depending on if the player is wall jumping or not
+        if (isWallJumping)
+        {
+            Run(wallJumpReduceMovement.Value);
+        }
+        else
+        {
+            Run(runLerpValue.Value);
+        }
+
+        if(isSliding)
+        {
+            Slide();
+        }
     }
 
     private void HandleInput()
@@ -195,11 +253,15 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-           // OnJumpInput();
+            if (canJumpCut.Value)
+            {
+                OnJumpUpInput();
+            }
         }
     }
     private void HandleCollision()
     {
+        
         if (!isJumping) // if player is not jumping
         {
             // Ground check
@@ -207,6 +269,27 @@ public class Player : MonoBehaviour
             {
                 LastOnGroundTime = coyoteTime.Value;
             }
+
+            //Right wall check, if the player is touching the wall that he is facing and he is facing right,
+            //or if touches the wall he isnt facing when he is facing left and not wall jumping. 
+            if(((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight) 
+                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight))) 
+            {
+               
+                LastOnRightWallTime = coyoteTime.Value;
+            }
+            // same but for left wall
+            if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight)
+                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight)))
+            {
+               
+                LastOnLeftWallTime = coyoteTime.Value;
+            }
+
+            //If the player turns, the checkpoints swap sides, so its good to make sure that the longest on a wall time value is storedz`
+            LastOnWallTime = Mathf.Max(LastOnLeftWallTime, LastOnRightWallTime);
+
+
         }
     }
     private void HandleJump()
@@ -214,33 +297,79 @@ public class Player : MonoBehaviour
         if (isJumping && RB.velocity.y < 0) // if player is falling 
         {
             isJumping = false;
-          
+            if(!isWallJumping)
+            {
+                _isJumpFalling = true;
+            }
+        }
+        if(isWallJumping && Time.time - _wallJumpStartTime > wallJumpTime.Value) // check if the player can still walljump
+        {
+            isWallJumping = false;
         }
 
-        if (CanJump())
+        if (CanJump() && !isWallJumping)
         {
+            _isJumpCut = false;
             if (!isJumping)
             {
                 _isJumpFalling = false;
             }
         }
 
-        if (CanJump() && LastPressedJumpTime > 0)
+        if (CanJump() && LastPressedJumpTime > 0) // check if player can jump, then jump
         {
             isJumping = true;
+            isWallJumping = false;
+            _isJumpCut = false;
             _isJumpFalling = false;
             Jump();
+        }
+        else if (CanWallJump() && LastPressedJumpTime > 0)
+        { 
+            isWallJumping = true;
+            isJumping = false;
+            _isJumpCut = false;
+            _isJumpFalling = false;
+            _wallJumpStartTime = Time.time;
+
+            // this sets which direction we were facing on the last wall jump.
+            // It does so by checking if the last on r
+            _lastWallJumpDir = (LastOnRightWallTime > 0) ? -1 : 1;
+
+            WallJump(_lastWallJumpDir);
         }
     }
     private void HandleGravityScale()
     {
-        if (RB.velocity.y < 0 && _moveInput.y < 0)
+        
+        //check if player can slide and if they are moving towards the wall theyre facing
+        if (CanSlide() && ((LastOnLeftWallTime > 0 && _moveInput.x < 0) || (LastOnRightWallTime > 0 && _moveInput.x > 0)))
+        {
+            Mathf.Clamp(RB.totalForce.y, 0, 200);
+            
+             isSliding = true;
+        }
+        else
+        {
+            isSliding = false;
+        }
+
+        if(isSliding)
+        {
+            SetGravityScale(0); //ignore gravity
+        }
+        else if (RB.velocity.y < 0 && _moveInput.y < 0)
         {
             //increase gravitational pull when holding down
             SetGravityScale(_gravityScale * fastFallMultiplier.Value);
             RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFastFallSpeed.Value));// Ensure the player falls faster but not infinitely
         }
-        else if ((isJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value) // check if jumping and the value is smaller than threshold
+        else if(_isJumpCut)
+        {
+            SetGravityScale(_gravityScale * jumpCutMultiplier.Value);
+            RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFallSpeed.Value));
+        }
+        else if ((isJumping || isWallJumping | _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value) // check if jumping and the value is smaller than threshold
         {
             SetGravityScale(_gravityScale * jumpHangGravityMult.Value);
         }
@@ -293,6 +422,39 @@ public class Player : MonoBehaviour
         RB.AddForce(Vector2.up * force, ForceMode2D.Impulse); // add force as an impulse to the rb
 
     }
+    private void WallJump(int direction)
+    {
+        // Similar to jump, lets make sure we cant wall jump multiple times from one press
+        LastPressedJumpTime = 0;
+        LastOnGroundTime = 0;
+        LastOnRightWallTime = 0;
+        LastOnLeftWallTime = 0;
+
+        Vector2 force = new Vector2(wallJumpForce.Value.x, wallJumpForce.Value.y);
+        force.x *= direction; 
+        // make sure we apply the force the opposite direction from the wall
+        if(Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
+        {
+            force.x -= RB.velocity.x;
+        }
+        if(RB.velocity.y < 0) // check if player is falling, if so substract the fall velocity from the jump force 
+        {
+            force.y -= RB.velocity.y;
+        }
+        RB.AddForce(force, ForceMode2D.Impulse);
+    }
+
+    private void Slide()
+    {
+        
+        float speedDif = slideSpeed.Value - RB.velocity.y;
+        float movement = speedDif * slideAcceleration.Value;
+
+        // fixedupdate can overcorrect the movment, so we clamp the movement value so that the acceleration cant be greater than the number of frames per second
+        movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif)*(1/Time.fixedDeltaTime));
+        Debug.Log(movement);
+        RB.AddForce(Mathf.Abs(movement)* -1 * Vector2.up);
+    }
 
     private void Run(float lerpValue)
     {
@@ -312,7 +474,7 @@ public class Player : MonoBehaviour
         }
 
         //Increase the acceleration and maxSpeed when at the maxheight of their jump, makes the jump feel a bit more bouncy, responsive and natural
-        if ((isJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value)
+        if ((isJumping || isWallJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value)
         {
             accelRate *= jumpHangAccelerationMult.Value;
             targetSpeed *= jumpHangMaxSpeedMult.Value;
@@ -335,16 +497,61 @@ public class Player : MonoBehaviour
         LastPressedJumpTime = jumpInputBufferTime.Value;
     }
 
+    public void OnJumpUpInput()
+    {
+        if(CanJumpCut() || CanWallJumpCut())
+        {
+            _isJumpCut = true;
+        }
+    }
+   
     private bool CanJump()
     {
         return LastOnGroundTime > 0 && !isJumping;
+    }
+    private bool CanWallJump()
+    {
+        // checks if: 
+        // Is player allowed to press jump again
+        // Is player is touching a wall
+        // Is player not on the ground
+        // Isnt already wallJumping or facing the walls in the wrong direction
+        
+        return LastPressedJumpTime > 0 && LastOnWallTime > 0 && LastOnGroundTime <= 0 && (!isWallJumping ||
+             (LastOnRightWallTime > 0 && _lastWallJumpDir == 1) || (LastOnLeftWallTime > 0 && _lastWallJumpDir == -1));
+    }
+    private bool CanJumpCut()
+    {
+        return isJumping && RB.velocity.y > 0;
+    }
+    private bool CanWallJumpCut()
+    {
+        return isWallJumping && RB.velocity.y > 0; // if the player is doing a wall jump and is not yet falling
+    }
+
+    private bool CanSlide()
+    {
+        // check if the player is on a wall
+        // if they are not jumping
+        // if they are not wall jumping
+        // if they are not on the ground 
+        if (!isJumping && LastOnGroundTime <= 0)
+            return true;
+        else
+            return false;
+
     }
 
 #region GIZMOS
 private void OnDrawGizmosSelected()
 {
     Gizmos.color = Color.green;
-    Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
+        Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
+    Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(_frontWallCheckPoint.position, _wallCheckSize);
+        Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
+
+
 }
     #endregion
 }

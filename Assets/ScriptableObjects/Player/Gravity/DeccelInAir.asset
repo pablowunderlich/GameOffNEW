@@ -17,7 +17,7 @@ MonoBehaviour:
   _raiseWarning: 1
   _isClamped: 0
   _minClampedValue: 0
-  _maxClampedValue: 0
+  _maxClampedValue: 2
   _event:
     m_PersistentCalls:
       m_Calls: []
