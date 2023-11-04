@@ -11,7 +11,11 @@ public class CameraFollow : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private Transform target;
-
+    private void Awake()
+    {
+        Vector3 targetPosition = target.position + cameraOffset.Value;
+        transform.position = targetPosition;
+    }
     // Update is called once per frame
     void Update()
     {
