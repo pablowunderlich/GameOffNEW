@@ -33,10 +33,10 @@ public class Player : MonoBehaviour
     [Space(5)]
 
     [Header("Jumping")]
-    [Tooltip("Time it takes from pressing jump, to reaching max jump height")]
+    [Tooltip("Time it takes from pressing jump, to reaching max jump height CANT BE CHANGED DURING RUNTIME")]
     public FloatReference timeToMaxHeight; // Time it takes from pressing jump, to reaching max jump height
 
-    [Tooltip("Maximum jump height")]
+    [Tooltip("Maximum jump height CANT BE CHANGED DURING RUNTIME")]
     public FloatReference maxJumpHeight; // Maximum jump height
 
     [Tooltip("Determine how long the jump can hang in the hair")]
@@ -183,14 +183,14 @@ public class Player : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
 
         _gravityStrength = -(2 * maxJumpHeight.Value) / Mathf.Pow(timeToMaxHeight.Value, 2);
+        _gravityScale = _gravityStrength / Physics2D.gravity.y;
         _jumpForce = Mathf.Abs(_gravityStrength) * timeToMaxHeight.Value;
-        runAcceleration.Value = Mathf.Clamp(runAcceleration.Value, 0.01f, runMaxSpeed.Value);
-        runDecceleration.Value = Mathf.Clamp(runDecceleration.Value, 0.01f, runMaxSpeed.Value);
-
         _runAccelAmount = (50 * runAcceleration.Value) / runMaxSpeed.Value;
         _runDeccelAmount = (50 * runDecceleration.Value) / runMaxSpeed.Value;
-        conserveMomentum.Value = true;
-        _gravityScale = _gravityStrength / Physics2D.gravity.y;
+        runAcceleration.Value = Mathf.Clamp(runAcceleration.Value, 0.01f, runMaxSpeed.Value);
+        runDecceleration.Value = Mathf.Clamp(runDecceleration.Value, 0.01f, runMaxSpeed.Value);
+       
+        
        // isJumping = false;
     }
     void Start()
@@ -273,14 +273,14 @@ public class Player : MonoBehaviour
             //Right wall check, if the player is touching the wall that he is facing and he is facing right,
             //or if touches the wall he isnt facing when he is facing left and not wall jumping. 
             if(((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight) 
-                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight))) 
+                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight)) && !isWallJumping) 
             {
                
                 LastOnRightWallTime = coyoteTime.Value;
             }
             // same but for left wall
             if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight)
-                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight)))
+               || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight)) && !isWallJumping)
             {
                
                 LastOnLeftWallTime = coyoteTime.Value;
@@ -345,8 +345,6 @@ public class Player : MonoBehaviour
         //check if player can slide and if they are moving towards the wall theyre facing
         if (CanSlide() && ((LastOnLeftWallTime > 0 && _moveInput.x < 0) || (LastOnRightWallTime > 0 && _moveInput.x > 0)))
         {
-            Mathf.Clamp(RB.totalForce.y, 0, 200);
-            
              isSliding = true;
         }
         else
@@ -358,7 +356,7 @@ public class Player : MonoBehaviour
         {
             SetGravityScale(0); //ignore gravity
         }
-        else if (RB.velocity.y < 0 && _moveInput.y < 0)
+        else if (RB.velocity.y < 0 && _moveInput.y < 0) //if falling and pressing down
         {
             //increase gravitational pull when holding down
             SetGravityScale(_gravityScale * fastFallMultiplier.Value);
@@ -369,11 +367,11 @@ public class Player : MonoBehaviour
             SetGravityScale(_gravityScale * jumpCutMultiplier.Value);
             RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFallSpeed.Value));
         }
-        else if ((isJumping || isWallJumping | _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value) // check if jumping and the value is smaller than threshold
+        else if ((isJumping || isWallJumping || _isJumpFalling) && Mathf.Abs(RB.velocity.y) < jumpHangTimeThreshold.Value) // check if jumping and the value is smaller than threshold
         {
             SetGravityScale(_gravityScale * jumpHangGravityMult.Value);
         }
-        else if (RB.velocity.y < 0)
+        else if (RB.velocity.y < 0)     
         {
             //Higher gravity when falling
             SetGravityScale(_gravityScale * fallMultiplier.Value);
@@ -452,8 +450,8 @@ public class Player : MonoBehaviour
 
         // fixedupdate can overcorrect the movment, so we clamp the movement value so that the acceleration cant be greater than the number of frames per second
         movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif)*(1/Time.fixedDeltaTime));
-        Debug.Log(movement);
-        RB.AddForce(Mathf.Abs(movement)* -1 * Vector2.up);
+       
+        RB.AddForce(movement * Vector2.up);
     }
 
     private void Run(float lerpValue)
@@ -535,10 +533,14 @@ public class Player : MonoBehaviour
         // if they are not jumping
         // if they are not wall jumping
         // if they are not on the ground 
-        if (!isJumping && LastOnGroundTime <= 0)
+        if (LastOnWallTime > 0 && !isJumping && !isWallJumping && LastOnGroundTime <= 0)
+        {
             return true;
+        }
         else
+        {
             return false;
+        }
 
     }
 
@@ -555,6 +557,5 @@ private void OnDrawGizmosSelected()
 }
     #endregion
 }
-
 
 
