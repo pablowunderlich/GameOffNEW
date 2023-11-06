@@ -1,6 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Player_Events" ID="{00EEA589-9F2F-46A8-8402-E27E60869025}" ShortID="246225478">
+					<ChildrenList>
+						<Event Name="Play_Dash_Glide_Loop_SFX_01" ID="{2FFE1FBA-BDC5-4EAD-90A8-D61C5074F88F}">
+							<ChildrenList>
+								<Action Name="" ID="{2CB4B817-88D7-4670-A854-74420D69B374}" ShortID="113222089">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dash_Glide Loop_SFX_4" ID="{D762CD3E-4A09-4DE8-92E7-BB574EE25C5A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Enemy_Turret_Fire" ID="{0EDCAD2A-D53F-4BA1-B24C-E004A031F5AE}">
+							<ChildrenList>
+								<Action Name="" ID="{10A40E87-DD78-4092-93CB-FFD3303FAA11}" ShortID="469501221">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Enemy_Turret_Fire" ID="{D7C09821-B2F0-4FE5-84AF-4E0D114CDE90}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Arm_Swing" ID="{93CEC1AF-AC64-4B42-8EC2-4005D4C66E85}">
+							<ChildrenList>
+								<Action Name="" ID="{16E22423-B5ED-46DB-8D59-54C4BC81BB99}" ShortID="1010113018">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Arm_Swing" ID="{A80C3841-BD96-4FC7-8735-67987F02E822}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Button_Press" ID="{EC3728DB-89B1-43C4-91CD-94DC42486787}">
+							<ChildrenList>
+								<Action Name="" ID="{477CDF30-FD7E-481C-A2E5-22DF7E59521B}" ShortID="958228051">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Button_Press" ID="{9B17BBA9-A7BC-4054-8A96-192A19502438}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Jump" ID="{47164ECE-B0FE-432A-BCA2-FF5D142904D9}">
+							<ChildrenList>
+								<Action Name="" ID="{F474A948-D0A2-46B9-B9FD-C3C5791412D3}" ShortID="1022093804">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Jump" ID="{56D2DFC1-7159-4A94-9726-2E246C3B080C}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Land" ID="{A2CCEB01-E6B6-48E5-8013-6868D9D6B49E}">
+							<ChildrenList>
+								<Action Name="" ID="{8DBA9863-1158-450B-801B-42932391C834}" ShortID="332900113">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Land" ID="{D4DE85C6-49F9-47EB-8D8F-8F18990F3D7C}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Press_On_Pad" ID="{058BC0FB-F94C-401D-8272-E342F9F0A9CD}">
+							<ChildrenList>
+								<Action Name="" ID="{99873488-8C05-4781-960A-8F7134BA24C1}" ShortID="770438915">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Press_On_Pad" ID="{71453576-2CED-406B-BD5A-AD8871E3468A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Pull_Lever" ID="{FC929D60-81F8-45E8-B9B0-340992FA9EF7}">
+							<ChildrenList>
+								<Action Name="" ID="{854EC469-18F7-4543-B807-7F3B9B3F2258}" ShortID="527331851">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Pull_Lever" ID="{589EF84A-AE05-4535-9333-DB8C243AD2D0}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Take_Damage" ID="{56CBC192-90D7-42EC-99C6-55146F5EA483}">
+							<ChildrenList>
+								<Action Name="" ID="{DFD37A11-A5A0-4168-B632-FBB775AFA323}" ShortID="800678617">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Take_Damage" ID="{D39035AF-A347-4679-B9FD-D6CD962D5E97}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Player_Jump" ID="{24C0E10A-4190-4BE6-B8B5-868C07655EA4}">
+							<ChildrenList>
+								<Action Name="" ID="{170A31B1-7C4F-47C6-A200-0D925BEBA000}" ShortID="833330720">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Jump" ID="{56D2DFC1-7159-4A94-9726-2E246C3B080C}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" ShortID="473650679">
+					<ChildrenList>
+						<Event Name="Stop_Dash_Glide_Loop_SFX_4" ID="{4F3E139A-BC3F-468E-8E49-F893EEE7B326}">
+							<ChildrenList>
+								<Action Name="" ID="{8CD47982-CE6E-471E-854A-69A2FB3978B3}" ShortID="253618304">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dash_Glide Loop_SFX_4" ID="{D762CD3E-4A09-4DE8-92E7-BB574EE25C5A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -243,6 +243,7 @@ public class Player : MonoBehaviour
         if (_moveInput.x != 0) // if there is imput with intention of moving left or right
         {
             CheckDirectionToFace(_moveInput.x > 0); // check what direction to face by checking if x input > 0
+            CheckDirectionToFace(_moveInput.x > 0); // check what direction to face by checking if x input > 0
         }
 
         // checks to see if the jump button is pressed and released (second one could be used for short jumps etc
@@ -261,7 +262,7 @@ public class Player : MonoBehaviour
     }
     private void HandleCollision()
     {
-        
+        #region collision with ground
         if (!isJumping) // if player is not jumping
         {
             // Ground check
@@ -288,8 +289,16 @@ public class Player : MonoBehaviour
 
             //If the player turns, the checkpoints swap sides, so its good to make sure that the longest on a wall time value is storedz`
             LastOnWallTime = Mathf.Max(LastOnLeftWallTime, LastOnRightWallTime);
+        }
+        #endregion
 
-
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Geary")
+        {
+            currentHealth.Value -= collision.gameObject.GetComponent<GearyEnemy>().damage;
+            Debug.Log(currentHealth);   
         }
     }
     private void HandleJump()
@@ -412,6 +421,13 @@ public class Player : MonoBehaviour
         LastPressedJumpTime = 0;
         LastOnGroundTime = 0;
 
+        #region Pablo
+
+        //im adding the jump stop event so it stops playing
+        AkSoundEngine.PostEvent("Play_Player_Jump", this.gameObject);
+
+        #endregion Pablo
+
         float force = _jumpForce;
         if (RB.velocity.y < 0) // if player is going down
         {
@@ -427,6 +443,14 @@ public class Player : MonoBehaviour
         LastOnGroundTime = 0;
         LastOnRightWallTime = 0;
         LastOnLeftWallTime = 0;
+
+
+        #region Pablo
+
+        //im adding the jump stop event so it stops playing
+        AkSoundEngine.PostEvent("Play_Player_Jump", this.gameObject);
+
+        #endregion Pablo
 
         Vector2 force = new Vector2(wallJumpForce.Value.x, wallJumpForce.Value.y);
         force.x *= direction; 
@@ -493,6 +517,8 @@ public class Player : MonoBehaviour
     public void OnJumpInput() // call when jump is pressed
     {
         LastPressedJumpTime = jumpInputBufferTime.Value;
+        
+
     }
 
     public void OnJumpUpInput()

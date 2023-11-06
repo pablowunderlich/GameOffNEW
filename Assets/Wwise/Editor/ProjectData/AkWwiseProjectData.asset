@@ -24,7 +24,9 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: e849a8c9a992944ea48f70a09123e439
     GuidInternal: 
+
     m_lastTime: -8585025825133499657
+
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +40,9 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e77fbde5329104bb2b761abb384a5ec
     GuidInternal: 
+
     m_lastTime: -8585025825133599681
+
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,8 +70,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0982ab1750ce649b118815ca958edbf
     GuidInternal: 
-    m_lastTime: -8585023110211040890
-    List: []
+    m_lastTime: -8585023867032951168
+    List:
+    - name: Main
+      guid: de578859deb1154780088adfc6cc709e
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c0982ab1750ce649b118815ca958edbf
+      - ElementName: Main
+        ObjectType: 7
+        guid: de578859deb1154780088adfc6cc709e
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +98,262 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585023110211070896
-    List: []
+    m_lastTime: -8585023845400219495
+    List:
+    - name: Enemy_Events
+      guid: e8d1a7d816b5344e993ff1d291aa25f3
+      id: 3235296321
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      Path: Events\Default Work Unit\Enemy_Events
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Dash_Glide_Loop_SFX_01
+      guid: ba1ffe2fc5bdad4e90a8d61c5074f88f
+      id: 2913963765
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Dash_Glide_Loop_SFX_01
+        ObjectType: 3
+        guid: ba1ffe2fc5bdad4e90a8d61c5074f88f
+      Path: Events\Default Work Unit\Player_Events\Play_Dash_Glide_Loop_SFX_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Enemy_Turret_Fire
+      guid: 2aaddc0e3fd5a14bb24ce004a031f5ae
+      id: 616075970
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Enemy_Turret_Fire
+        ObjectType: 3
+        guid: 2aaddc0e3fd5a14bb24ce004a031f5ae
+      Path: Events\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire
+      maxAttenuation: 0
+      maxDuration: 1.3710834
+      minDuration: 1.3710834
+    - name: Play_Player_Arm_Swing
+      guid: afc1ce9364ac424b8ec24005d4c66e85
+      id: 1726909165
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Arm_Swing
+        ObjectType: 3
+        guid: afc1ce9364ac424b8ec24005d4c66e85
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Arm_Swing
+      maxAttenuation: 0
+      maxDuration: 1.0742917
+      minDuration: 1.0742917
+    - name: Play_Player_Button_Press
+      guid: db2837ecb189c44391cd94dc42486787
+      id: 128901360
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Button_Press
+        ObjectType: 3
+        guid: db2837ecb189c44391cd94dc42486787
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Button_Press
+      maxAttenuation: 0
+      maxDuration: 0.409875
+      minDuration: 0.409875
+    - name: Play_Player_Jump
+      guid: ce4e1647feb02a43bca2ff5d142904d9
+      id: 562256996
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Jump
+        ObjectType: 3
+        guid: ce4e1647feb02a43bca2ff5d142904d9
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Jump
+      maxAttenuation: 0
+      maxDuration: 0.5239583
+      minDuration: 0.5239583
+    - name: Play_Player_Land
+      guid: 01ebcca2b6e6e54880136868d9d6b49e
+      id: 4249207015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Land
+        ObjectType: 3
+        guid: 01ebcca2b6e6e54880136868d9d6b49e
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Land
+      maxAttenuation: 0
+      maxDuration: 0.450375
+      minDuration: 0.450375
+    - name: Play_Player_Press_On_Pad
+      guid: fbc08b054cf91d408272e342f9f0a9cd
+      id: 3228691145
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Press_On_Pad
+        ObjectType: 3
+        guid: fbc08b054cf91d408272e342f9f0a9cd
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Press_On_Pad
+      maxAttenuation: 0
+      maxDuration: 0.92889583
+      minDuration: 0.92889583
+    - name: Play_Player_Pull_Lever
+      guid: 609d92fcf881e845b9b0340992fa9ef7
+      id: 2186439036
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Pull_Lever
+        ObjectType: 3
+        guid: 609d92fcf881e845b9b0340992fa9ef7
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Pull_Lever
+      maxAttenuation: 0
+      maxDuration: 0.8876042
+      minDuration: 0.8876042
+    - name: Play_Player_Take_Damage
+      guid: 92c1cb56d790ec4299c655146f5ea483
+      id: 1172205655
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Take_Damage
+        ObjectType: 3
+        guid: 92c1cb56d790ec4299c655146f5ea483
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Take_Damage
+      maxAttenuation: 0
+      maxDuration: 1.0479167
+      minDuration: 0.5620625
+    - name: Player_Events
+      guid: 89a5ee002f9fa8468402e27e60869025
+      id: 2993354578
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      Path: Events\Default Work Unit\Player_Events
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Dash_Glide_Loop_SFX_4
+      guid: 9a133e4f3fbc8e468e49f893eee7b326
+      id: 3432329370
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Stop_Dash_Glide_Loop_SFX_4
+        ObjectType: 3
+        guid: 9a133e4f3fbc8e468e49f893eee7b326
+      Path: Events\Default Work Unit\Enemy_Events\Stop_Dash_Glide_Loop_SFX_4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Player_Jump
+      guid: 0ae1c0249041e64bb8b5868c07655ea4
+      id: 3588747354
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Stop_Player_Jump
+        ObjectType: 3
+        guid: 0ae1c0249041e64bb8b5868c07655ea4
+      Path: Events\Default Work Unit\Player_Events\Stop_Player_Jump
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -94,7 +366,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 78902fe67f13e34d886e38595a4c8919
     GuidInternal: 
-    m_lastTime: -8585025825133689697
+    m_lastTime: -8585026458872585366
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -108,7 +380,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8381769859dbb944a116f733ab5f4bf4
     GuidInternal: 
-    m_lastTime: -8585025825133519657
+    m_lastTime: -8585026458872513797
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -121,8 +393,8 @@ MonoBehaviour:
       guid: 651ac4c810342a42b4fcd7e9cefe389e
     ParentPath: Switches\Default Work Unit
     guid: 651ac4c810342a42b4fcd7e9cefe389e
-    GuidInternal: 
-    m_lastTime: -8585025825133519657
+    GuidInternal:
+    m_lastTime: -8585026458872503762
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -136,10 +408,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d416b16a19e550428d5b7a0b809ba9f3
     GuidInternal: 
-    m_lastTime: -8585025825133509659
+    m_lastTime: -8585026458872503762
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 030000000400000005000000060000000700000008000000090000000b0000000c000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
