@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	128901360	Play_Player_Button_Press			\Default Work Unit\Player_Events\Play_Player_Button_Press	
+	562256996	Play_Player_Jump			\Default Work Unit\Player_Events\Play_Player_Jump	
+	616075970	Play_Enemy_Turret_Fire			\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire	
+	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player_Events\Play_Player_Take_Damage	
+	1726909165	Play_Player_Arm_Swing			\Default Work Unit\Player_Events\Play_Player_Arm_Swing	
+	2186439036	Play_Player_Pull_Lever			\Default Work Unit\Player_Events\Play_Player_Pull_Lever	
+	2913963765	Play_Dash_Glide_Loop_SFX_01			\Default Work Unit\Player_Events\Play_Dash_Glide_Loop_SFX_01	
+	3228691145	Play_Player_Press_On_Pad			\Default Work Unit\Player_Events\Play_Player_Press_On_Pad	
+	3432329370	Stop_Dash_Glide_Loop_SFX_4			\Default Work Unit\Enemy_Events\Stop_Dash_Glide_Loop_SFX_4	
+	3588747354	Stop_Player_Jump			\Default Work Unit\Player_Events\Stop_Player_Jump	
+	4249207015	Play_Player_Land			\Default Work Unit\Player_Events\Play_Player_Land	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	61722497	Player_Button Press_SFX_10	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Button Press_SFX_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Button_Press\Player_Button Press_SFX_10		78792
+	108288308	Player_Damage 1_SFX_2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 1_SFX_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 1_SFX_2		200944
+	244295874	Player_Press on pad_SFX_11	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Press on pad_SFX_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Press_On_Pad\Player_Press on pad_SFX_11		178444
+	346110309	Dash_Glide Loop_SFX_4	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Dash_Glide Loop_SFX_4_22A01561.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Dahs&Glide\Dash_Glide Loop_SFX_4		524688
+	497341625	Player_Jump_SFX_0	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Jump_SFX_0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Jump\Player_Jump_SFX_0		100696
+	599656409	Player_Damage 3_SFX_4	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 3_SFX_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 3_SFX_4		201296
+	611082514	Player_Damage 2_SFX_3	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 2_SFX_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 2_SFX_3		193124
+	766998527	Enemy_Turret fire_SFX_6	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Turret fire_SFX_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Enemy_SFX\Enemy_Turret_Fire\Enemy_Turret fire_SFX_6		263344
+	779989710	Player_Land_SFX_1	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Land_SFX_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Land\Player_Land_SFX_1		86568
+	798414008	Player_Lever pull_SFX_8	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Lever pull_SFX_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Pull_Lever\Player_Lever pull_SFX_8		170516
+	906798711	Player_Arm swing_SFX_0	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Arm swing_SFX_0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Arm_Swing\Player_Arm swing_SFX_0		206360
+	922165199	Player_Damage 4_SFX_5	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 4_SFX_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 4_SFX_5		108012
+
