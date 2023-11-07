@@ -313,19 +313,21 @@ public class Player : MonoBehaviour
         {
             foreach (Collider2D col in results)
             {
-                if (col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                // I AM AWARE I COULD JUST MAKE ONE IF STATEMENT, BUT
+                // I WANT TO LEAVE IT LIKE THIS TO EASILY ADD FUNCTIONALITY LATER
+                if (col.gameObject.layer == LayerMask.NameToLayer("Enemy")) 
                 { 
                     if(col.gameObject.CompareTag("Geary"))
                     {
-                        if (_timeSinceLastHit > InvincibilityTime.Value)
-                        {
-                            currentHealth.Value -= col.GetComponent<GearyEnemy>().damage;
-                            _timeSinceLastHit = 0;
-                            Debug.Log(currentHealth);
-                            StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
-
-                        }
-                        
+                        LoseLife();
+                    }
+                    if(col.gameObject.CompareTag("Acid"))
+                    {
+                        LoseLife();
+                    }  
+                    if(col.gameObject.CompareTag("Spikes"))
+                    {
+                        LoseLife();
                     }
                 }
             }
@@ -615,7 +617,17 @@ public class Player : MonoBehaviour
 
         _spriteRenderer.enabled = true;
     }
+    private void LoseLife()
+    {
+        if (_timeSinceLastHit > InvincibilityTime.Value)
+        {
+            currentHealth.Value -= 1;
+            _timeSinceLastHit = 0;
+            Debug.Log(currentHealth);
+            StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
+        }
 
+    }
 #region GIZMOS
 private void OnDrawGizmosSelected()
 {

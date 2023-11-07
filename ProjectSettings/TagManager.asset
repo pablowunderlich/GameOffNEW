@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SawEnemy
   - Geary
+  - Acid
+  - Spikes
   layers:
   - Default
   - TransparentFX
