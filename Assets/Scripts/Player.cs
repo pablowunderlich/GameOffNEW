@@ -455,6 +455,13 @@ public class Player : MonoBehaviour
         LastPressedJumpTime = 0;
         LastOnGroundTime = 0;
 
+        #region Pablo
+
+        //im adding the jump stop event so it stops playing
+        AkSoundEngine.PostEvent("Play_Player_Jump", this.gameObject);
+
+        #endregion Pablo
+
         float force = _jumpForce;
         if (RB.velocity.y < 0) // if player is going down
         {
@@ -470,6 +477,14 @@ public class Player : MonoBehaviour
         LastOnGroundTime = 0;
         LastOnRightWallTime = 0;
         LastOnLeftWallTime = 0;
+
+
+        #region Pablo
+
+        //im adding the jump stop event so it stops playing
+        AkSoundEngine.PostEvent("Play_Player_Jump", this.gameObject);
+
+        #endregion Pablo
 
         Vector2 force = new Vector2(wallJumpForce.Value.x, wallJumpForce.Value.y);
         force.x *= direction; 
@@ -536,6 +551,8 @@ public class Player : MonoBehaviour
     public void OnJumpInput() // call when jump is pressed
     {
         LastPressedJumpTime = jumpInputBufferTime.Value;
+        
+
     }
 
     public void OnJumpUpInput()

@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{B12A98C0-0C75-49E6-B118-815CA958EDBF}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{B12A98C0-0C75-49E6-B118-815CA958EDBF}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{B12A98C0-0C75-49E6-B118-815CA958EDBF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{598857DE-B1DE-4715-8008-8ADFC6CC709E}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Stop_Dash_Glide_Loop_SFX_4" ID="{4F3E139A-BC3F-468E-8E49-F893EEE7B326}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Events" ID="{00EEA589-9F2F-46A8-8402-E27E60869025}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

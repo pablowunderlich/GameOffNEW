@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{28CE4AEA-B5EF-4168-9979-ACCD62E99C0B}" SchemaVersion="110">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{28CE4AEA-B5EF-4168-9979-ACCD62E99C0B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{28CE4AEA-B5EF-4168-9979-ACCD62E99C0B}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="GameOff" ID="{826A4B11-DD7C-4D72-B344-8059FC34A824}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Dash_Glide_Loop_SFX_01" ID="{2FFE1FBA-BDC5-4EAD-90A8-D61C5074F88F}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Dash_Glide_Loop_SFX_4" ID="{4F3E139A-BC3F-468E-8E49-F893EEE7B326}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>
