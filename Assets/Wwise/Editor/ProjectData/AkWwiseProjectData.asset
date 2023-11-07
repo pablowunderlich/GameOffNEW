@@ -66,7 +66,9 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0982ab1750ce649b118815ca958edbf
     GuidInternal: 
-    m_lastTime: -8585022899007097702
+
+    m_lastTime: -8585022809872876985
+
     List:
     - name: Main
       guid: de578859deb1154780088adfc6cc709e
@@ -94,7 +96,8 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585022899007757750
+    m_lastTime: -8585022759415913741
+
     List:
     - name: Enemy_Events
       guid: e8d1a7d816b5344e993ff1d291aa25f3
@@ -193,6 +196,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.409875
       minDuration: 0.409875
+    - name: Play_Player_Floor_Hit
+      guid: 30c85b337d36704295b33356ff7be2c1
+      id: 3978617892
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Floor_Hit
+        ObjectType: 3
+        guid: 30c85b337d36704295b33356ff7be2c1
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Floor_Hit
+      maxAttenuation: 0
+      maxDuration: 0.39854166
+      minDuration: 0.37025
     - name: Play_Player_Jump
       guid: ce4e1647feb02a43bca2ff5d142904d9
       id: 562256996
@@ -211,8 +234,8 @@ MonoBehaviour:
         guid: ce4e1647feb02a43bca2ff5d142904d9
       Path: Events\Default Work Unit\Player_Events\Play_Player_Jump
       maxAttenuation: 0
-      maxDuration: 0.5239583
-      minDuration: 0.5239583
+      maxDuration: 0.44112033
+      minDuration: 0.41636214
     - name: Play_Player_Land
       guid: 01ebcca2b6e6e54880136868d9d6b49e
       id: 4249207015
@@ -293,6 +316,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.0479167
       minDuration: 0.5620625
+    - name: Play_Player_Voice
+      guid: 2642b8118cb94342846e01755fbded8c
+      id: 3216481374
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Voice
+        ObjectType: 3
+        guid: 2642b8118cb94342846e01755fbded8c
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Voice
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Player_WallJump
+      guid: e514587b8aedd2479199cd75fcd19972
+      id: 937438432
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_WallJump
+        ObjectType: 3
+        guid: e514587b8aedd2479199cd75fcd19972
+      Path: Events\Default Work Unit\Player_Events\Play_Player_WallJump
+      maxAttenuation: 0
+      maxDuration: 0.148167
+      minDuration: 0.13985102
     - name: Player_Events
       guid: 89a5ee002f9fa8468402e27e60869025
       id: 2993354578
@@ -362,8 +425,24 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 78902fe67f13e34d886e38595a4c8919
     GuidInternal: 
-    m_lastTime: -8585028209670336852
-    List: []
+
+    m_lastTime: -8585022802944242717
+    List:
+    - name: Player_Max_Jump
+      guid: c223eda99691d04195d98158aabc2fc9
+      id: 3305153192
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 78902fe67f13e34d886e38595a4c8919
+      - ElementName: Player_Max_Jump
+        ObjectType: 13
+        guid: c223eda99691d04195d98158aabc2fc9
+      Path: Game Parameters\Default Work Unit\Player_Max_Jump
+
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -407,7 +486,8 @@ MonoBehaviour:
     m_lastTime: -8585028209670546877
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0300000004000000050000000600000008000000090000000b0000000c000000
+
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
