@@ -244,7 +244,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1615442607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &210135326
+
+--- !u!1 &179163922
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,21 +253,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 210135327}
   - component: {fileID: 210135328}
   m_Layer: 0
   m_Name: Sprite
+
+  - component: {fileID: 179163923}
+  - component: {fileID: 179163924}
+  m_Layer: 6
+  m_Name: PlayerVoice
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &210135327
+
+--- !u!4 &179163923
+
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 210135326}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -276,12 +287,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1852078468}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &210135328
-SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 210135326}
   m_Enabled: 1
   m_CastShadows: 0
@@ -328,6 +338,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+
 --- !u!213 &260731767
 Sprite:
   m_ObjectHideFlags: 0
@@ -617,6 +628,7 @@ Transform:
   m_Children:
   - {fileID: 1615442607}
   - {fileID: 1206331954}
+  - {fileID: 179163923}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &435246565
@@ -2785,7 +2797,9 @@ Transform:
   - {fileID: 681094490}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1852078464
+
+--- !u!1 &1990423133
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2793,17 +2807,20 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+
   - component: {fileID: 1852078468}
   - component: {fileID: 1852078467}
   - component: {fileID: 1852078466}
   - component: {fileID: 1852078465}
   m_Layer: 0
   m_Name: Ingot
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
 --- !u!114 &1852078465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,11 +2906,14 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 7
 --- !u!4 &1852078468
+=======
+--- !u!4 &1990423134
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+
   m_GameObject: {fileID: 1852078464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -2902,6 +2922,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 210135327}
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131651837
@@ -2949,3 +2970,5 @@ SceneRoots:
   - {fileID: 1852078468}
   - {fileID: 1524839406}
   - {fileID: 363783633}
+  - {fileID: 1990423134}
+
