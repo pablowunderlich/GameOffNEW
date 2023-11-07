@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8d258b9c4cc2e42bf1ab77d7548028, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
+  AcousticTextureWwu: []
+  AuxBusWwu: []
+  BankWwu: []
+  EventWwu: []
+  RtpcWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  TriggerWwu: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
-  ExpandedWaapiItemIds: 0300000004000000050000000600000008000000090000000b0000000c000000
-
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
