@@ -21,6 +21,7 @@ public class GearyEnemy : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         RB.gravityScale = _gravityScale;
+ 
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class GearyEnemy : MonoBehaviour
         if (!Physics2D.OverlapBox(groundCheck.position, groundCheckSize,0, groundLayerMask)) //if the object is no longer colliding with the ground
         {
             //destroy object
+          
             Debug.Log("i am death");
             Destroy(gameObject, 0.5f);
             
