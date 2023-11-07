@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8D9066E2-9558-A186-DF5D-A4E461B8751A}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F56A610C-C7C4-F874-B68B-7ADDF94EBB7A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,11 +21,8 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
-			<GameParameters>
-				<GameParameter Id="3305153192" Name="Player_Max_Jump"/>
-			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A2617964-0B3C-EB06-BE49-719E951D489D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{62ABCA00-BD23-2EE5-A84B-539C7F1EA7A2}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -45,9 +42,9 @@
 					<ShortName>Dash_Glide Loop_SFX_4.wav</ShortName>
 					<CachePath>SFX/Dash_Glide Loop_SFX_4_22A01561.wem</CachePath>
 				</File>
-				<File Id="419135938" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player_Floor_Hit-002.wav</ShortName>
-					<CachePath>SFX/Player_Floor_Hit-002_10C4C929.wem</CachePath>
+				<File Id="497341625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Jump_SFX_0.wav</ShortName>
+					<CachePath>SFX/Player_Jump_SFX_0_10C4C929.wem</CachePath>
 				</File>
 				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
@@ -56,10 +53,6 @@
 				<File Id="611082514" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 2_SFX_3.wav</ShortName>
 					<CachePath>SFX/Player_Damage 2_SFX_3_10C4C929.wem</CachePath>
-				</File>
-				<File Id="757544981" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Jump_SFX_1.wav</ShortName>
-					<CachePath>SFX/Jump_SFX_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="766998527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Turret fire_SFX_6.wav</ShortName>
@@ -80,14 +73,6 @@
 				<File Id="922165199" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 4_SFX_5.wav</ShortName>
 					<CachePath>SFX/Player_Damage 4_SFX_5_10C4C929.wem</CachePath>
-				</File>
-				<File Id="969170493" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player_Floor_Hit-001.wav</ShortName>
-					<CachePath>SFX/Player_Floor_Hit-001_10C4C929.wem</CachePath>
-				</File>
-				<File Id="1045843882" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Land_SFX_2.wav</ShortName>
-					<CachePath>SFX/Land_SFX_2_23639DF7.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -111,15 +96,9 @@
 						<MediaRef Id="61722497"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3978617892" Name="Play_Player_Floor_Hit" DurationType="OneShot" DurationMin="0.37025" DurationMax="0.39854166">
+				<Event Id="562256996" Name="Play_Player_Jump" DurationType="OneShot" DurationMin="0.5239583" DurationMax="0.5239583">
 					<MediaRefs>
-						<MediaRef Id="419135938"/>
-						<MediaRef Id="969170493"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="562256996" Name="Play_Player_Jump" DurationType="OneShot" DurationMin="0.41636214" DurationMax="0.44112033">
-					<MediaRefs>
-						<MediaRef Id="757544981"/>
+						<MediaRef Id="497341625"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4249207015" Name="Play_Player_Land" DurationType="OneShot" DurationMin="0.450375" DurationMax="0.450375">
@@ -145,19 +124,10 @@
 						<MediaRef Id="922165199"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3216481374" Name="Play_Player_Voice" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="937438432" Name="Play_Player_WallJump" DurationType="OneShot" DurationMin="0.13985102" DurationMax="0.148167">
-					<MediaRefs>
-						<MediaRef Id="1045843882"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="3305153192" Name="Player_Max_Jump"/>
-			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{859F028B-E84E-BFF7-A5B1-EAEFA61CF11F}</FileHash>
+	<FileHash>{3A4C9746-DBF9-5A19-3FAA-C76E57B70260}</FileHash>
 </SoundBanksInfo>
