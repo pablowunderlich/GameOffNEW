@@ -14,12 +14,7 @@
 							<Position X="1" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true">
-						<RTPCValue>
-							<GameParameterRef Name="Player_Max_Jump" ID="{A9ED23C2-9196-41D0-95D9-8158AABC2FC9}"/>
-							<Value>73.2371794871795</Value>
-						</RTPCValue>
-					</RTPCValueList>
+					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

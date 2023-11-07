@@ -6,7 +6,6 @@ TagManager:
   tags:
   - SawEnemy
   - Geary
-  - Floor
   layers:
   - Default
   - TransparentFX
