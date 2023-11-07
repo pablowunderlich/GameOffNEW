@@ -369,11 +369,23 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: b327e9713e8617146ab82e219ec90e35, type: 2}
+  InvincibilityTime:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}
+  blinkInterval:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}
   _groundCheckPoint: {fileID: 68808473}
   _groundCheckSize: {x: 1.14, y: 0.25}
   _frontWallCheckPoint: {fileID: 1006998548}
   _backWallCheckPoint: {fileID: 1713157797}
   _wallCheckSize: {x: 0.4, y: 1}
+  _enemyCheckPoint: {fileID: 0}
+  _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
   _groundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -12776,6 +12788,11 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 1e02dbb1c0afbaf4aa38a3aa7325b886, type: 2}
+  sceneCamera: {fileID: 0}
+  cameraOrthoSize:
+    _useConstant: 1
+    _constantValue: 10
+    _variable: {fileID: 0}
   target: {fileID: 237424711}
 --- !u!1 &916366094
 GameObject:
