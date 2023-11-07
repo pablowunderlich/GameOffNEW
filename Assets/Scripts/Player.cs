@@ -482,7 +482,7 @@ public class Player : MonoBehaviour
         #region Pablo
 
         //im adding the jump stop event so it stops playing
-        AkSoundEngine.PostEvent("Play_Player_Jump", this.gameObject);
+        AkSoundEngine.PostEvent("Play_Player_WallJump", this.gameObject);
 
         #endregion Pablo
 
