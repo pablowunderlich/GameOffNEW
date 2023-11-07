@@ -22,7 +22,11 @@ public class GearySpawner : MonoBehaviour
         GameObject GearyToSpawn = Instantiate(Geary, transform.position, Quaternion.identity);
         Rigidbody2D RB = GearyToSpawn.GetComponent<Rigidbody2D>();
 
-        if(RB != null)
+        #region Pablo
+        //AkSoundEngine.PostEvent("Play_Gearrs", this.gameObject);
+        #endregion
+
+        if (RB != null)
         {
             if (isSpawningToLeft)
             {

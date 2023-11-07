@@ -25,6 +25,9 @@ public class Ingot : MonoBehaviour
             GameManager.Instance.SetScore(GameManager.Instance.GetScore() + 1);
             Debug.Log(GameManager.Instance.GetScore());
             Destroy(gameObject);
+            #region Pablo
+            AkSoundEngine.PostEvent("Play_Ingots", this.gameObject);
+            #endregion
         }
     }
 }

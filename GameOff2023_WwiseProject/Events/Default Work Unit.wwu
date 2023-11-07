@@ -118,6 +118,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Player_WallJump" ID="{D78AD4F8-FFC9-4385-AC0B-6AA651E1B0C8}">
+							<ChildrenList>
+								<Action Name="" ID="{12A10CB4-0B15-4B27-A216-7E27E1B11ACE}" ShortID="1041313185">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_WallJump" ID="{DCCC2DC7-E58F-4149-AA9B-2AD095E1993A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" ShortID="473650679">
@@ -132,6 +143,62 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Dash_Glide Loop_SFX_4" ID="{D762CD3E-4A09-4DE8-92E7-BB574EE25C5A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Ambient" ID="{171EF431-095E-4E08-AA00-595F1F2D55AB}" ShortID="343113046">
+					<ChildrenList>
+						<Event Name="Play_Gearrs" ID="{C0C08312-35A9-4925-A5ED-4D4539765E94}">
+							<ChildrenList>
+								<Action Name="" ID="{3461337A-EA44-4175-A5E8-A0CC8966D14A}" ShortID="92463436">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gearrs" ID="{437D1835-CBC3-4151-8407-8804F893EBE9}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Gearrs" ID="{6BFE5BD9-F032-45C0-BBCB-402526B37C83}">
+							<ChildrenList>
+								<Action Name="" ID="{C4AACE31-2D7C-488E-8061-D2C1E7828C0A}" ShortID="830778571">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Gearrs" ID="{437D1835-CBC3-4151-8407-8804F893EBE9}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Factory" ID="{8E986B0F-A934-4FB2-A903-1E1387ED0023}">
+							<ChildrenList>
+								<Action Name="" ID="{065CA6DD-A5CB-4896-A8F9-29EA9F952023}" ShortID="374243812">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Factory" ID="{381E785E-5FD5-4DF4-90D6-0D593152E020}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Collectibles_Interact" ID="{1A2E4D33-0614-42D2-8D6E-F8D26509302D}" ShortID="761524199">
+					<ChildrenList>
+						<Event Name="Play_Ingots" ID="{99F510CD-C2E6-49F7-B8F3-370D440DADF7}">
+							<ChildrenList>
+								<Action Name="" ID="{2A50BE68-9E6B-468D-BD79-7C771F43CFA2}" ShortID="147766016">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Ingots" ID="{74786D54-C13B-4551-BF8D-B3783773AD05}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
