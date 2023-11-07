@@ -13,6 +13,14 @@
 							<ObjectRef Name="Stop_Dash_Glide_Loop_SFX_4" ID="{4F3E139A-BC3F-468E-8E49-F893EEE7B326}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
 							<Position X="1" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_Gearrs" ID="{C0C08312-35A9-4925-A5ED-4D4539765E94}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Gearrs" ID="{6BFE5BD9-F032-45C0-BBCB-402526B37C83}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+							<Position X="3" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
