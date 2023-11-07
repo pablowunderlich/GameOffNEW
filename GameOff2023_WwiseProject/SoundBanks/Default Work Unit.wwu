@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{598857DE-B1DE-4715-8008-8ADFC6CC709E}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Default Work Unit" ID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Dash_Glide_Loop_SFX_4" ID="{4F3E139A-BC3F-468E-8E49-F893EEE7B326}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Player_Events" ID="{00EEA589-9F2F-46A8-8402-E27E60869025}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>

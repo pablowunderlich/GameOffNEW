@@ -118,6 +118,39 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Player_WallJump" ID="{7B5814E5-ED8A-47D2-9199-CD75FCD19972}">
+							<ChildrenList>
+								<Action Name="" ID="{B0915F33-4A89-4912-B06B-3E8DA428FCFB}" ShortID="151686099">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_WallJump" ID="{0539C7A6-88E4-4F4E-999F-DF8410792F7D}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Voice" ID="{11B84226-B98C-4243-846E-01755FBDED8C}">
+							<ChildrenList>
+								<Action Name="" ID="{F0018C66-ED66-44BD-9AB9-A8DF85148B8E}" ShortID="729862456">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Voice" ID="{6741E0F4-D95A-4B52-A482-9C10241EF76C}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Player_Floor_Hit" ID="{335BC830-367D-4270-95B3-3356FF7BE2C1}">
+							<ChildrenList>
+								<Action Name="" ID="{AC494AE7-F411-47D8-9FE0-CA1C5A007F68}" ShortID="816886411">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Floor_Hit" ID="{17F463BC-FBB0-4832-BDCA-CD92D99A1459}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" ShortID="473650679">
