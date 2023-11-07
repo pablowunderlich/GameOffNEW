@@ -120,6 +120,11 @@ public class Player : MonoBehaviour
     // This is a short time lapse where the player can jump even if they have already moved off platform. This increases responsiveness
     public FloatReference coyoteTime;
 
+    [Space(5)]
+    [Header("Time")]
+    public FloatReference InvincibilityTime;
+
+    public FloatReference blinkInterval;
     #endregion
     #region INSPECTOR_VARIABLES
     [Header("Checks")]
@@ -131,7 +136,11 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _backWallCheckPoint;
     [SerializeField] private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
 
+    [SerializeField] private Transform _enemyCheckPoint;
+    private Vector2 _enemyCheckSize;
+
     [Header("Layers and Tags")]
+    [SerializeField] private LayerMask _enemyLayer;
     [SerializeField] private LayerMask _groundLayer; //this is for if we want different layers
 
     #endregion
@@ -139,6 +148,7 @@ public class Player : MonoBehaviour
     // These variables are constant, can be changed but not during runtime
     [SerializeField]
     private Sprite _spriteReference; // reference to the player sprite
+    private SpriteRenderer _spriteRenderer;
 
     public Rigidbody2D RB { get; private set; } // Player rigidbody
 
@@ -166,6 +176,7 @@ public class Player : MonoBehaviour
     //Wall jump variables
     private float _wallJumpStartTime;
     private int _lastWallJumpDir; // check which direction the player was facing at the last wall jump
+    private float _timeSinceLastHit;
 
     #endregion
     private void Awake()
@@ -181,6 +192,7 @@ public class Player : MonoBehaviour
         }
 
         RB = GetComponent<Rigidbody2D>();
+        _spriteRenderer = transform.Find("PlayerSprite").GetComponent<SpriteRenderer>();
 
         _gravityStrength = -(2 * maxJumpHeight.Value) / Mathf.Pow(timeToMaxHeight.Value, 2);
         _gravityScale = _gravityStrength / Physics2D.gravity.y;
@@ -197,6 +209,7 @@ public class Player : MonoBehaviour
     {
         SetGravityScale(_gravityScale); // Set the gravity scale
         isFacingRight = true; //Start game with player facing right
+        _enemyCheckSize = transform.localScale;
     }
 
     // Update is called once per frame
@@ -208,6 +221,8 @@ public class Player : MonoBehaviour
         LastOnLeftWallTime -= Time.deltaTime;
         LastOnRightWallTime -= Time.deltaTime;
         LastPressedJumpTime -= Time.deltaTime;
+
+        _timeSinceLastHit += Time.deltaTime;
 
         #endregion
 
@@ -292,15 +307,34 @@ public class Player : MonoBehaviour
         }
         #endregion
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Geary")
+        #region enemy pass-through collision
+        Collider2D[] results;
+        results = Physics2D.OverlapBoxAll(_enemyCheckPoint.position, _enemyCheckSize, 0, _enemyLayer);
         {
-            currentHealth.Value -= collision.gameObject.GetComponent<GearyEnemy>().damage;
-            Debug.Log(currentHealth);   
+            foreach (Collider2D col in results)
+            {
+                if (col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+                { 
+                    if(col.gameObject.CompareTag("Geary"))
+                    {
+                        if (_timeSinceLastHit > InvincibilityTime.Value)
+                        {
+                            currentHealth.Value -= col.GetComponent<GearyEnemy>().damage;
+                            _timeSinceLastHit = 0;
+                            Debug.Log(currentHealth);
+                            StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
+
+                        }
+                        
+                    }
+                }
+            }
         }
+        #endregion
+
     }
+
+
     private void HandleJump()
     {
         if (isJumping && RB.velocity.y < 0) // if player is falling 
@@ -552,6 +586,18 @@ public class Player : MonoBehaviour
         }
 
     }
+    IEnumerator Blink(float duration, float interval)
+    {
+        float end = Time.time + duration;
+        
+            while(Time.time < end)
+            {
+                _spriteRenderer.enabled = !_spriteRenderer.enabled;
+                yield return new WaitForSeconds(interval);
+            }
+
+        _spriteRenderer.enabled = true;
+    }
 
 #region GIZMOS
 private void OnDrawGizmosSelected()
@@ -561,6 +607,8 @@ private void OnDrawGizmosSelected()
     Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(_frontWallCheckPoint.position, _wallCheckSize);
         Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
+    Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(_enemyCheckPoint.position, _enemyCheckSize);
 
 
 }
