@@ -39,7 +39,10 @@ public class GearyEnemy : MonoBehaviour
             Debug.Log("i am death");
             Destroy(gameObject, 0.5f);
             
+
         }
+
+       
  
     }
 
@@ -48,4 +51,6 @@ public class GearyEnemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
     }
+
+   
 }

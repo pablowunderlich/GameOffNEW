@@ -179,7 +179,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585021944507135914
+    m_lastTime: -8585021322975900619
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -232,6 +232,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Acid
+      guid: 8877402639f89e499e50aedd42ffe1b3
+      id: 2532590645
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Ambient
+        ObjectType: 4
+        guid: 31f41e175e09084eaa00595f1f2d55ab
+      - ElementName: Play_Acid
+        ObjectType: 3
+        guid: 8877402639f89e499e50aedd42ffe1b3
+      Path: Events\Default Work Unit\Ambient\Play_Acid
+      maxAttenuation: 0
+      maxDuration: 0.667875
+      minDuration: 0.6678542
     - name: Play_Dash_Glide_Loop_SFX_01
       guid: ba1ffe2fc5bdad4e90a8d61c5074f88f
       id: 2913963765
@@ -310,8 +330,8 @@ MonoBehaviour:
         guid: 1283c0c0a9352549a5ed4d4539765e94
       Path: Events\Default Work Unit\Ambient\Play_Gearrs
       maxAttenuation: 0
-      maxDuration: 1.3675
-      minDuration: 1.3675
+      maxDuration: 1.5349668
+      minDuration: 1.2183039
     - name: Play_Ingots
       guid: cd10f599e6c2f749b8f3370d440dadf7
       id: 4172536178
@@ -372,6 +392,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.409875
       minDuration: 0.409875
+    - name: Play_Player_Damaged
+      guid: 602b845147d0e342abd554c37ed6967e
+      id: 2301987285
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Player_Events
+        ObjectType: 4
+        guid: 89a5ee002f9fa8468402e27e60869025
+      - ElementName: Play_Player_Damaged
+        ObjectType: 3
+        guid: 602b845147d0e342abd554c37ed6967e
+      Path: Events\Default Work Unit\Player_Events\Play_Player_Damaged
+      maxAttenuation: 0
+      maxDuration: 0.8399792
+      minDuration: 0.4194375
     - name: Play_Player_Jump
       guid: ce4e1647feb02a43bca2ff5d142904d9
       id: 562256996
@@ -626,7 +666,7 @@ MonoBehaviour:
     m_lastTime: -8585026458872503762
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000700000008000000
+  ExpandedWaapiItemIds: 050000000600000007000000080000000b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

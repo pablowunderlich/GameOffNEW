@@ -8,6 +8,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	1726909165	Play_Player_Arm_Swing			\Default Work Unit\Player_Events\Play_Player_Arm_Swing	
 	2186439036	Play_Player_Pull_Lever			\Default Work Unit\Player_Events\Play_Player_Pull_Lever	
 	2187562616	Stop_Gearrs			\Default Work Unit\Ambient\Stop_Gearrs	
+	2301987285	Play_Player_Damaged			\Default Work Unit\Player_Events\Play_Player_Damaged	
+	2532590645	Play_Acid			\Default Work Unit\Ambient\Play_Acid	
 	2913963765	Play_Dash_Glide_Loop_SFX_01			\Default Work Unit\Player_Events\Play_Dash_Glide_Loop_SFX_01	
 	3228691145	Play_Player_Press_On_Pad			\Default Work Unit\Player_Events\Play_Player_Press_On_Pad	
 	3432329370	Stop_Dash_Glide_Loop_SFX_4			\Default Work Unit\Enemy_Events\Stop_Dash_Glide_Loop_SFX_4	
@@ -18,19 +20,34 @@ Event	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	24055890	Factory-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Factory-001_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Factory\Factory-001		3475864
+	32054300	Damaged-007	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-007_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-007		86496
+	41468466	Damaged-009	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-009_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-009		82228
 	61722497	Player_Button Press_SFX_10	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Button Press_SFX_10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Button_Press\Player_Button Press_SFX_10		78792
+	87523064	Damaged-012	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-012_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-012		86928
+	87743108	Damaged-002	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-002		86496
 	108288308	Player_Damage 1_SFX_2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 1_SFX_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 1_SFX_2		200944
 	121143607	Jump-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Jump-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Jump\Jump-001		21056
 	211177115	Land_SFX_2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Land_SFX_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_WallJump\Land_SFX_2		86568
 	244295874	Player_Press on pad_SFX_11	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Press on pad_SFX_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Press_On_Pad\Player_Press on pad_SFX_11		178444
 	346110309	Dash_Glide Loop_SFX_4	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Dash_Glide Loop_SFX_4_22A01561.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Dahs&Glide\Dash_Glide Loop_SFX_4		524688
+	359950720	Acid-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Acid-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-001		128324
 	466389316	Ingots-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Ingots-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collectibles_Interact\Ingots\Ingots-001		74380
+	491728714	Acid-002	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Acid-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-002		128328
 	599656409	Player_Damage 3_SFX_4	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 3_SFX_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 3_SFX_4		201296
+	604732285	Damaged-006	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-006		82548
 	611082514	Player_Damage 2_SFX_3	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 2_SFX_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 2_SFX_3		193124
+	693302685	Damaged-008	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-008_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-008		80628
 	766998527	Enemy_Turret fire_SFX_6	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Turret fire_SFX_6_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\Enemy_Turret_Fire\Enemy_Turret fire_SFX_6		263344
 	778160072	Gears-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Gears-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Gearrs\Gears-001		262656
 	779989710	Player_Land_SFX_1	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Land_SFX_1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Land\Player_Land_SFX_1		86568
 	798414008	Player_Lever pull_SFX_8	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Lever pull_SFX_8_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Pull_Lever\Player_Lever pull_SFX_8		170516
+	863198133	Damaged-003	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-003		160168
+	879079641	Damaged-004	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-004_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-004		86496
 	906798711	Player_Arm swing_SFX_0	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Arm swing_SFX_0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Arm_Swing\Player_Arm swing_SFX_0		206360
 	922165199	Player_Damage 4_SFX_5	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Player_Damage 4_SFX_5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 4_SFX_5		108012
+	962036437	Damaged-010	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-010_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-010		82148
+	998952339	Acid-003	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Acid-003_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-003		128324
+	1016834625	Damaged-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-001		83400
+	1036243180	Damaged-005	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-005_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-005		161372
+	1045332651	Damaged-011	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Mac\SFX\Damaged-011_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-011		160952
 
