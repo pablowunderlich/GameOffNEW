@@ -129,6 +129,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Player_Damaged" ID="{51842B60-D047-42E3-ABD5-54C37ED6967E}">
+							<ChildrenList>
+								<Action Name="" ID="{9E52C225-1DA5-45B0-8897-0E77D784BDB6}" ShortID="344451633">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Damaged" ID="{37D56045-DA2A-416C-8A0C-C132FA02F09E}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" ShortID="473650679">
@@ -184,6 +195,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Factory" ID="{381E785E-5FD5-4DF4-90D6-0D593152E020}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Acid" ID="{26407788-F839-499E-9E50-AEDD42FFE1B3}">
+							<ChildrenList>
+								<Action Name="" ID="{D7BDCE78-E346-4A59-8E19-F2681C9A9695}" ShortID="212542433">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Acid" ID="{6DCACFB1-86DD-4BEE-A357-2C60442B3A7A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

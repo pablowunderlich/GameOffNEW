@@ -29,7 +29,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9B29B509-7CA0-E992-3E70-CF344567209A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F809C55C-823E-B065-D05A-F00B08453FC3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -37,9 +37,25 @@
 					<ShortName>Factory-001.wav</ShortName>
 					<CachePath>SFX/Factory-001_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="32054300" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-007.wav</ShortName>
+					<CachePath>SFX/Damaged-007_10C4C929.wem</CachePath>
+				</File>
+				<File Id="41468466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-009.wav</ShortName>
+					<CachePath>SFX/Damaged-009_10C4C929.wem</CachePath>
+				</File>
 				<File Id="61722497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Button Press_SFX_10.wav</ShortName>
 					<CachePath>SFX/Player_Button Press_SFX_10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="87523064" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-012.wav</ShortName>
+					<CachePath>SFX/Damaged-012_10C4C929.wem</CachePath>
+				</File>
+				<File Id="87743108" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-002.wav</ShortName>
+					<CachePath>SFX/Damaged-002_10C4C929.wem</CachePath>
 				</File>
 				<File Id="108288308" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 1_SFX_2.wav</ShortName>
@@ -61,17 +77,33 @@
 					<ShortName>Dash_Glide Loop_SFX_4.wav</ShortName>
 					<CachePath>SFX/Dash_Glide Loop_SFX_4_22A01561.wem</CachePath>
 				</File>
+				<File Id="359950720" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Acid-001.wav</ShortName>
+					<CachePath>SFX/Acid-001_10C4C929.wem</CachePath>
+				</File>
 				<File Id="466389316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ingots-001.wav</ShortName>
 					<CachePath>SFX/Ingots-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="491728714" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Acid-002.wav</ShortName>
+					<CachePath>SFX/Acid-002_10C4C929.wem</CachePath>
 				</File>
 				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
 					<CachePath>SFX/Player_Damage 3_SFX_4_10C4C929.wem</CachePath>
 				</File>
+				<File Id="604732285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-006.wav</ShortName>
+					<CachePath>SFX/Damaged-006_10C4C929.wem</CachePath>
+				</File>
 				<File Id="611082514" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 2_SFX_3.wav</ShortName>
 					<CachePath>SFX/Player_Damage 2_SFX_3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="693302685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-008.wav</ShortName>
+					<CachePath>SFX/Damaged-008_10C4C929.wem</CachePath>
 				</File>
 				<File Id="766998527" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Turret fire_SFX_6.wav</ShortName>
@@ -89,6 +121,14 @@
 					<ShortName>Player_Lever pull_SFX_8.wav</ShortName>
 					<CachePath>SFX/Player_Lever pull_SFX_8_10C4C929.wem</CachePath>
 				</File>
+				<File Id="863198133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-003.wav</ShortName>
+					<CachePath>SFX/Damaged-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="879079641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-004.wav</ShortName>
+					<CachePath>SFX/Damaged-004_10C4C929.wem</CachePath>
+				</File>
 				<File Id="906798711" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Arm swing_SFX_0.wav</ShortName>
 					<CachePath>SFX/Player_Arm swing_SFX_0_10C4C929.wem</CachePath>
@@ -97,8 +137,35 @@
 					<ShortName>Player_Damage 4_SFX_5.wav</ShortName>
 					<CachePath>SFX/Player_Damage 4_SFX_5_10C4C929.wem</CachePath>
 				</File>
+				<File Id="962036437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-010.wav</ShortName>
+					<CachePath>SFX/Damaged-010_10C4C929.wem</CachePath>
+				</File>
+				<File Id="998952339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Acid-003.wav</ShortName>
+					<CachePath>SFX/Acid-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1016834625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-001.wav</ShortName>
+					<CachePath>SFX/Damaged-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1036243180" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-005.wav</ShortName>
+					<CachePath>SFX/Damaged-005_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1045332651" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-011.wav</ShortName>
+					<CachePath>SFX/Damaged-011_10C4C929.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2532590645" Name="Play_Acid" DurationType="OneShot" DurationMin="0.6678542" DurationMax="0.667875">
+					<MediaRefs>
+						<MediaRef Id="359950720"/>
+						<MediaRef Id="491728714"/>
+						<MediaRef Id="998952339"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2913963765" Name="Play_Dash_Glide_Loop_SFX_01" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="346110309"/>
@@ -114,7 +181,7 @@
 						<MediaRef Id="24055890"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="789689882" Name="Play_Gearrs" DurationType="OneShot" DurationMin="1.3675" DurationMax="1.3675">
+				<Event Id="789689882" Name="Play_Gearrs" DurationType="OneShot" DurationMin="1.2183039" DurationMax="1.5349668">
 					<MediaRefs>
 						<MediaRef Id="778160072"/>
 					</MediaRefs>
@@ -132,6 +199,22 @@
 				<Event Id="128901360" Name="Play_Player_Button_Press" DurationType="OneShot" DurationMin="0.409875" DurationMax="0.409875">
 					<MediaRefs>
 						<MediaRef Id="61722497"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2301987285" Name="Play_Player_Damaged" DurationType="OneShot" DurationMin="0.4194375" DurationMax="0.8399792">
+					<MediaRefs>
+						<MediaRef Id="32054300"/>
+						<MediaRef Id="41468466"/>
+						<MediaRef Id="87523064"/>
+						<MediaRef Id="87743108"/>
+						<MediaRef Id="604732285"/>
+						<MediaRef Id="693302685"/>
+						<MediaRef Id="863198133"/>
+						<MediaRef Id="879079641"/>
+						<MediaRef Id="962036437"/>
+						<MediaRef Id="1016834625"/>
+						<MediaRef Id="1036243180"/>
+						<MediaRef Id="1045332651"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="562256996" Name="Play_Player_Jump" DurationType="OneShot" DurationMin="0.126126" DurationMax="0.13362585">
@@ -173,5 +256,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4E2EB3D3-BC40-280A-93B5-70A3D2636D45}</FileHash>
+	<FileHash>{7E08CE15-6A6A-9DB6-7AC2-2C076F39674A}</FileHash>
 </SoundBanksInfo>

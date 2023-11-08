@@ -18,5 +18,8 @@ public class AcidEnemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
+        #region Pablo
+        AkSoundEngine.PostEvent("Play_Acid", this.gameObject);
+        #endregion
     }
 }
