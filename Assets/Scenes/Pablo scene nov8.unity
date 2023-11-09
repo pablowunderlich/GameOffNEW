@@ -467,6 +467,8 @@ GameObject:
   - component: {fileID: 435246566}
   - component: {fileID: 435246567}
   - component: {fileID: 435246568}
+  - component: {fileID: 435246570}
+  - component: {fileID: 435246569}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -720,6 +722,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27870fe5caf1b8498f51538198a858b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &435246569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435246562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76d2f77afde65846adab78d6c2b2bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &435246570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435246562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e436652ce94ae9439b8b3d4a1e72413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &613277967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2028,7 +2066,7 @@ GameObject:
   - component: {fileID: 842818900}
   - component: {fileID: 842818903}
   - component: {fileID: 842818904}
-  - component: {fileID: 842818902}
+  - component: {fileID: 842818905}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2102,20 +2140,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &842818902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 842818898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a76d2f77afde65846adab78d6c2b2bc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isDefaultListener: 1
-  listenerId: 0
 --- !u!114 &842818903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2164,6 +2188,20 @@ MonoBehaviour:
     _constantValue: 10
     _variable: {fileID: 11400000, guid: c32488673f34bc9469f05de14bc6bdc1, type: 2}
   target: {fileID: 435246564}
+--- !u!114 &842818905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842818898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76d2f77afde65846adab78d6c2b2bc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!1 &927569336
 GameObject:
   m_ObjectHideFlags: 0
