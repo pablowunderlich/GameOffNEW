@@ -322,14 +322,18 @@ public class Player : MonoBehaviour
                     if(col.gameObject.CompareTag("Geary"))
                     {
                         LoseLife();
+                        
+                        
                     }
                     if(col.gameObject.CompareTag("Acid"))
                     {
                         LoseLife();
+                        
                     }  
                     if(col.gameObject.CompareTag("Spikes"))
                     {
                         LoseLife();
+                       
                     }
                 }
             }
@@ -633,6 +637,9 @@ public class Player : MonoBehaviour
             currentHealth.Value -= 1; // remove a life
             _timeSinceLastHit = 0;
             Debug.Log(currentHealth);
+            #region Pablo
+            AkSoundEngine.PostEvent("Play_Player_Damaged", this.gameObject);
+            #endregion
             StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
             if (currentHealth.Value < 0)
             {

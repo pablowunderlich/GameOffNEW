@@ -21,7 +21,10 @@ public class GearyEnemy : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         RB.gravityScale = _gravityScale;
- 
+        #region Pablo
+        AkSoundEngine.PostEvent("Play_Gearrs", this.gameObject);
+        #endregion
+
     }
 
     // Update is called once per frame
@@ -38,8 +41,12 @@ public class GearyEnemy : MonoBehaviour
           
             Debug.Log("i am death");
             Destroy(gameObject, 0.5f);
+            AkSoundEngine.PostEvent("Stop_Gearrs", this.gameObject);
             
+
         }
+
+       
  
     }
 
@@ -48,4 +55,6 @@ public class GearyEnemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
     }
+
+   
 }
