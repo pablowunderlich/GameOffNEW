@@ -179,7 +179,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585021322975900619
+    m_lastTime: -8585021080580686303
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -249,7 +249,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 8877402639f89e499e50aedd42ffe1b3
       Path: Events\Default Work Unit\Ambient\Play_Acid
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.667875
       minDuration: 0.6678542
     - name: Play_Dash_Glide_Loop_SFX_01
@@ -269,7 +269,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: ba1ffe2fc5bdad4e90a8d61c5074f88f
       Path: Events\Default Work Unit\Player_Events\Play_Dash_Glide_Loop_SFX_01
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_Enemy_Turret_Fire
@@ -289,7 +289,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2aaddc0e3fd5a14bb24ce004a031f5ae
       Path: Events\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.3710834
       minDuration: 1.3710834
     - name: Play_Factory
@@ -309,7 +309,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0f6b988e34a9b24fa9031e1387ed0023
       Path: Events\Default Work Unit\Ambient\Play_Factory
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: -1
       minDuration: -1
     - name: Play_Gearrs
@@ -329,7 +329,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1283c0c0a9352549a5ed4d4539765e94
       Path: Events\Default Work Unit\Ambient\Play_Gearrs
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.5349668
       minDuration: 1.2183039
     - name: Play_Ingots
@@ -349,7 +349,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: cd10f599e6c2f749b8f3370d440dadf7
       Path: Events\Default Work Unit\Collectibles_Interact\Play_Ingots
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.39823276
       minDuration: 0.37588164
     - name: Play_Player_Arm_Swing
@@ -369,7 +369,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: afc1ce9364ac424b8ec24005d4c66e85
       Path: Events\Default Work Unit\Player_Events\Play_Player_Arm_Swing
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.0742917
       minDuration: 1.0742917
     - name: Play_Player_Button_Press
@@ -389,7 +389,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: db2837ecb189c44391cd94dc42486787
       Path: Events\Default Work Unit\Player_Events\Play_Player_Button_Press
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.409875
       minDuration: 0.409875
     - name: Play_Player_Damaged
@@ -409,7 +409,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 602b845147d0e342abd554c37ed6967e
       Path: Events\Default Work Unit\Player_Events\Play_Player_Damaged
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.8399792
       minDuration: 0.4194375
     - name: Play_Player_Jump
@@ -429,7 +429,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: ce4e1647feb02a43bca2ff5d142904d9
       Path: Events\Default Work Unit\Player_Events\Play_Player_Jump
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.13362585
       minDuration: 0.126126
     - name: Play_Player_Land
@@ -449,7 +449,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 01ebcca2b6e6e54880136868d9d6b49e
       Path: Events\Default Work Unit\Player_Events\Play_Player_Land
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.450375
       minDuration: 0.450375
     - name: Play_Player_Press_On_Pad
@@ -469,7 +469,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: fbc08b054cf91d408272e342f9f0a9cd
       Path: Events\Default Work Unit\Player_Events\Play_Player_Press_On_Pad
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.92889583
       minDuration: 0.92889583
     - name: Play_Player_Pull_Lever
@@ -489,7 +489,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 609d92fcf881e845b9b0340992fa9ef7
       Path: Events\Default Work Unit\Player_Events\Play_Player_Pull_Lever
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.8876042
       minDuration: 0.8876042
     - name: Play_Player_Take_Damage
@@ -509,7 +509,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: 92c1cb56d790ec4299c655146f5ea483
       Path: Events\Default Work Unit\Player_Events\Play_Player_Take_Damage
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 1.0479167
       minDuration: 0.5620625
     - name: Play_Player_WallJump
@@ -529,7 +529,7 @@ MonoBehaviour:
         ObjectType: 3
         guid: f8d48ad7c9ff8543ac0b6aa651e1b0c8
       Path: Events\Default Work Unit\Player_Events\Play_Player_WallJump
-      maxAttenuation: 0
+      maxAttenuation: 100
       maxDuration: 0.49113742
       minDuration: 0.463572
     - name: Player_Events
@@ -666,7 +666,7 @@ MonoBehaviour:
     m_lastTime: -8585026458872503762
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000080000000b000000
+  ExpandedWaapiItemIds: 05000000060000000700000009000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -29,7 +29,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F809C55C-823E-B065-D05A-F00B08453FC3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5C990ADD-594A-3CDD-6FE8-C3487FA58A28}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -111,7 +111,7 @@
 				</File>
 				<File Id="778160072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gears-001.wav</ShortName>
-					<CachePath>SFX/Gears-001_10C4C929.wem</CachePath>
+					<CachePath>SFX/Gears-001_41FA25B4.wem</CachePath>
 				</File>
 				<File Id="779989710" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Land_SFX_1.wav</ShortName>
@@ -159,49 +159,49 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="2532590645" Name="Play_Acid" DurationType="OneShot" DurationMin="0.6678542" DurationMax="0.667875">
+				<Event Id="2532590645" Name="Play_Acid" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6678542" DurationMax="0.667875">
 					<MediaRefs>
 						<MediaRef Id="359950720"/>
 						<MediaRef Id="491728714"/>
 						<MediaRef Id="998952339"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2913963765" Name="Play_Dash_Glide_Loop_SFX_01" DurationType="Infinite">
+				<Event Id="2913963765" Name="Play_Dash_Glide_Loop_SFX_01" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="346110309"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="616075970" Name="Play_Enemy_Turret_Fire" DurationType="OneShot" DurationMin="1.3710834" DurationMax="1.3710834">
+				<Event Id="616075970" Name="Play_Enemy_Turret_Fire" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3710834" DurationMax="1.3710834">
 					<MediaRefs>
 						<MediaRef Id="766998527"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3757240376" Name="Play_Factory" DurationType="Infinite">
+				<Event Id="3757240376" Name="Play_Factory" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24055890"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="789689882" Name="Play_Gearrs" DurationType="OneShot" DurationMin="1.2183039" DurationMax="1.5349668">
+				<Event Id="789689882" Name="Play_Gearrs" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="778160072"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4172536178" Name="Play_Ingots" DurationType="OneShot" DurationMin="0.37588164" DurationMax="0.39823276">
+				<Event Id="4172536178" Name="Play_Ingots" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.37588164" DurationMax="0.39823276">
 					<MediaRefs>
 						<MediaRef Id="466389316"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1726909165" Name="Play_Player_Arm_Swing" DurationType="OneShot" DurationMin="1.0742917" DurationMax="1.0742917">
+				<Event Id="1726909165" Name="Play_Player_Arm_Swing" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0742917" DurationMax="1.0742917">
 					<MediaRefs>
 						<MediaRef Id="906798711"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="128901360" Name="Play_Player_Button_Press" DurationType="OneShot" DurationMin="0.409875" DurationMax="0.409875">
+				<Event Id="128901360" Name="Play_Player_Button_Press" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.409875" DurationMax="0.409875">
 					<MediaRefs>
 						<MediaRef Id="61722497"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2301987285" Name="Play_Player_Damaged" DurationType="OneShot" DurationMin="0.4194375" DurationMax="0.8399792">
+				<Event Id="2301987285" Name="Play_Player_Damaged" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.4194375" DurationMax="0.8399792">
 					<MediaRefs>
 						<MediaRef Id="32054300"/>
 						<MediaRef Id="41468466"/>
@@ -217,27 +217,27 @@
 						<MediaRef Id="1045332651"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="562256996" Name="Play_Player_Jump" DurationType="OneShot" DurationMin="0.126126" DurationMax="0.13362585">
+				<Event Id="562256996" Name="Play_Player_Jump" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.126126" DurationMax="0.13362585">
 					<MediaRefs>
 						<MediaRef Id="121143607"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4249207015" Name="Play_Player_Land" DurationType="OneShot" DurationMin="0.450375" DurationMax="0.450375">
+				<Event Id="4249207015" Name="Play_Player_Land" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.450375" DurationMax="0.450375">
 					<MediaRefs>
 						<MediaRef Id="779989710"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3228691145" Name="Play_Player_Press_On_Pad" DurationType="OneShot" DurationMin="0.92889583" DurationMax="0.92889583">
+				<Event Id="3228691145" Name="Play_Player_Press_On_Pad" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.92889583" DurationMax="0.92889583">
 					<MediaRefs>
 						<MediaRef Id="244295874"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2186439036" Name="Play_Player_Pull_Lever" DurationType="OneShot" DurationMin="0.8876042" DurationMax="0.8876042">
+				<Event Id="2186439036" Name="Play_Player_Pull_Lever" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8876042" DurationMax="0.8876042">
 					<MediaRefs>
 						<MediaRef Id="798414008"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1172205655" Name="Play_Player_Take_Damage" DurationType="OneShot" DurationMin="0.5620625" DurationMax="1.0479167">
+				<Event Id="1172205655" Name="Play_Player_Take_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5620625" DurationMax="1.0479167">
 					<MediaRefs>
 						<MediaRef Id="108288308"/>
 						<MediaRef Id="599656409"/>
@@ -245,7 +245,7 @@
 						<MediaRef Id="922165199"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="937438432" Name="Play_Player_WallJump" DurationType="OneShot" DurationMin="0.463572" DurationMax="0.49113742">
+				<Event Id="937438432" Name="Play_Player_WallJump" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.463572" DurationMax="0.49113742">
 					<MediaRefs>
 						<MediaRef Id="211177115"/>
 					</MediaRefs>
@@ -256,5 +256,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{07EFBA62-6241-DE83-B643-584BE51EFB4A}</FileHash>
+	<FileHash>{8884B20C-1612-C640-BAD9-F6FAB7F9D3A0}</FileHash>
 </SoundBanksInfo>
