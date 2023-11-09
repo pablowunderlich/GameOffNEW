@@ -39,7 +39,7 @@ public class GearyEnemy : MonoBehaviour
         {
             //destroy object
           
-            Debug.Log("i am death");
+           
             Destroy(gameObject, 0.5f);
             AkSoundEngine.PostEvent("Stop_Gearrs", this.gameObject);
             
