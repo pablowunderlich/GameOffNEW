@@ -1,6 +1,7 @@
 using ScriptableObjectArchitecture;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 // This script follows the singleton pattern, meaning that i create an
@@ -172,7 +173,7 @@ public class Player : MonoBehaviour
     private float _gravityScale; // Gravity scale
     private bool _isJumpFalling; // is falling down after jump?
     private bool _isJumpCut; // is cutting the jump by releasing the jump button early
-
+    private Vector2 _spawnLocation; // spawnlocation
     //Wall jump variables
     private float _wallJumpStartTime;
     private int _lastWallJumpDir; // check which direction the player was facing at the last wall jump
@@ -250,6 +251,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    #region Handlers
     private void HandleInput()
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -428,6 +430,7 @@ public class Player : MonoBehaviour
         }
 
     }
+    #endregion
     public void SetGravityScale(float scale)
     {
         RB.gravityScale = scale;
@@ -440,7 +443,7 @@ public class Player : MonoBehaviour
             Turn();
         }
     }
-
+    #region playerActions
     private void Turn()
     {
         //store the scale and flip the character along the x axis
@@ -550,6 +553,10 @@ public class Player : MonoBehaviour
         RB.AddForce(movement * Vector2.right, ForceMode2D.Force); // apply this speed by the right vector as a force vector (DIRECTION AAAND MAGNITUDE)
 
     }
+
+    #endregion
+
+    #region OnInput
     public void OnJumpInput() // call when jump is pressed
     {
         LastPressedJumpTime = jumpInputBufferTime.Value;
@@ -564,7 +571,9 @@ public class Player : MonoBehaviour
             _isJumpCut = true;
         }
     }
-   
+
+    #endregion
+    #region CanDoAction
     private bool CanJump()
     {
         return LastOnGroundTime > 0 && !isJumping;
@@ -588,7 +597,7 @@ public class Player : MonoBehaviour
     {
         return isWallJumping && RB.velocity.y > 0; // if the player is doing a wall jump and is not yet falling
     }
-
+    #endregion
     private bool CanSlide()
     {
         // check if the player is on a wall
@@ -619,17 +628,40 @@ public class Player : MonoBehaviour
     }
     private void LoseLife()
     {
-        if (_timeSinceLastHit > InvincibilityTime.Value)
+        if (_timeSinceLastHit > InvincibilityTime.Value) // if the player can get hit
         {
-            currentHealth.Value -= 1;
+            currentHealth.Value -= 1; // remove a life
             _timeSinceLastHit = 0;
             Debug.Log(currentHealth);
             StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
+            if (currentHealth.Value < 0)
+            {
+                currentHealth.Value = 2; // set lifes back to 3 (0, 1, 2)
+                Respawn(); // respawn the player at latest checkpoint
+            }
+            else // do damage animation + sound
+            {
+                #region Pablo
+                AkSoundEngine.PostEvent("Play_Player_Damaged", this.gameObject);
+                #endregion 
+                StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
+            }
         }
 
     }
-#region GIZMOS
-private void OnDrawGizmosSelected()
+
+    #region spawning
+    Vector2 GetSpawnLocation() { return _spawnLocation; }
+    void SetSpawnLocation(Vector2 spawnLocation) { spawnLocation = _spawnLocation; }
+
+    void Respawn()
+    {
+        transform.position = _spawnLocation;
+    }
+
+    #endregion
+    #region GIZMOS
+    private void OnDrawGizmosSelected()
 {
     Gizmos.color = Color.green;
         Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
