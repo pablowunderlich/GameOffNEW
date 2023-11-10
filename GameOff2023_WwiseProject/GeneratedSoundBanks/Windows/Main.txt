@@ -14,6 +14,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3228691145	Play_Player_Press_On_Pad			\Default Work Unit\Player_Events\Play_Player_Press_On_Pad	
 	3432329370	Stop_Dash_Glide_Loop_SFX_4			\Default Work Unit\Enemy_Events\Stop_Dash_Glide_Loop_SFX_4	
 	3588747354	Stop_Player_Jump			\Default Work Unit\Player_Events\Stop_Player_Jump	
+	3659125941	Play_Level1			\Default Work Unit\Music\Play_Level1	
 	3757240376	Play_Factory			\Default Work Unit\Ambient\Play_Factory	
 	4172536178	Play_Ingots			\Default Work Unit\Collectibles_Interact\Play_Ingots	
 	4249207015	Play_Player_Land			\Default Work Unit\Player_Events\Play_Player_Land	
@@ -29,6 +30,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	121143607	Jump-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Jump-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Jump\Jump-001		21056
 	211177115	Land_SFX_2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Land_SFX_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_WallJump\Land_SFX_2		86568
 	244295874	Player_Press on pad_SFX_11	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Press on pad_SFX_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Press_On_Pad\Player_Press on pad_SFX_11		178444
+	266531675	Level1_1	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\level_1_bgm_demo_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Music\Level1\Level1\Level1_1		28790880
 	346110309	Dash_Glide Loop_SFX_4	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Dash_Glide Loop_SFX_4_22A01561.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Dahs&Glide\Dash_Glide Loop_SFX_4		524688
 	359950720	Acid-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Acid-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-001		128324
 	466389316	Ingots-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Ingots-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collectibles_Interact\Ingots\Ingots-001		74380
