@@ -85,6 +85,15 @@
 							</DuckingList>
 						</Bus>
 						<AuxBus Name="FX_sends" ID="{04E5AD5C-2BA4-478F-8CA2-8E0FFD1E440B}"/>
+						<Bus Name="Music" ID="{4FD05DF0-7E5F-4D93-8810-BDD4300F3195}">
+							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>

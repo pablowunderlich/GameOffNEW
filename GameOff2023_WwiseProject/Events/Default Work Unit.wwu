@@ -140,6 +140,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Respawn" ID="{A34D1B13-ECC0-49C5-9B9B-28678234DEC5}">
+							<ChildrenList>
+								<Action Name="" ID="{2016794F-4249-4662-B407-F68BEA740DDC}" ShortID="1003249268">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Respawn" ID="{E5040063-90B8-48BE-A634-7144D4D0E9DA}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" ShortID="473650679">
@@ -221,6 +232,35 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Ingots" ID="{74786D54-C13B-4551-BF8D-B3783773AD05}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{CB4623E8-8333-45DF-8FA0-A3AE3F17BFE1}" ShortID="1021492035">
+					<ChildrenList>
+						<Event Name="Play_Level1" ID="{6D8795F2-16B2-4E15-BD22-81E6B1A9C834}">
+							<ChildrenList>
+								<Action Name="" ID="{4E8AA866-6B0D-4633-A0B0-24DC34CEB20C}" ShortID="591751595">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level1" ID="{BD4E8095-07BD-45EF-BA0A-46ADDFA5CC21}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Level1" ID="{D3C8DD7B-0981-4D02-B923-277AD8FEA295}">
+							<ChildrenList>
+								<Action Name="" ID="{94D09C6F-2CDC-49E7-B73D-89B6D6A08328}" ShortID="841684009">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level1" ID="{BD4E8095-07BD-45EF-BA0A-46ADDFA5CC21}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6325B1A4-3476-EE04-DF2F-3D64A4AF1491}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{79463FBD-AD38-228F-CFF7-6A0981740610}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -24,12 +24,13 @@
 				<Bus Id="1069431850" Name="Player"/>
 				<Bus Id="2804607001" Name="Collectibles_Interact"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5C990ADD-594A-3CDD-6FE8-C3487FA58A28}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7C797C7D-3315-5E37-13A2-A976EE412373}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -65,6 +66,10 @@
 					<ShortName>Jump-001.wav</ShortName>
 					<CachePath>SFX/Jump-001_10C4C929.wem</CachePath>
 				</File>
+				<File Id="186984586" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Respawn-001.wav</ShortName>
+					<CachePath>SFX/Player_Respawn-001_10C4C929.wem</CachePath>
+				</File>
 				<File Id="211177115" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Land_SFX_2.wav</ShortName>
 					<CachePath>SFX/Land_SFX_2_10C4C929.wem</CachePath>
@@ -88,6 +93,10 @@
 				<File Id="491728714" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-002.wav</ShortName>
 					<CachePath>SFX/Acid-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="592516107" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level_1_bgm_demo_v2.wav</ShortName>
+					<CachePath>SFX/level_1_bgm_demo_v2_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
@@ -191,6 +200,11 @@
 						<MediaRef Id="466389316"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3659125941" Name="Play_Level1" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="592516107"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1726909165" Name="Play_Player_Arm_Swing" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0742917" DurationMax="1.0742917">
 					<MediaRefs>
 						<MediaRef Id="906798711"/>
@@ -250,11 +264,17 @@
 						<MediaRef Id="211177115"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="365318234" Name="Play_Respawn" MaxAttenuation="100" DurationType="OneShot" DurationMin="6.5197916" DurationMax="6.5197916">
+					<MediaRefs>
+						<MediaRef Id="186984586"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439791" Name="Stop_Level1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8884B20C-1612-C640-BAD9-F6FAB7F9D3A0}</FileHash>
+	<FileHash>{66884E25-AC1A-6D66-78B2-9D904E47E057}</FileHash>
 </SoundBanksInfo>
