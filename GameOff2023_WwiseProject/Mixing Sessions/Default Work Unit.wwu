@@ -11,6 +11,15 @@
 						<ObjectRef Name="Player" ID="{21503908-381D-4E27-9923-7DEF7BB54FC9}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
 					</ObjectList>
 				</MixingSession>
+				<MixingSession Name="mixing sesh" ID="{985D7277-912D-49C2-8B48-113C4266E172}">
+					<ObjectList>
+						<ObjectRef Name="Ambient" ID="{7AA21CE8-BB3E-49B0-AC18-DDA45CC7CC6F}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+						<ObjectRef Name="Collectibles_Interact" ID="{C5EAED56-B5C5-4D16-8D32-1A33E1021CCA}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+						<ObjectRef Name="Music" ID="{8EECEBBD-8020-4940-9ED4-33554EEF8E39}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+						<ObjectRef Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+						<ObjectRef Name="Player" ID="{21503908-381D-4E27-9923-7DEF7BB54FC9}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+					</ObjectList>
+				</MixingSession>
 			</ChildrenList>
 		</WorkUnit>
 	</MixingSessions>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6325B1A4-3476-EE04-DF2F-3D64A4AF1491}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{35A454DA-8D9D-3EFE-656D-820E826673F3}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -24,12 +24,13 @@
 				<Bus Id="1069431850" Name="Player"/>
 				<Bus Id="2804607001" Name="Collectibles_Interact"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
 			</Busses>
 			<AuxBusses>
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5C990ADD-594A-3CDD-6FE8-C3487FA58A28}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C371246E-F730-BAE9-7A41-05B71FAD238D}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -72,6 +73,10 @@
 				<File Id="244295874" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Press on pad_SFX_11.wav</ShortName>
 					<CachePath>SFX/Player_Press on pad_SFX_11_10C4C929.wem</CachePath>
+				</File>
+				<File Id="266531675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level_1_bgm_demo_v2.wav</ShortName>
+					<CachePath>SFX/level_1_bgm_demo_v2_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="346110309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dash_Glide Loop_SFX_4.wav</ShortName>
@@ -191,6 +196,11 @@
 						<MediaRef Id="466389316"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3659125941" Name="Play_Level1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="266531675"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1726909165" Name="Play_Player_Arm_Swing" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0742917" DurationMax="1.0742917">
 					<MediaRefs>
 						<MediaRef Id="906798711"/>
@@ -256,5 +266,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8884B20C-1612-C640-BAD9-F6FAB7F9D3A0}</FileHash>
+	<FileHash>{2A9E3FC4-E8EF-144A-BCAF-E4B0382E56AE}</FileHash>
 </SoundBanksInfo>
