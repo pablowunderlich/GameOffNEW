@@ -640,7 +640,7 @@ public class Player : MonoBehaviour
             #region Pablo
             AkSoundEngine.PostEvent("Play_Player_Damaged", this.gameObject);
             #endregion
-            if (currentHealth.Value < 1)
+            if (currentHealth.Value < 0)
             {
                 currentHealth.Value = 2; // set lifes back to 3 (0, 1, 2)
                 Respawn(); // respawn the player at latest checkpoint
@@ -660,7 +660,7 @@ public class Player : MonoBehaviour
     Vector2 GetSpawnLocation() { return _spawnLocation; }
     public void SetSpawnLocation(Vector2 spawnLocation) { _spawnLocation = spawnLocation; }
 
-    void Respawn()
+    public void Respawn()
     {
         transform.position = GetSpawnLocation();
     }
