@@ -78,6 +78,10 @@
 					<ShortName>Player_Press on pad_SFX_11.wav</ShortName>
 					<CachePath>SFX/Player_Press on pad_SFX_11_10C4C929.wem</CachePath>
 				</File>
+				<File Id="266531675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level_1_bgm_demo_v2.wav</ShortName>
+					<CachePath>SFX/level_1_bgm_demo_v2_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="346110309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dash_Glide Loop_SFX_4.wav</ShortName>
 					<CachePath>SFX/Dash_Glide Loop_SFX_4_22A01561.wem</CachePath>
