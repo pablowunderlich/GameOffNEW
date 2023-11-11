@@ -5,22 +5,21 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private bool _showSprite;
-    SpriteRenderer spriteRenderer = null;
-    private Rigidbody2D rb;
+    [SerializeField] private bool _showSprite; // bool to check if they should see sprite 
+    SpriteRenderer spriteRenderer = null; // 
+  
     void Start()
     {
-        spriteRenderer = transform.Find("SpawnerSprite").GetComponent<SpriteRenderer>();
+        spriteRenderer = transform.Find("SpawnerSprite").GetComponent<SpriteRenderer>(); // locate the sprite
     }
 
     // Update is called once per frame
     void Update()
     {
         ShowSprite();
-        rb = GetComponent<Rigidbody2D>();
     }
 
-    void ShowSprite()
+    void ShowSprite() // enable or disable the sprite
     {
         if (_showSprite)
         {
@@ -32,7 +31,7 @@ public class Checkpoint : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col) // check what version of this object was hit by player
     {
         if (col.GetComponent<Player>())
         {

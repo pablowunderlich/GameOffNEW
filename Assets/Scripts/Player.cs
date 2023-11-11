@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 {
 
     public static Player Instance { get; private set; } // Instance of the player that can be accessed in the entire project
-
+    // if you want to quickly look for a function, just use ctrl F
     #region RUNTIME_VARIABLES
     // These variables can be changed during runtime for testing purposes. They can also be accessed independently from this script
     [Header("Running")]
@@ -180,6 +180,8 @@ public class Player : MonoBehaviour
     private float _timeSinceLastHit;
 
     #endregion
+
+    #region Awake&Start
     private void Awake()
     {
         if (Instance == null) // check if there is not already an instance of this class in the scene
@@ -214,7 +216,8 @@ public class Player : MonoBehaviour
         transform.position = _spawnLocation;
 
     }
-
+    #endregion
+    #region Update&FixedUpdate
     // Update is called once per frame
     void Update()
     {
@@ -252,6 +255,7 @@ public class Player : MonoBehaviour
             Slide();
         }
     }
+    #endregion
 
     #region Handlers
     private void HandleInput()
@@ -435,18 +439,6 @@ public class Player : MonoBehaviour
 
     }
     #endregion
-    public void SetGravityScale(float scale)
-    {
-        RB.gravityScale = scale;
-    }
-
-    public void CheckDirectionToFace(bool IsMovingRight)
-    {
-        if (IsMovingRight != isFacingRight)
-        {
-            Turn();
-        }
-    }
     #region playerActions
     private void Turn()
     {
@@ -559,7 +551,6 @@ public class Player : MonoBehaviour
     }
 
     #endregion
-
     #region OnInput
     public void OnJumpInput() // call when jump is pressed
     {
@@ -601,7 +592,7 @@ public class Player : MonoBehaviour
     {
         return isWallJumping && RB.velocity.y > 0; // if the player is doing a wall jump and is not yet falling
     }
-    #endregion
+    
     private bool CanSlide()
     {
         // check if the player is on a wall
@@ -618,6 +609,8 @@ public class Player : MonoBehaviour
         }
 
     }
+    #endregion
+    #region taking damage and death
     IEnumerator Blink(float duration, float interval)
     {
         float end = Time.time + duration;
@@ -655,7 +648,7 @@ public class Player : MonoBehaviour
         }
 
     }
-
+    #endregion
     #region spawning
     Vector2 GetSpawnLocation() { return _spawnLocation; }
     public void SetSpawnLocation(Vector2 spawnLocation) { _spawnLocation = spawnLocation; }
@@ -666,6 +659,7 @@ public class Player : MonoBehaviour
     }
 
     #endregion
+
     #region GIZMOS
     private void OnDrawGizmosSelected()
     {
@@ -680,6 +674,18 @@ public class Player : MonoBehaviour
 
     }
     #endregion
+    public void SetGravityScale(float scale)
+    {
+        RB.gravityScale = scale;
+    }
+
+    public void CheckDirectionToFace(bool IsMovingRight)
+    {
+        if (IsMovingRight != isFacingRight)
+        {
+            Turn();
+        }
+    }
 }
 
 

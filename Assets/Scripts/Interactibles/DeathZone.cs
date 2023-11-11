@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision) // check if player collides, if so respawn the player and set it's health value to max
     {
         if(collision.GetComponent<Player>())
         {
