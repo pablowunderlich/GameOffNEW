@@ -29,8 +29,10 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_PULL_LEVER = 2186439036U;
         static const AkUniqueID PLAY_PLAYER_TAKE_DAMAGE = 1172205655U;
         static const AkUniqueID PLAY_PLAYER_WALLJUMP = 937438432U;
+        static const AkUniqueID PLAY_RESPAWN = 365318234U;
         static const AkUniqueID STOP_DASH_GLIDE_LOOP_SFX_4 = 3432329370U;
         static const AkUniqueID STOP_GEARRS = 2187562616U;
+        static const AkUniqueID STOP_LEVEL1 = 1761439791U;
         static const AkUniqueID STOP_PLAYER_JUMP = 3588747354U;
     } // namespace EVENTS
 
