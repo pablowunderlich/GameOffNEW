@@ -10,6 +10,7 @@ TagManager:
   - StartPoint
   - CheckPoint
   - EndPoint
+  - Bullet
   layers:
   - Default
   - TransparentFX

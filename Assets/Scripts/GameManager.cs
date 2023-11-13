@@ -9,10 +9,11 @@ public class GameManager : MonoBehaviour
 
         
 
-private float _score;
+    private float _score; // here for now, might move to a different location if score is levelBound
 
     private void Awake()
     {
+        #region simpleton stuff
         if (Instance == null)
         {
             Instance = this;
@@ -23,6 +24,7 @@ private float _score;
         }
 
         DontDestroyOnLoad(gameObject);
+        #endregion
     }
     void Start()
     {
@@ -35,6 +37,8 @@ private float _score;
         
     }
 
+    #region getters and setters
     public float GetScore() { return _score; }
     public void SetScore(float newScore) { _score = newScore; }
+    #endregion
 }

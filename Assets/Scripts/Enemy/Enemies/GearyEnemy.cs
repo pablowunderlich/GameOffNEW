@@ -6,11 +6,7 @@ using UnityEngine.UIElements;
 
 public class GearyEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] private float _velocity;
-    [SerializeField] private Vector2 _knockBack;
     [SerializeField] private float _gravityScale;
-    public int damage;
 
     public Transform groundCheck;
     public Vector2 groundCheckSize;
