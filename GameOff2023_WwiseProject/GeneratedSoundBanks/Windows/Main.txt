@@ -1,13 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	128901360	Play_Player_Button_Press			\Default Work Unit\Player_Events\Play_Player_Button_Press	
-	365318234	Play_Respawn			\Default Work Unit\Player_Events\Play_Respawn	
 	562256996	Play_Player_Jump			\Default Work Unit\Player_Events\Play_Player_Jump	
 	616075970	Play_Enemy_Turret_Fire			\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire	
 	789689882	Play_Gearrs			\Default Work Unit\Ambient\Play_Gearrs	
 	937438432	Play_Player_WallJump			\Default Work Unit\Player_Events\Play_Player_WallJump	
 	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player_Events\Play_Player_Take_Damage	
 	1726909165	Play_Player_Arm_Swing			\Default Work Unit\Player_Events\Play_Player_Arm_Swing	
-	1761439791	Stop_Level1			\Default Work Unit\Music\Stop_Level1	
 	2186439036	Play_Player_Pull_Lever			\Default Work Unit\Player_Events\Play_Player_Pull_Lever	
 	2187562616	Stop_Gearrs			\Default Work Unit\Ambient\Stop_Gearrs	
 	2301987285	Play_Player_Damaged			\Default Work Unit\Player_Events\Play_Player_Damaged	
@@ -30,7 +28,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	87743108	Damaged-002	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-002		86496
 	108288308	Player_Damage 1_SFX_2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 1_SFX_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 1_SFX_2		200944
 	121143607	Jump-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Jump-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Jump\Jump-001		21056
-	186984586	Player_Respawn-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Respawn-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Respawn\Player_Respawn-001		1251896
 	211177115	Land_SFX_2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Land_SFX_2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_WallJump\Land_SFX_2		86568
 	244295874	Player_Press on pad_SFX_11	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Press on pad_SFX_11_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Press_On_Pad\Player_Press on pad_SFX_11		178444
 	266531675	Level1_1	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\level_1_bgm_demo_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Music\Level1\Level1\Level1_1		28790880
@@ -38,7 +35,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	359950720	Acid-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Acid-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-001		128324
 	466389316	Ingots-001	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Ingots-001_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collectibles_Interact\Ingots\Ingots-001		74380
 	491728714	Acid-002	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Acid-002_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-002		128328
-	592516107	level_1_bgm_demo_v2	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\level_1_bgm_demo_v2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Music\Level1\level_1_bgm_demo_v2\level_1_bgm_demo_v2		28790880
 	599656409	Player_Damage 3_SFX_4	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 3_SFX_4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 3_SFX_4		201296
 	604732285	Damaged-006	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-006_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-006		82548
 	611082514	Player_Damage 2_SFX_3	C:\Users\guate\Desktop\GitLab Files\GameOff2023\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 2_SFX_3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 2_SFX_3		193124

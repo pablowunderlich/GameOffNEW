@@ -56,13 +56,14 @@
 						<Bus Name="Collectibles_Interact" ID="{C5EAED56-B5C5-4D16-8D32-1A33E1021CCA}"/>
 						<Bus Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}"/>
 						<AuxBus Name="FX_sends" ID="{04E5AD5C-2BA4-478F-8CA2-8E0FFD1E440B}"/>
-						<Bus Name="Music" ID="{4FD05DF0-7E5F-4D93-8810-BDD4300F3195}">
+						<Bus Name="Music" ID="{8EECEBBD-8020-4940-9ED4-33554EEF8E39}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
 										<Value>-12</Value>
 									</ValueList>
 								</Property>
+								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 						</Bus>
 					</ChildrenList>
