@@ -27,6 +27,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_PLAYER_PRESS_ON_PAD = 3228691145U;
         static const AkUniqueID PLAY_PLAYER_PULL_LEVER = 2186439036U;
+        static const AkUniqueID PLAY_PLAYER_RESPAWN = 4238880044U;
         static const AkUniqueID PLAY_PLAYER_TAKE_DAMAGE = 1172205655U;
         static const AkUniqueID PLAY_PLAYER_WALLJUMP = 937438432U;
         static const AkUniqueID STOP_DASH_GLIDE_LOOP_SFX_4 = 3432329370U;

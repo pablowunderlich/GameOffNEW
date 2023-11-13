@@ -64,6 +64,11 @@
 									</ValueList>
 								</Property>
 								<Property Name="RecoveryTime" Type="Real64" Value="0.5"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 						</Bus>
 					</ChildrenList>

@@ -663,6 +663,9 @@ public class Player : MonoBehaviour
     public void Respawn()
     {
         transform.position = GetSpawnLocation();
+        #region Pablo
+        AkSoundEngine.PostEvent("Play_Player_Respawn", this.gameObject);
+        #endregion
     }
 
     #endregion

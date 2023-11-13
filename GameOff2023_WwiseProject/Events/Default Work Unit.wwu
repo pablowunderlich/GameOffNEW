@@ -140,6 +140,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Player_Respawn" ID="{A5B833C5-513B-4276-B99D-D410A97287D6}">
+							<ChildrenList>
+								<Action Name="" ID="{93AA11EC-71F7-4DA7-9CAF-69B456E929C9}" ShortID="605433659">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Respawn" ID="{10BE5534-4708-445E-B4C7-AC188FB6706E}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" ShortID="473650679">

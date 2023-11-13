@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{35A454DA-8D9D-3EFE-656D-820E826673F3}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9DA18CE9-DE40-4376-0546-9D78903536A8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -30,7 +30,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C371246E-F730-BAE9-7A41-05B71FAD238D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{202F2149-A720-7203-112A-1C141F5D912F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -49,6 +49,10 @@
 				<File Id="61722497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Button Press_SFX_10.wav</ShortName>
 					<CachePath>SFX/Player_Button Press_SFX_10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="73350191" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Respawn-001.wav</ShortName>
+					<CachePath>SFX/Player_Respawn-001_88D1C15B.wem</CachePath>
 				</File>
 				<File Id="87523064" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-012.wav</ShortName>
@@ -247,6 +251,11 @@
 						<MediaRef Id="798414008"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4238880044" Name="Play_Player_Respawn" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.7476912" DurationMax="3.7476912">
+					<MediaRefs>
+						<MediaRef Id="73350191"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1172205655" Name="Play_Player_Take_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5620625" DurationMax="1.0479167">
 					<MediaRefs>
 						<MediaRef Id="108288308"/>
@@ -266,5 +275,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{2A9E3FC4-E8EF-144A-BCAF-E4B0382E56AE}</FileHash>
+	<FileHash>{C7C819A4-B8CD-0A14-FBA2-E424AC73D87A}</FileHash>
 </SoundBanksInfo>
