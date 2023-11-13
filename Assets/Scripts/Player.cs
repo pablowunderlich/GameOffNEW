@@ -340,6 +340,10 @@ public class Player : MonoBehaviour
                     LoseLife();
 
                 }
+                if(col.gameObject.CompareTag("Bullet"))
+                {
+                    LoseLife();
+                }
 
             }
         }

@@ -38,11 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e77fbde5329104bb2b761abb384a5ec
     GuidInternal: 
-
-    m_lastTime: -8585020203376064671
-
-
-
+    m_lastTime: -8585016895403192007
     List:
     - name: Ambient
       guid: e81ca27a3ebbb049ac18dda45cc7cc6f
@@ -200,11 +196,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-
-    
-
-    m_lastTime: -8585020409179492870
-
+    m_lastTime: -8585016895409692504
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -728,14 +720,7 @@ MonoBehaviour:
     m_lastTime: -8585028209670546877
     List: []
   ExpandedFileSystemItemIds: 
-
-  ExpandedWaapiItemIds: 050000000600000007000000090000000d0000000e00000019000000
-
-
-
- 
- 
-
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
