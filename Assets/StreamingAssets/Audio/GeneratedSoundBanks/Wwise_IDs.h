@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID PLAY_FACTORY = 3757240376U;
         static const AkUniqueID PLAY_GEARRS = 789689882U;
         static const AkUniqueID PLAY_INGOTS = 4172536178U;
+        static const AkUniqueID PLAY_LEVEL1 = 3659125941U;
         static const AkUniqueID PLAY_PLAYER_ARM_SWING = 1726909165U;
         static const AkUniqueID PLAY_PLAYER_BUTTON_PRESS = 128901360U;
         static const AkUniqueID PLAY_PLAYER_DAMAGED = 2301987285U;
@@ -44,6 +45,7 @@ namespace AK
         static const AkUniqueID AMBIENT = 77978275U;
         static const AkUniqueID COLLECTIBLES_INTERACT = 2804607001U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID NPCS = 833916109U;
         static const AkUniqueID PLAYER = 1069431850U;
     } // namespace BUSSES
