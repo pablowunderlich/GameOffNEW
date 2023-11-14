@@ -19,6 +19,7 @@ public class BulletSpawner : MonoBehaviour
     {
         GameObject BulletToSpawn = Instantiate(Bullet, transform.position, Quaternion.identity);
         Rigidbody2D RB = BulletToSpawn.GetComponent<Rigidbody2D>();
+        AkSoundEngine.PostEvent("Play_Enemy_Turret_Fire_01", this.gameObject);
 
         if (RB != null)
         {

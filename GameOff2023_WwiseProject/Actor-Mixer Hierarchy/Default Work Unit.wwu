@@ -747,6 +747,13 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Player_Respawn" ID="{10BE5534-4708-445E-B4C7-AC188FB6706E}" ShortID="587873705">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
@@ -756,7 +763,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Player_Respawn-001" ID="{09D39386-02E1-4C30-AE06-3D07A30766DE}" ShortID="452441932">
+								<Sound Name="Player_Respawn" ID="{BB1A697F-7075-4B52-9824-775651ABAEC8}" ShortID="822753901">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
@@ -766,21 +773,16 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player_Respawn-001" ID="{33F08B1A-4A6A-42DA-98DE-B212F0ABA78E}">
-											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="3.74769115120276"/>
-												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.74769115120276"/>
-											</PropertyList>
+										<AudioFileSource Name="Player_Respawn" ID="{BFA0CDDB-39D0-418B-B781-881B2B0A756D}">
 											<Language>SFX</Language>
-											<AudioFile>Player_Respawn-001.wav</AudioFile>
+											<AudioFile>Player_Respawn.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="73350191"/>
+												<MediaID ID="499161104"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player_Respawn-001" ID="{33F08B1A-4A6A-42DA-98DE-B212F0ABA78E}" Platform="Linked"/>
+										<ActiveSource Name="Player_Respawn" ID="{BFA0CDDB-39D0-418B-B781-881B2B0A756D}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
