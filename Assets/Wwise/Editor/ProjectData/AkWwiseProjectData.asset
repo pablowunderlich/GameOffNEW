@@ -196,7 +196,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585016985380376843
+    m_lastTime: -8585016752291703758
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -323,6 +323,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2aaddc0e3fd5a14bb24ce004a031f5ae
       Path: Events\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire
+      maxAttenuation: 100
+      maxDuration: 1.3710834
+      minDuration: 1.3710834
+    - name: Play_Enemy_Turret_Fire_01
+      guid: 448e8b0ac6d55a4f88b712c6fc4141b6
+      id: 3364672736
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_Enemy_Turret_Fire_01
+        ObjectType: 3
+        guid: 448e8b0ac6d55a4f88b712c6fc4141b6
+      Path: Events\Default Work Unit\Enemy_Events\Play_Enemy_Turret_Fire_01
       maxAttenuation: 100
       maxDuration: 1.3710834
       minDuration: 1.3710834
@@ -564,8 +584,8 @@ MonoBehaviour:
         guid: c533b8a53b517642b99dd410a97287d6
       Path: Events\Default Work Unit\Player_Events\Play_Player_Respawn
       maxAttenuation: 100
-      maxDuration: 3.7476912
-      minDuration: 3.7476912
+      maxDuration: 0.40014583
+      minDuration: 0.40014583
     - name: Play_Player_Take_Damage
       guid: 92c1cb56d790ec4299c655146f5ea483
       id: 1172205655
@@ -740,7 +760,7 @@ MonoBehaviour:
     m_lastTime: -8585026458872503762
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: fc000000fd00000002010000
+  ExpandedWaapiItemIds: 05000000060000000800000009000000fc000000fd00000002010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

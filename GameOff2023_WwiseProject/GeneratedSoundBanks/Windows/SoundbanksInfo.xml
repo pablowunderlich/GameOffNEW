@@ -30,7 +30,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{202F2149-A720-7203-112A-1C141F5D912F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F1FFCB04-8604-9817-1A72-0B05BB2ACBD3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -49,10 +49,6 @@
 				<File Id="61722497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Button Press_SFX_10.wav</ShortName>
 					<CachePath>SFX/Player_Button Press_SFX_10_10C4C929.wem</CachePath>
-				</File>
-				<File Id="73350191" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player_Respawn-001.wav</ShortName>
-					<CachePath>SFX/Player_Respawn-001_88D1C15B.wem</CachePath>
 				</File>
 				<File Id="87523064" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-012.wav</ShortName>
@@ -97,6 +93,10 @@
 				<File Id="491728714" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-002.wav</ShortName>
 					<CachePath>SFX/Acid-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="499161104" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Respawn.wav</ShortName>
+					<CachePath>SFX/Player_Respawn_10C4C929.wem</CachePath>
 				</File>
 				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
@@ -185,6 +185,11 @@
 						<MediaRef Id="766998527"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3364672736" Name="Play_Enemy_Turret_Fire_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3710834" DurationMax="1.3710834">
+					<MediaRefs>
+						<MediaRef Id="766998527"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3757240376" Name="Play_Factory" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24055890"/>
@@ -251,9 +256,9 @@
 						<MediaRef Id="798414008"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4238880044" Name="Play_Player_Respawn" MaxAttenuation="100" DurationType="OneShot" DurationMin="3.7476912" DurationMax="3.7476912">
+				<Event Id="4238880044" Name="Play_Player_Respawn" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.40014583" DurationMax="0.40014583">
 					<MediaRefs>
-						<MediaRef Id="73350191"/>
+						<MediaRef Id="499161104"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1172205655" Name="Play_Player_Take_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5620625" DurationMax="1.0479167">
@@ -275,5 +280,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C7C819A4-B8CD-0A14-FBA2-E424AC73D87A}</FileHash>
+	<FileHash>{8685F613-A367-71B3-3333-8F307EEEA7BB}</FileHash>
 </SoundBanksInfo>

@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID PLAY_ACID = 2532590645U;
         static const AkUniqueID PLAY_DASH_GLIDE_LOOP_SFX_01 = 2913963765U;
         static const AkUniqueID PLAY_ENEMY_TURRET_FIRE = 616075970U;
+        static const AkUniqueID PLAY_ENEMY_TURRET_FIRE_01 = 3364672736U;
         static const AkUniqueID PLAY_FACTORY = 3757240376U;
         static const AkUniqueID PLAY_GEARRS = 789689882U;
         static const AkUniqueID PLAY_INGOTS = 4172536178U;
