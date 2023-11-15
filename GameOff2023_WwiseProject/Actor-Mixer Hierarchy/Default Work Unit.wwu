@@ -805,19 +805,60 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Enemy_Turret_Fire" ID="{D7C09821-B2F0-4FE5-84AF-4E0D114CDE90}" ShortID="84983765">
+						<RandomSequenceContainer Name="NPC_TurretFire" ID="{E5091B15-4148-412B-98C7-6AB9F16BDA3A}" ShortID="291334335">
 							<PropertyList>
-								<Property Name="MaxSoundPerInstance" Type="int16">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
-								</Property>
-								<Property Name="UseMaxSoundPerInstance" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="2D Ambient" ID="{F64D3A71-CC79-40AB-BA95-48BE7A83A7A0}" WorkUnitID="{EBEB918F-F42A-45A1-BBB6-E18B92720108}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Player" ID="{21503908-381D-4E27-9923-7DEF7BB54FC9}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Turret_Rivet" ID="{037B7EDF-620C-4301-B6AA-8413E63BFC62}" ShortID="838408550">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="2D Ambient" ID="{F64D3A71-CC79-40AB-BA95-48BE7A83A7A0}" WorkUnitID="{EBEB918F-F42A-45A1-BBB6-E18B92720108}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Turret_Rivet" ID="{E1AFD7EC-4F77-4916-9C07-6EB7D49E9373}">
+											<Language>SFX</Language>
+											<AudioFile>Turret_Rivet.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="200669082"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Turret_Rivet" ID="{E1AFD7EC-4F77-4916-9C07-6EB7D49E9373}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Turret_Rivet" ID="{037B7EDF-620C-4301-B6AA-8413E63BFC62}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="NPC_BullerHit" ID="{9266D288-9216-4BC4-961F-C32E38C2DC8B}" ShortID="32909935">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
@@ -827,26 +868,116 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Enemy_Turret fire_SFX_6" ID="{5CE30B46-4A40-4425-BA77-98BD82B28B71}" ShortID="47732013">
+								<Sound Name="BulletExplode-001" ID="{A40798F6-CC3F-4AD4-B328-0F661535AF6C}" ShortID="790420868">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="2D Ambient" ID="{F64D3A71-CC79-40AB-BA95-48BE7A83A7A0}" WorkUnitID="{EBEB918F-F42A-45A1-BBB6-E18B92720108}"/>
+										</Reference>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+											<ObjectRef Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Player_Turret fire_SFX_6" ID="{EF793121-2F45-46D4-9759-AE187E21A9B5}">
+										<AudioFileSource Name="BulletExplode-001" ID="{A1A93EF9-3125-41DD-9709-0C5D255C5E2F}">
 											<Language>SFX</Language>
-											<AudioFile>Player_Turret fire_SFX_6.wav</AudioFile>
+											<AudioFile>BulletExplode-001.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="766998527"/>
+												<MediaID ID="123732449"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Player_Turret fire_SFX_6" ID="{EF793121-2F45-46D4-9759-AE187E21A9B5}" Platform="Linked"/>
+										<ActiveSource Name="BulletExplode-001" ID="{A1A93EF9-3125-41DD-9709-0C5D255C5E2F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BulletExplode-003" ID="{26A36052-7AE1-40B5-BC30-B812D1362A1C}" ShortID="396935537">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="2D Ambient" ID="{F64D3A71-CC79-40AB-BA95-48BE7A83A7A0}" WorkUnitID="{EBEB918F-F42A-45A1-BBB6-E18B92720108}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BulletExplode-003" ID="{C6440AAA-DED5-442C-88C9-A4939F4B5BE3}">
+											<Language>SFX</Language>
+											<AudioFile>BulletExplode-003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="998468921"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BulletExplode-003" ID="{C6440AAA-DED5-442C-88C9-A4939F4B5BE3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BulletExplode-002" ID="{FB6B2CB2-DF17-4128-AD46-5F25A1C8DD37}" ShortID="697551565">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="2D Ambient" ID="{F64D3A71-CC79-40AB-BA95-48BE7A83A7A0}" WorkUnitID="{EBEB918F-F42A-45A1-BBB6-E18B92720108}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BulletExplode-002" ID="{805EFC2C-D355-47D6-8CEC-D8987D209B58}">
+											<Language>SFX</Language>
+											<AudioFile>BulletExplode-002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="934996487"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BulletExplode-002" ID="{805EFC2C-D355-47D6-8CEC-D8987D209B58}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="BulletExplode-004" ID="{1A970E13-685A-4BDC-AA8C-B5AC7D655524}" ShortID="980320590">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="2D Ambient" ID="{F64D3A71-CC79-40AB-BA95-48BE7A83A7A0}" WorkUnitID="{EBEB918F-F42A-45A1-BBB6-E18B92720108}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="NPCs" ID="{6E15AE3A-BAF2-4356-B912-96258F9D6876}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="BulletExplode-004" ID="{DC3E2106-D530-464B-BF2C-BCD130674BC8}">
+											<Language>SFX</Language>
+											<AudioFile>BulletExplode-004.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="888702899"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="BulletExplode-004" ID="{DC3E2106-D530-464B-BF2C-BCD130674BC8}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

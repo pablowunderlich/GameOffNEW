@@ -196,7 +196,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585016752291703758
+    m_lastTime: -8585015888765045308
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -323,29 +323,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2aaddc0e3fd5a14bb24ce004a031f5ae
       Path: Events\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire
-      maxAttenuation: 100
-      maxDuration: 1.3710834
-      minDuration: 1.3710834
-    - name: Play_Enemy_Turret_Fire_01
-      guid: 448e8b0ac6d55a4f88b712c6fc4141b6
-      id: 3364672736
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 24a1bccfa938e34192cf38a8bf5cf67d
-      - ElementName: Enemy_Events
-        ObjectType: 4
-        guid: e8d1a7d816b5344e993ff1d291aa25f3
-      - ElementName: Play_Enemy_Turret_Fire_01
-        ObjectType: 3
-        guid: 448e8b0ac6d55a4f88b712c6fc4141b6
-      Path: Events\Default Work Unit\Enemy_Events\Play_Enemy_Turret_Fire_01
-      maxAttenuation: 100
-      maxDuration: 1.3710834
-      minDuration: 1.3710834
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Factory
       guid: 0f6b988e34a9b24fa9031e1387ed0023
       id: 3757240376
@@ -426,6 +406,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_NPC_BullerHit
+      guid: ce43d36c16321346abbb409185c62fbe
+      id: 1849873131
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_NPC_BullerHit
+        ObjectType: 3
+        guid: ce43d36c16321346abbb409185c62fbe
+      Path: Events\Default Work Unit\Enemy_Events\Play_NPC_BullerHit
+      maxAttenuation: 100
+      maxDuration: 1.182875
+      minDuration: 1.1828542
+    - name: Play_NPC_TurretFire
+      guid: 9361f98af713be42b5dfb462a7b9d622
+      id: 2380288232
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_NPC_TurretFire
+        ObjectType: 3
+        guid: 9361f98af713be42b5dfb462a7b9d622
+      Path: Events\Default Work Unit\Enemy_Events\Play_NPC_TurretFire
+      maxAttenuation: 100
+      maxDuration: 0.6915
+      minDuration: 0.6915
     - name: Play_Player_Arm_Swing
       guid: afc1ce9364ac424b8ec24005d4c66e85
       id: 1726909165
@@ -683,6 +703,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_NPC_TurretFire_01
+      guid: 612a449977fd1549aae65e17ef09296c
+      id: 746833256
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Stop_NPC_TurretFire_01
+        ObjectType: 3
+        guid: 612a449977fd1549aae65e17ef09296c
+      Path: Events\Default Work Unit\Enemy_Events\Stop_NPC_TurretFire_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Player_Jump
       guid: 0ae1c0249041e64bb8b5868c07655ea4
       id: 3588747354
@@ -760,7 +800,7 @@ MonoBehaviour:
     m_lastTime: -8585026458872503762
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000800000009000000fc000000fd00000002010000
+  ExpandedWaapiItemIds: 050000000600000007000000090000000a000000f5000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

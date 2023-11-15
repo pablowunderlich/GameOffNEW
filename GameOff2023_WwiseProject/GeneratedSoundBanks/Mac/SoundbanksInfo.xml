@@ -30,7 +30,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F1FFCB04-8604-9817-1A72-0B05BB2ACBD3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3CF325F7-7B8E-3526-B12C-1D6BE9B7F786}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -65,6 +65,14 @@
 				<File Id="121143607" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Jump-001.wav</ShortName>
 					<CachePath>SFX/Jump-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="123732449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-001.wav</ShortName>
+					<CachePath>SFX/BulletExplode-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="200669082" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Turret_Rivet.wav</ShortName>
+					<CachePath>SFX/Turret_Rivet_10C4C929.wem</CachePath>
 				</File>
 				<File Id="211177115" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Land_SFX_2.wav</ShortName>
@@ -114,10 +122,6 @@
 					<ShortName>Damaged-008.wav</ShortName>
 					<CachePath>SFX/Damaged-008_10C4C929.wem</CachePath>
 				</File>
-				<File Id="766998527" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Player_Turret fire_SFX_6.wav</ShortName>
-					<CachePath>SFX/Player_Turret fire_SFX_6_10C4C929.wem</CachePath>
-				</File>
 				<File Id="778160072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gears-001.wav</ShortName>
 					<CachePath>SFX/Gears-001_41FA25B4.wem</CachePath>
@@ -138,6 +142,10 @@
 					<ShortName>Damaged-004.wav</ShortName>
 					<CachePath>SFX/Damaged-004_10C4C929.wem</CachePath>
 				</File>
+				<File Id="888702899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-004.wav</ShortName>
+					<CachePath>SFX/BulletExplode-004_10C4C929.wem</CachePath>
+				</File>
 				<File Id="906798711" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Arm swing_SFX_0.wav</ShortName>
 					<CachePath>SFX/Player_Arm swing_SFX_0_10C4C929.wem</CachePath>
@@ -146,9 +154,17 @@
 					<ShortName>Player_Damage 4_SFX_5.wav</ShortName>
 					<CachePath>SFX/Player_Damage 4_SFX_5_10C4C929.wem</CachePath>
 				</File>
+				<File Id="934996487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-002.wav</ShortName>
+					<CachePath>SFX/BulletExplode-002_10C4C929.wem</CachePath>
+				</File>
 				<File Id="962036437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-010.wav</ShortName>
 					<CachePath>SFX/Damaged-010_10C4C929.wem</CachePath>
+				</File>
+				<File Id="998468921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-003.wav</ShortName>
+					<CachePath>SFX/BulletExplode-003_10C4C929.wem</CachePath>
 				</File>
 				<File Id="998952339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-003.wav</ShortName>
@@ -180,16 +196,7 @@
 						<MediaRef Id="346110309"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="616075970" Name="Play_Enemy_Turret_Fire" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3710834" DurationMax="1.3710834">
-					<MediaRefs>
-						<MediaRef Id="766998527"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3364672736" Name="Play_Enemy_Turret_Fire_01" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.3710834" DurationMax="1.3710834">
-					<MediaRefs>
-						<MediaRef Id="766998527"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="616075970" Name="Play_Enemy_Turret_Fire" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3757240376" Name="Play_Factory" MaxAttenuation="100" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24055890"/>
@@ -208,6 +215,22 @@
 				<Event Id="3659125941" Name="Play_Level1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="266531675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1849873131" Name="Play_NPC_BullerHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1828542" DurationMax="1.182875">
+					<MediaRefs>
+						<MediaRef Id="123732449"/>
+						<MediaRef Id="888702899"/>
+						<MediaRef Id="934996487"/>
+						<MediaRef Id="998468921"/>
+					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="746833256" Name="Stop_NPC_TurretFire_01"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="2380288232" Name="Play_NPC_TurretFire" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6915" DurationMax="0.6915">
+					<MediaRefs>
+						<MediaRef Id="200669082"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1726909165" Name="Play_Player_Arm_Swing" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0742917" DurationMax="1.0742917">
@@ -276,9 +299,10 @@
 				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="746833256" Name="Stop_NPC_TurretFire_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{33A1CDDD-1EC2-E205-B9A7-00AC426A579C}</FileHash>
+	<FileHash>{98535AD8-F9E3-2B7E-F622-4A96CBE698D6}</FileHash>
 </SoundBanksInfo>
