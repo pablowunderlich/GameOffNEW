@@ -1,6 +1,7 @@
 using ScriptableObjectArchitecture;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 // This script follows the singleton pattern, meaning that i create an
@@ -14,7 +15,7 @@ public class Player : MonoBehaviour
 {
 
     public static Player Instance { get; private set; } // Instance of the player that can be accessed in the entire project
-
+    // if you want to quickly look for a function, just use ctrl F
     #region RUNTIME_VARIABLES
     // These variables can be changed during runtime for testing purposes. They can also be accessed independently from this script
     [Header("Running")]
@@ -52,7 +53,7 @@ public class Player : MonoBehaviour
 
     [Tooltip("The time that the movement is reduced after waljumping (BETWEEN 0 AND 1.5)")]
     public FloatReference wallJumpTime;
-    
+
 
     [Space(5)]
     [Header("Falling")]
@@ -120,6 +121,11 @@ public class Player : MonoBehaviour
     // This is a short time lapse where the player can jump even if they have already moved off platform. This increases responsiveness
     public FloatReference coyoteTime;
 
+    [Space(5)]
+    [Header("Time")]
+    public FloatReference InvincibilityTime;
+
+    public FloatReference blinkInterval;
     #endregion
     #region INSPECTOR_VARIABLES
     [Header("Checks")]
@@ -131,7 +137,11 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _backWallCheckPoint;
     [SerializeField] private Vector2 _wallCheckSize = new Vector2(0.5f, 1f);
 
+    [SerializeField] private Transform _enemyCheckPoint;
+    private Vector2 _enemyCheckSize;
+
     [Header("Layers and Tags")]
+    [SerializeField] private LayerMask _enemyLayer; 
     [SerializeField] private LayerMask _groundLayer; //this is for if we want different layers
 
     #endregion
@@ -139,6 +149,8 @@ public class Player : MonoBehaviour
     // These variables are constant, can be changed but not during runtime
     [SerializeField]
     private Sprite _spriteReference; // reference to the player sprite
+    private SpriteRenderer _spriteRenderer; // reference to player sprite renderer to blink on taking damage
+    [SerializeField] private Checkpoint _startPoint;
 
     public Rigidbody2D RB { get; private set; } // Player rigidbody
 
@@ -150,7 +162,6 @@ public class Player : MonoBehaviour
     public float LastOnWallTime { get; private set; }
     public float LastOnRightWallTime { get; private set; }
     public float LastOnLeftWallTime { get; private set; }
-   
 
     private Vector2 _moveInput; // Vector to determine 2D movement direction
     public float LastPressedJumpTime { get; private set; }
@@ -162,12 +173,15 @@ public class Player : MonoBehaviour
     private float _gravityScale; // Gravity scale
     private bool _isJumpFalling; // is falling down after jump?
     private bool _isJumpCut; // is cutting the jump by releasing the jump button early
-
+    private Vector2 _spawnLocation; // spawnlocation
     //Wall jump variables
     private float _wallJumpStartTime;
     private int _lastWallJumpDir; // check which direction the player was facing at the last wall jump
+    private float _timeSinceLastHit;
 
     #endregion
+
+    #region Awake&Start
     private void Awake()
     {
         if (Instance == null) // check if there is not already an instance of this class in the scene
@@ -181,7 +195,8 @@ public class Player : MonoBehaviour
         }
 
         RB = GetComponent<Rigidbody2D>();
-
+        _spriteRenderer = transform.Find("PlayerSprite").GetComponent<SpriteRenderer>();
+        _spawnLocation = _startPoint.transform.position;
         _gravityStrength = -(2 * maxJumpHeight.Value) / Mathf.Pow(timeToMaxHeight.Value, 2);
         _gravityScale = _gravityStrength / Physics2D.gravity.y;
         _jumpForce = Mathf.Abs(_gravityStrength) * timeToMaxHeight.Value;
@@ -189,16 +204,20 @@ public class Player : MonoBehaviour
         _runDeccelAmount = (50 * runDecceleration.Value) / runMaxSpeed.Value;
         runAcceleration.Value = Mathf.Clamp(runAcceleration.Value, 0.01f, runMaxSpeed.Value);
         runDecceleration.Value = Mathf.Clamp(runDecceleration.Value, 0.01f, runMaxSpeed.Value);
-       
-        
-       // isJumping = false;
+
+
+        // isJumping = false;
     }
     void Start()
     {
         SetGravityScale(_gravityScale); // Set the gravity scale
         isFacingRight = true; //Start game with player facing right
-    }
+        _enemyCheckSize = transform.localScale;
+        transform.position = _spawnLocation;
 
+    }
+    #endregion
+    #region Update&FixedUpdate
     // Update is called once per frame
     void Update()
     {
@@ -208,6 +227,8 @@ public class Player : MonoBehaviour
         LastOnLeftWallTime -= Time.deltaTime;
         LastOnRightWallTime -= Time.deltaTime;
         LastPressedJumpTime -= Time.deltaTime;
+
+        _timeSinceLastHit += Time.deltaTime;
 
         #endregion
 
@@ -229,12 +250,14 @@ public class Player : MonoBehaviour
             Run(runLerpValue.Value);
         }
 
-        if(isSliding)
+        if (isSliding)
         {
             Slide();
         }
     }
+    #endregion
 
+    #region Handlers
     private void HandleInput()
     {
         _moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -273,17 +296,17 @@ public class Player : MonoBehaviour
 
             //Right wall check, if the player is touching the wall that he is facing and he is facing right,
             //or if touches the wall he isnt facing when he is facing left and not wall jumping. 
-            if(((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight) 
-                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight)) && !isWallJumping) 
+            if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight)
+                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight)) && !isWallJumping)
             {
-               
+
                 LastOnRightWallTime = coyoteTime.Value;
             }
             // same but for left wall
             if (((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !isFacingRight)
                || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && isFacingRight)) && !isWallJumping)
             {
-               
+
                 LastOnLeftWallTime = coyoteTime.Value;
             }
 
@@ -292,26 +315,53 @@ public class Player : MonoBehaviour
         }
         #endregion
 
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Geary")
+        #region enemy pass-through collision
+        Collider2D[] results;
+        results = Physics2D.OverlapBoxAll(_enemyCheckPoint.position, _enemyCheckSize, 0, _enemyLayer);
+        foreach (Collider2D col in results)
         {
-            currentHealth.Value -= collision.gameObject.GetComponent<GearyEnemy>().damage;
-            Debug.Log(currentHealth);   
+            // I AM AWARE I COULD JUST MAKE ONE IF STATEMENT, BUT
+            // I WANT TO LEAVE IT LIKE THIS TO EASILY ADD FUNCTIONALITY LATER
+            if (col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                if (col.gameObject.CompareTag("Geary"))
+                {
+                    LoseLife();
+
+
+                }
+                if (col.gameObject.CompareTag("Acid"))
+                {
+                    LoseLife();
+
+                }
+                if (col.gameObject.CompareTag("Spikes"))
+                {
+                    LoseLife();
+
+                }
+                if(col.gameObject.CompareTag("Bullet"))
+                {
+                    LoseLife();
+                }
+
+            }
         }
+        #endregion
     }
+
+    
     private void HandleJump()
     {
         if (isJumping && RB.velocity.y < 0) // if player is falling 
         {
             isJumping = false;
-            if(!isWallJumping)
+            if (!isWallJumping)
             {
                 _isJumpFalling = true;
             }
         }
-        if(isWallJumping && Time.time - _wallJumpStartTime > wallJumpTime.Value) // check if the player can still walljump
+        if (isWallJumping && Time.time - _wallJumpStartTime > wallJumpTime.Value) // check if the player can still walljump
         {
             isWallJumping = false;
         }
@@ -334,7 +384,7 @@ public class Player : MonoBehaviour
             Jump();
         }
         else if (CanWallJump() && LastPressedJumpTime > 0)
-        { 
+        {
             isWallJumping = true;
             isJumping = false;
             _isJumpCut = false;
@@ -350,18 +400,18 @@ public class Player : MonoBehaviour
     }
     private void HandleGravityScale()
     {
-        
+
         //check if player can slide and if they are moving towards the wall theyre facing
         if (CanSlide() && ((LastOnLeftWallTime > 0 && _moveInput.x < 0) || (LastOnRightWallTime > 0 && _moveInput.x > 0)))
         {
-             isSliding = true;
+            isSliding = true;
         }
         else
         {
             isSliding = false;
         }
 
-        if(isSliding)
+        if (isSliding)
         {
             SetGravityScale(0); //ignore gravity
         }
@@ -371,7 +421,7 @@ public class Player : MonoBehaviour
             SetGravityScale(_gravityScale * fastFallMultiplier.Value);
             RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFastFallSpeed.Value));// Ensure the player falls faster but not infinitely
         }
-        else if(_isJumpCut)
+        else if (_isJumpCut)
         {
             SetGravityScale(_gravityScale * jumpCutMultiplier.Value);
             RB.velocity = new Vector2(RB.velocity.x, Mathf.Max(RB.velocity.y, -maxFallSpeed.Value));
@@ -380,7 +430,7 @@ public class Player : MonoBehaviour
         {
             SetGravityScale(_gravityScale * jumpHangGravityMult.Value);
         }
-        else if (RB.velocity.y < 0)     
+        else if (RB.velocity.y < 0)
         {
             //Higher gravity when falling
             SetGravityScale(_gravityScale * fallMultiplier.Value);
@@ -392,19 +442,8 @@ public class Player : MonoBehaviour
         }
 
     }
-    public void SetGravityScale(float scale)
-    {
-        RB.gravityScale = scale;
-    }
-
-    public void CheckDirectionToFace(bool IsMovingRight)
-    {
-        if (IsMovingRight != isFacingRight)
-        {
-            Turn();
-        }
-    }
-
+    #endregion
+    #region playerActions
     private void Turn()
     {
         //store the scale and flip the character along the x axis
@@ -448,18 +487,18 @@ public class Player : MonoBehaviour
         #region Pablo
 
         //im adding the jump stop event so it stops playing
-        AkSoundEngine.PostEvent("Play_Player_Jump", this.gameObject);
+        AkSoundEngine.PostEvent("Play_Player_WallJump", this.gameObject);
 
         #endregion Pablo
 
         Vector2 force = new Vector2(wallJumpForce.Value.x, wallJumpForce.Value.y);
-        force.x *= direction; 
+        force.x *= direction;
         // make sure we apply the force the opposite direction from the wall
-        if(Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
+        if (Mathf.Sign(RB.velocity.x) != Mathf.Sign(force.x))
         {
             force.x -= RB.velocity.x;
         }
-        if(RB.velocity.y < 0) // check if player is falling, if so substract the fall velocity from the jump force 
+        if (RB.velocity.y < 0) // check if player is falling, if so substract the fall velocity from the jump force 
         {
             force.y -= RB.velocity.y;
         }
@@ -468,13 +507,13 @@ public class Player : MonoBehaviour
 
     private void Slide()
     {
-        
+
         float speedDif = slideSpeed.Value - RB.velocity.y;
         float movement = speedDif * slideAcceleration.Value;
 
         // fixedupdate can overcorrect the movment, so we clamp the movement value so that the acceleration cant be greater than the number of frames per second
-        movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif)*(1/Time.fixedDeltaTime));
-       
+        movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime));
+
         RB.AddForce(movement * Vector2.up);
     }
 
@@ -514,21 +553,26 @@ public class Player : MonoBehaviour
         RB.AddForce(movement * Vector2.right, ForceMode2D.Force); // apply this speed by the right vector as a force vector (DIRECTION AAAND MAGNITUDE)
 
     }
+
+    #endregion
+    #region OnInput
     public void OnJumpInput() // call when jump is pressed
     {
         LastPressedJumpTime = jumpInputBufferTime.Value;
-        
+
 
     }
 
     public void OnJumpUpInput()
     {
-        if(CanJumpCut() || CanWallJumpCut())
+        if (CanJumpCut() || CanWallJumpCut())
         {
             _isJumpCut = true;
         }
     }
-   
+
+    #endregion
+    #region CanDoAction
     private bool CanJump()
     {
         return LastOnGroundTime > 0 && !isJumping;
@@ -540,7 +584,7 @@ public class Player : MonoBehaviour
         // Is player is touching a wall
         // Is player not on the ground
         // Isnt already wallJumping or facing the walls in the wrong direction
-        
+
         return LastPressedJumpTime > 0 && LastOnWallTime > 0 && LastOnGroundTime <= 0 && (!isWallJumping ||
              (LastOnRightWallTime > 0 && _lastWallJumpDir == 1) || (LastOnLeftWallTime > 0 && _lastWallJumpDir == -1));
     }
@@ -552,7 +596,7 @@ public class Player : MonoBehaviour
     {
         return isWallJumping && RB.velocity.y > 0; // if the player is doing a wall jump and is not yet falling
     }
-
+    
     private bool CanSlide()
     {
         // check if the player is on a wall
@@ -569,19 +613,86 @@ public class Player : MonoBehaviour
         }
 
     }
+    #endregion
+    #region taking damage and death
+    IEnumerator Blink(float duration, float interval)
+    {
+        float end = Time.time + duration;
 
-#region GIZMOS
-private void OnDrawGizmosSelected()
-{
-    Gizmos.color = Color.green;
+        while (Time.time < end)
+        {
+            _spriteRenderer.enabled = !_spriteRenderer.enabled;
+            yield return new WaitForSeconds(interval);
+        }
+
+        _spriteRenderer.enabled = true;
+    }
+    private void LoseLife()
+    {
+        if (_timeSinceLastHit > InvincibilityTime.Value) // if the player can get hit
+        {
+            currentHealth.Value -= 1; // remove a life
+            _timeSinceLastHit = 0;
+            Debug.Log(currentHealth);
+            #region Pablo
+            AkSoundEngine.PostEvent("Play_Player_Damaged", this.gameObject);
+            #endregion
+            if (currentHealth.Value < 0)
+            {
+                currentHealth.Value = 2; // set lifes back to 3 (0, 1, 2)
+                Respawn(); // respawn the player at latest checkpoint
+            }
+            else // do damage animation + sound
+            {
+                StartCoroutine(Blink(InvincibilityTime.Value, blinkInterval.Value));
+                #region Pablo
+                AkSoundEngine.PostEvent("Play_Player_Damaged", this.gameObject);
+                #endregion 
+            }
+        }
+
+    }
+    #endregion
+    #region spawning
+    Vector2 GetSpawnLocation() { return _spawnLocation; }
+    public void SetSpawnLocation(Vector2 spawnLocation) { _spawnLocation = spawnLocation; }
+
+    public void Respawn()
+    {
+        transform.position = GetSpawnLocation();
+        #region Pablo
+        AkSoundEngine.PostEvent("Play_Player_Respawn", this.gameObject);
+        #endregion
+    }
+
+    #endregion
+
+    #region GIZMOS
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
         Gizmos.DrawWireCube(_groundCheckPoint.position, _groundCheckSize);
-    Gizmos.color = Color.blue;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireCube(_frontWallCheckPoint.position, _wallCheckSize);
         Gizmos.DrawWireCube(_backWallCheckPoint.position, _wallCheckSize);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(_enemyCheckPoint.position, _enemyCheckSize);
 
 
-}
+    }
     #endregion
+    public void SetGravityScale(float scale)
+    {
+        RB.gravityScale = scale;
+    }
+
+    public void CheckDirectionToFace(bool IsMovingRight)
+    {
+        if (IsMovingRight != isFacingRight)
+        {
+            Turn();
+        }
+    }
 }
 
 

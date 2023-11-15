@@ -4,8 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SawEnemy
   - Geary
+  - Acid
+  - Spikes
+  - StartPoint
+  - CheckPoint
+  - EndPoint
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - PlayerSpawner
   - 
   - 
   - 
