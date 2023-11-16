@@ -170,12 +170,47 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_Enemy_Turret_Fire_01" ID="{0A8B8E44-D5C6-4F5A-88B7-12C6FC4141B6}">
+						<Event Name="Play_NPC_TurretFire" ID="{8AF96193-13F7-42BE-B5DF-B462A7B9D622}">
 							<ChildrenList>
-								<Action Name="" ID="{77F73429-D273-42A2-908F-8A26FD48AF7B}" ShortID="133067360">
+								<Action Name="" ID="{948CFDE2-1F7C-4B92-B20D-1265435BE813}" ShortID="341655279">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Enemy_Turret_Fire" ID="{D7C09821-B2F0-4FE5-84AF-4E0D114CDE90}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+											<ObjectRef Name="NPC_TurretFire" ID="{E5091B15-4148-412B-98C7-6AB9F16BDA3A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_NPC_BullerHit" ID="{6CD343CE-3216-4613-ABBB-409185C62FBE}">
+							<ChildrenList>
+								<Action Name="" ID="{FE60E8AA-4224-4C43-89EE-5F172AB54EC1}" ShortID="540730132">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_BullerHit" ID="{9266D288-9216-4BC4-961F-C32E38C2DC8B}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2AEA5146-5E89-4DEB-B095-BEF2F0AD5726}" ShortID="600291680">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="41"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Stop_NPC_TurretFire_01" ID="{99442A61-FD77-4915-AAE6-5E17EF09296C}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_NPC_TurretFire_01" ID="{99442A61-FD77-4915-AAE6-5E17EF09296C}">
+							<ChildrenList>
+								<Action Name="" ID="{63677320-C3B1-4D07-A89B-0818B006A135}" ShortID="1064389528">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_TurretFire" ID="{E5091B15-4148-412B-98C7-6AB9F16BDA3A}" WorkUnitID="{EE92C3BA-1077-4954-B47B-64A04B9360FF}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
