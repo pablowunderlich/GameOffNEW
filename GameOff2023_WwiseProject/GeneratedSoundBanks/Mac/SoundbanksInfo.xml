@@ -30,10 +30,14 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3CF325F7-7B8E-3526-B12C-1D6BE9B7F786}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9BBFFB91-33EC-75AB-F283-B95078A6BCB6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="21001878" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Mouse_Over_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Mouse_Over_SFX_1_439096C3.wem</CachePath>
+				</File>
 				<File Id="24055890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Factory-001.wav</ShortName>
 					<CachePath>SFX/Factory-001_D79FB2B7.wem</CachePath>
@@ -57,6 +61,10 @@
 				<File Id="87743108" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-002.wav</ShortName>
 					<CachePath>SFX/Damaged-002_10C4C929.wem</CachePath>
+				</File>
+				<File Id="88237716" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>main menu 135bpm 4_4.wav</ShortName>
+					<CachePath>SFX/main menu 135bpm 4_4_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="108288308" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 1_SFX_2.wav</ShortName>
@@ -82,6 +90,10 @@
 					<ShortName>Player_Press on pad_SFX_11.wav</ShortName>
 					<CachePath>SFX/Player_Press on pad_SFX_11_10C4C929.wem</CachePath>
 				</File>
+				<File Id="260826926" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level 2 140bpm 4_4.wav</ShortName>
+					<CachePath>SFX/level 2 140bpm 4_4_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="266531675" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>level_1_bgm_demo_v2.wav</ShortName>
 					<CachePath>SFX/level_1_bgm_demo_v2_D79FB2B7.wem</CachePath>
@@ -93,6 +105,14 @@
 				<File Id="359950720" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-001.wav</ShortName>
 					<CachePath>SFX/Acid-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="370379150" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level 3 134bpm 4_4.wav</ShortName>
+					<CachePath>SFX/level 3 134bpm 4_4_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="385548339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Button_Click_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Button_Click_SFX_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="466389316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ingots-001.wav</ShortName>
@@ -217,6 +237,21 @@
 						<MediaRef Id="266531675"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3659125942" Name="Play_Level2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="260826926"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3659125943" Name="Play_Level3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="370379150"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3738780720" Name="Play_MainMenu" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="88237716"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1849873131" Name="Play_NPC_BullerHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1828542" DurationMax="1.182875">
 					<MediaRefs>
 						<MediaRef Id="123732449"/>
@@ -297,6 +332,16 @@
 						<MediaRef Id="211177115"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1362934681" Name="Play_UI_Mouse_Over" DurationType="OneShot" DurationMin="0.195625" DurationMax="0.195625">
+					<MediaRefs>
+						<MediaRef Id="21001878"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3308548503" Name="Play_UI_Select" DurationType="OneShot" DurationMin="0.35002083" DurationMax="0.35002083">
+					<MediaRefs>
+						<MediaRef Id="385548339"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="746833256" Name="Stop_NPC_TurretFire_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -304,5 +349,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{98535AD8-F9E3-2B7E-F622-4A96CBE698D6}</FileHash>
+	<FileHash>{3D5E70DB-C4DD-534D-8E2A-547E1217E895}</FileHash>
 </SoundBanksInfo>
