@@ -326,6 +326,79 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Menu" ID="{2492EA90-A309-43BE-8929-C805AF4DC428}">
+							<ChildrenList>
+								<Action Name="" ID="{2CC7DEE4-AD26-4954-99E4-E9BBEBCBA6D0}" ShortID="459376493">
+									<PropertyList>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level3" ID="{8390D7C0-D1A7-4AC8-9A19-7BF351205D33}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Level1" ID="{8C475512-E204-4E8B-8DB6-2222A8CDA4E6}">
+							<ChildrenList>
+								<Action Name="" ID="{0B389958-C3E9-474A-BAAC-79D6106402A4}" ShortID="252794060">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level1" ID="{BD4E8095-07BD-45EF-BA0A-46ADDFA5CC21}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Level2" ID="{1977F170-A91A-49B6-8E09-5F6D5E6590A3}">
+							<ChildrenList>
+								<Action Name="" ID="{0F0E82EA-2C0F-4CA2-BF3B-6F5876F7B0D4}" ShortID="1063205276">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level2" ID="{239357B6-AF17-4997-AE26-7A65D38332C7}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Level3" ID="{FF044C05-3E54-4292-8D79-EA4BBF03A05B}">
+							<ChildrenList>
+								<Action Name="" ID="{2405C8D3-1B7B-479E-B320-2F403AECE02B}" ShortID="327801006">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level3" ID="{8390D7C0-D1A7-4AC8-9A19-7BF351205D33}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Menu" ID="{F4E4E8CA-95B7-4668-B2F2-42F48E902EB7}">
+							<ChildrenList>
+								<Action Name="" ID="{80A6228F-655D-4EF5-ABA3-39257E93C78A}" ShortID="12780471">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level3" ID="{8390D7C0-D1A7-4AC8-9A19-7BF351205D33}" WorkUnitID="{95365E2D-6C52-4983-824C-11725BD0FE03}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{6CCD0339-3123-4616-A50C-1E8B89A116CE}" ShortID="689347384">

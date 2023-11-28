@@ -6,9 +6,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	789689882	Play_Gearrs			\Default Work Unit\Ambient\Play_Gearrs	
 	937438432	Play_Player_WallJump			\Default Work Unit\Player_Events\Play_Player_WallJump	
 	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player_Events\Play_Player_Take_Damage	
+	1278378707	Play_Menu			\Default Work Unit\Music\Play_Menu	
 	1362934681	Play_UI_Mouse_Over			\Default Work Unit\UI\Play_UI_Mouse_Over	
 	1726909165	Play_Player_Arm_Swing			\Default Work Unit\Player_Events\Play_Player_Arm_Swing	
 	1749424733	Play_UI_Click			\Default Work Unit\UI\Play_UI_Click	
+	1761439788	Stop_Level2			\Default Work Unit\Music\Stop_Level2	
+	1761439789	Stop_Level3			\Default Work Unit\Music\Stop_Level3	
+	1761439791	Stop_Level1			\Default Work Unit\Music\Stop_Level1	
 	1849873131	Play_NPC_BullerHit			\Default Work Unit\Enemy_Events\Play_NPC_BullerHit	
 	2186439036	Play_Player_Pull_Lever			\Default Work Unit\Player_Events\Play_Player_Pull_Lever	
 	2187562616	Stop_Gearrs			\Default Work Unit\Ambient\Stop_Gearrs	
@@ -16,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2380288232	Play_NPC_TurretFire			\Default Work Unit\Enemy_Events\Play_NPC_TurretFire	
 	2532590645	Play_Acid			\Default Work Unit\Ambient\Play_Acid	
 	2913963765	Play_Dash_Glide_Loop_SFX_01			\Default Work Unit\Player_Events\Play_Dash_Glide_Loop_SFX_01	
+	2914981333	Stop_Menu			\Default Work Unit\Music\Stop_Menu	
 	3228691145	Play_Player_Press_On_Pad			\Default Work Unit\Player_Events\Play_Player_Press_On_Pad	
 	3432329370	Stop_Dash_Glide_Loop_SFX_4			\Default Work Unit\Enemy_Events\Stop_Dash_Glide_Loop_SFX_4	
 	3588747354	Stop_Player_Jump			\Default Work Unit\Player_Events\Stop_Player_Jump	
