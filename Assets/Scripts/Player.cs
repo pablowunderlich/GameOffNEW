@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 // This script follows the singleton pattern, meaning that i create an
 // instance of this class that is static and can be 
@@ -110,6 +111,9 @@ public class Player : MonoBehaviour
 
     [Tooltip("Current Health")]
     public IntReference currentHealth; // Current player health
+    public Image heart1; 
+    public Image heart2; 
+    public Image heart3;
 
     [Header("Timing")]
     // This is a short time lapse where the player can jump even if they pressed jump just before the player hits ground.
@@ -637,9 +641,19 @@ public class Player : MonoBehaviour
             #region Pablo
             AkSoundEngine.PostEvent("Play_Player_Damaged", this.gameObject);
             #endregion
-            if (currentHealth.Value < 0)
+            if (currentHealth.Value == 2)
             {
-                currentHealth.Value = 2; // set lifes back to 3 (0, 1, 2)
+                heart3.gameObject.SetActive(false);
+            }
+            if (currentHealth.Value == 1)
+            {
+                heart2.gameObject.SetActive(false);
+            }
+            if (currentHealth.Value <= 0)
+            {
+                heart3.gameObject.SetActive(true);
+                heart2.gameObject.SetActive(true);
+                currentHealth.Value = 3; // set lifes back to 3
                 Respawn(); // respawn the player at latest checkpoint
             }
             else // do damage animation + sound

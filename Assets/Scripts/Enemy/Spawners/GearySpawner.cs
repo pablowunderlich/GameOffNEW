@@ -8,6 +8,8 @@ public class GearySpawner : MonoBehaviour
     public float velocity;
     public bool isSpawningToLeft;
     public float interval;
+    [SerializeField] float timeToDissapear;
+
 
     public GameObject Geary;
 
@@ -21,9 +23,6 @@ public class GearySpawner : MonoBehaviour
     {
         GameObject GearyToSpawn = Instantiate(Geary, transform.position, Quaternion.identity);
         Rigidbody2D RB = GearyToSpawn.GetComponent<Rigidbody2D>();
-
-
-
         if (RB != null)
         {
             if (isSpawningToLeft)
@@ -35,5 +34,6 @@ public class GearySpawner : MonoBehaviour
                 RB.velocity = new Vector2(velocity, 0);
             }
         }
+        Destroy(GearyToSpawn,timeToDissapear);
     }
 }
