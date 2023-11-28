@@ -1255,6 +1255,86 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
+				<ActorMixer Name="UI" ID="{94D59A6D-25BD-44F9-B1F8-3CF062606456}" ShortID="942672678">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="UI" ID="{CE220072-D278-45B7-B1CE-611CC2DF26A4}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="UI_Click" ID="{01AFF0EC-0C28-4B26-93A4-214AEF1DA6D3}" ShortID="908770188">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_Button_Click_SFX_1" ID="{BB88104C-E5B2-483D-9D91-388EB36E7739}" ShortID="334161008">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Button_Click_SFX_1" ID="{091B5893-651C-4829-9B04-86AED06CB6FF}">
+											<Language>SFX</Language>
+											<AudioFile>UI_Button_Click_SFX_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="872279965"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Button_Click_SFX_1" ID="{091B5893-651C-4829-9B04-86AED06CB6FF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="UI_Mouse_Over" ID="{E8896B01-A68A-4207-819D-7DDC286DC90E}" ShortID="372753778">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="UI_Mouse_Over_SFX_1" ID="{CFD55862-2D29-496F-987E-AF13B020BD43}" ShortID="1029230139">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{EE5B265F-7AA3-441B-8AA9-3D4CD3416F1D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DEFB779E-2953-4B10-B2B7-61ABB384A5EC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UI_Mouse_Over_SFX_1" ID="{CD2531BF-0DA8-479D-A054-32C54A1C45B2}">
+											<Language>SFX</Language>
+											<AudioFile>UI_Mouse_Over_SFX_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="577939512"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UI_Mouse_Over_SFX_1" ID="{CD2531BF-0DA8-479D-A054-32C54A1C45B2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

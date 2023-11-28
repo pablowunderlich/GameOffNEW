@@ -71,6 +71,15 @@
 								</Property>
 							</PropertyList>
 						</Bus>
+						<Bus Name="UI" ID="{CE220072-D278-45B7-B1CE-611CC2DF26A4}">
+							<PropertyList>
+								<Property Name="OutputBusLowpass" Type="int16">
+									<ValueList>
+										<Value>45</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+						</Bus>
 					</ChildrenList>
 				</Bus>
 			</ChildrenList>
