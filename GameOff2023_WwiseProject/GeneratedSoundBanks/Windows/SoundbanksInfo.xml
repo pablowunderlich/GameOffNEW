@@ -31,7 +31,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{CD5E15FB-4067-84CF-644E-9BBA8C5BB834}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E71B6B4C-2EF8-11FD-5B1C-634F23A910D5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -244,6 +244,11 @@
 						<MediaRef Id="72470847"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1278378707" Name="Play_Menu" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="72470847"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1849873131" Name="Play_NPC_BullerHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1828542" DurationMax="1.182875">
 					<MediaRefs>
 						<MediaRef Id="123732449"/>
@@ -336,10 +341,14 @@
 				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439791" Name="Stop_Level1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439788" Name="Stop_Level2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439789" Name="Stop_Level3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2914981333" Name="Stop_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="746833256" Name="Stop_NPC_TurretFire_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FAD48D5C-2B65-36F2-643D-A5B1473BE1B5}</FileHash>
+	<FileHash>{64AEC186-6C3E-DD79-A05E-B9D03CDEC55D}</FileHash>
 </SoundBanksInfo>
