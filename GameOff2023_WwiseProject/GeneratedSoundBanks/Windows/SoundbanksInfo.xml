@@ -9,203 +9,169 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0A429104-FFB3-7241-1865-BEBB154B3579}">
-			<ShortName>Init</ShortName>
-			<Path>Init.bnk</Path>
-			<Plugins>
-				<AudioDevices>
-					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
-					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
-				</AudioDevices>
-			</Plugins>
-			<Busses>
-				<Bus Id="77978275" Name="Ambient"/>
-				<Bus Id="833916109" Name="NPCs"/>
-				<Bus Id="1069431850" Name="Player"/>
-				<Bus Id="1551306167" Name="UI"/>
-				<Bus Id="2804607001" Name="Collectibles_Interact"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
-				<Bus Id="3991942870" Name="Music"/>
-			</Busses>
-			<AuxBusses>
-				<AuxBus Id="1398521715" Name="FX_sends"/>
-			</AuxBusses>
-		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E56BE26B-2310-0EB7-367B-319FA216F341}">
-			<ShortName>Main</ShortName>
-			<Path>Main.bnk</Path>
+		<SoundBank Id="141331489" Type="User" Language="SFX" Hash="{6105D05F-BDF0-2E36-5376-C9A131EF2480}">
+			<ShortName>Lvl2</ShortName>
+			<Path>Lvl2.bnk</Path>
 			<Media>
 				<File Id="24055890" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Factory-001.wav</ShortName>
-					<CachePath>SFX/Factory-001_179463A7.wem</CachePath>
+					<CachePath>SFX/Factory-001_F2BF74AC.wem</CachePath>
 				</File>
 				<File Id="32054300" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-007.wav</ShortName>
-					<CachePath>SFX/Damaged-007_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-007_32513D82.wem</CachePath>
 				</File>
 				<File Id="41468466" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-009.wav</ShortName>
-					<CachePath>SFX/Damaged-009_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-009_32513D82.wem</CachePath>
 				</File>
 				<File Id="61722497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Button Press_SFX_10.wav</ShortName>
-					<CachePath>SFX/Player_Button Press_SFX_10_835714D9.wem</CachePath>
-				</File>
-				<File Id="72470847" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>level 3 134bpm 4_4.wav</ShortName>
-					<CachePath>SFX/level 3 134bpm 4_4_179463A7.wem</CachePath>
+					<CachePath>SFX/Player_Button Press_SFX_10_32513D82.wem</CachePath>
 				</File>
 				<File Id="87523064" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-012.wav</ShortName>
-					<CachePath>SFX/Damaged-012_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-012_32513D82.wem</CachePath>
 				</File>
 				<File Id="87743108" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-002.wav</ShortName>
-					<CachePath>SFX/Damaged-002_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-002_32513D82.wem</CachePath>
 				</File>
 				<File Id="108288308" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 1_SFX_2.wav</ShortName>
-					<CachePath>SFX/Player_Damage 1_SFX_2_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Damage 1_SFX_2_32513D82.wem</CachePath>
 				</File>
 				<File Id="121143607" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Jump-001.wav</ShortName>
-					<CachePath>SFX/Jump-001_835714D9.wem</CachePath>
+					<CachePath>SFX/Jump-001_32513D82.wem</CachePath>
 				</File>
 				<File Id="123732449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BulletExplode-001.wav</ShortName>
-					<CachePath>SFX/BulletExplode-001_835714D9.wem</CachePath>
+					<CachePath>SFX/BulletExplode-001_32513D82.wem</CachePath>
 				</File>
 				<File Id="126233366" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>level 2 140bpm 4_4.wav</ShortName>
-					<CachePath>SFX/level 2 140bpm 4_4_179463A7.wem</CachePath>
+					<CachePath>SFX/level 2 140bpm 4_4_F2BF74AC.wem</CachePath>
 				</File>
 				<File Id="200669082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Turret_Rivet.wav</ShortName>
-					<CachePath>SFX/Turret_Rivet_835714D9.wem</CachePath>
+					<CachePath>SFX/Turret_Rivet_32513D82.wem</CachePath>
 				</File>
 				<File Id="211177115" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Land_SFX_2.wav</ShortName>
-					<CachePath>SFX/Land_SFX_2_835714D9.wem</CachePath>
+					<CachePath>SFX/Land_SFX_2_32513D82.wem</CachePath>
 				</File>
 				<File Id="244295874" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Press on pad_SFX_11.wav</ShortName>
-					<CachePath>SFX/Player_Press on pad_SFX_11_835714D9.wem</CachePath>
-				</File>
-				<File Id="266531675" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>level_1_bgm_demo_v2.wav</ShortName>
-					<CachePath>SFX/level_1_bgm_demo_v2_179463A7.wem</CachePath>
+					<CachePath>SFX/Player_Press on pad_SFX_11_32513D82.wem</CachePath>
 				</File>
 				<File Id="346110309" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Dash_Glide Loop_SFX_4.wav</ShortName>
-					<CachePath>SFX/Dash_Glide Loop_SFX_4_D57A0631.wem</CachePath>
+					<CachePath>SFX/Dash_Glide Loop_SFX_4_809B1F16.wem</CachePath>
 				</File>
 				<File Id="359950720" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-001.wav</ShortName>
-					<CachePath>SFX/Acid-001_835714D9.wem</CachePath>
-				</File>
-				<File Id="396692590" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>main menu 135bpm 4_4.wav</ShortName>
-					<CachePath>SFX/main menu 135bpm 4_4_179463A7.wem</CachePath>
+					<CachePath>SFX/Acid-001_32513D82.wem</CachePath>
 				</File>
 				<File Id="466389316" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ingots-001.wav</ShortName>
-					<CachePath>SFX/Ingots-001_835714D9.wem</CachePath>
+					<CachePath>SFX/Ingots-001_32513D82.wem</CachePath>
 				</File>
 				<File Id="491728714" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-002.wav</ShortName>
-					<CachePath>SFX/Acid-002_835714D9.wem</CachePath>
+					<CachePath>SFX/Acid-002_32513D82.wem</CachePath>
 				</File>
 				<File Id="499161104" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Respawn.wav</ShortName>
-					<CachePath>SFX/Player_Respawn_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Respawn_32513D82.wem</CachePath>
 				</File>
 				<File Id="537644221" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>NPC_Trap.wav</ShortName>
-					<CachePath>SFX/NPC_Trap_835714D9.wem</CachePath>
+					<CachePath>SFX/NPC_Trap_32513D82.wem</CachePath>
 				</File>
 				<File Id="577939512" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_Mouse_Over_SFX_1.wav</ShortName>
-					<CachePath>SFX/UI_Mouse_Over_SFX_1_835714D9.wem</CachePath>
+					<CachePath>SFX/UI_Mouse_Over_SFX_1_32513D82.wem</CachePath>
 				</File>
 				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
-					<CachePath>SFX/Player_Damage 3_SFX_4_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Damage 3_SFX_4_32513D82.wem</CachePath>
 				</File>
 				<File Id="604732285" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-006.wav</ShortName>
-					<CachePath>SFX/Damaged-006_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-006_32513D82.wem</CachePath>
 				</File>
 				<File Id="611082514" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 2_SFX_3.wav</ShortName>
-					<CachePath>SFX/Player_Damage 2_SFX_3_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Damage 2_SFX_3_32513D82.wem</CachePath>
 				</File>
 				<File Id="693302685" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-008.wav</ShortName>
-					<CachePath>SFX/Damaged-008_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-008_32513D82.wem</CachePath>
 				</File>
 				<File Id="778160072" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Gears-001.wav</ShortName>
-					<CachePath>SFX/Gears-001_F7203CE4.wem</CachePath>
+					<CachePath>SFX/Gears-001_8AAE516F.wem</CachePath>
 				</File>
 				<File Id="779989710" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Land_SFX_1.wav</ShortName>
-					<CachePath>SFX/Player_Land_SFX_1_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Land_SFX_1_32513D82.wem</CachePath>
 				</File>
 				<File Id="798414008" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Lever pull_SFX_8.wav</ShortName>
-					<CachePath>SFX/Player_Lever pull_SFX_8_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Lever pull_SFX_8_32513D82.wem</CachePath>
 				</File>
 				<File Id="863198133" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-003.wav</ShortName>
-					<CachePath>SFX/Damaged-003_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-003_32513D82.wem</CachePath>
 				</File>
 				<File Id="872279965" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_Button_Click_SFX_1.wav</ShortName>
-					<CachePath>SFX/UI_Button_Click_SFX_1_835714D9.wem</CachePath>
+					<CachePath>SFX/UI_Button_Click_SFX_1_32513D82.wem</CachePath>
 				</File>
 				<File Id="879079641" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-004.wav</ShortName>
-					<CachePath>SFX/Damaged-004_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-004_32513D82.wem</CachePath>
 				</File>
 				<File Id="888702899" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BulletExplode-004.wav</ShortName>
-					<CachePath>SFX/BulletExplode-004_835714D9.wem</CachePath>
+					<CachePath>SFX/BulletExplode-004_32513D82.wem</CachePath>
 				</File>
 				<File Id="906798711" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Arm swing_SFX_0.wav</ShortName>
-					<CachePath>SFX/Player_Arm swing_SFX_0_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Arm swing_SFX_0_32513D82.wem</CachePath>
 				</File>
 				<File Id="922165199" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 4_SFX_5.wav</ShortName>
-					<CachePath>SFX/Player_Damage 4_SFX_5_835714D9.wem</CachePath>
+					<CachePath>SFX/Player_Damage 4_SFX_5_32513D82.wem</CachePath>
 				</File>
 				<File Id="934996487" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BulletExplode-002.wav</ShortName>
-					<CachePath>SFX/BulletExplode-002_835714D9.wem</CachePath>
+					<CachePath>SFX/BulletExplode-002_32513D82.wem</CachePath>
 				</File>
 				<File Id="962036437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-010.wav</ShortName>
-					<CachePath>SFX/Damaged-010_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-010_32513D82.wem</CachePath>
 				</File>
 				<File Id="998468921" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BulletExplode-003.wav</ShortName>
-					<CachePath>SFX/BulletExplode-003_835714D9.wem</CachePath>
+					<CachePath>SFX/BulletExplode-003_32513D82.wem</CachePath>
 				</File>
 				<File Id="998952339" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Acid-003.wav</ShortName>
-					<CachePath>SFX/Acid-003_835714D9.wem</CachePath>
+					<CachePath>SFX/Acid-003_32513D82.wem</CachePath>
 				</File>
 				<File Id="1016834625" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-001.wav</ShortName>
-					<CachePath>SFX/Damaged-001_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-001_32513D82.wem</CachePath>
 				</File>
 				<File Id="1036243180" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-005.wav</ShortName>
-					<CachePath>SFX/Damaged-005_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-005_32513D82.wem</CachePath>
 				</File>
 				<File Id="1045332651" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-011.wav</ShortName>
-					<CachePath>SFX/Damaged-011_835714D9.wem</CachePath>
+					<CachePath>SFX/Damaged-011_32513D82.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -237,24 +203,9 @@
 						<MediaRef Id="466389316"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3659125941" Name="Play_Level1" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="266531675"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3659125942" Name="Play_Level2" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="126233366"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3659125943" Name="Play_Level3" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="72470847"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="1278378707" Name="Play_Menu" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="396692590"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1849873131" Name="Play_NPC_BullerHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1828542" DurationMax="1.182875">
@@ -354,14 +305,367 @@
 				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1761439791" Name="Stop_Level1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1761439788" Name="Stop_Level2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1761439789" Name="Stop_Level3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2914981333" Name="Stop_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="746833256" Name="Stop_NPC_TurretFire_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
+		<SoundBank Id="141331490" Type="User" Language="SFX" Hash="{CFC66D6E-38CC-A84A-2ACB-EB60F92CB223}">
+			<ShortName>Lvl1</ShortName>
+			<Path>Lvl1.bnk</Path>
+			<Media>
+				<File Id="24055890" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Factory-001.wav</ShortName>
+					<CachePath>SFX/Factory-001_F2BF74AC.wem</CachePath>
+				</File>
+				<File Id="32054300" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-007.wav</ShortName>
+					<CachePath>SFX/Damaged-007_32513D82.wem</CachePath>
+				</File>
+				<File Id="41468466" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-009.wav</ShortName>
+					<CachePath>SFX/Damaged-009_32513D82.wem</CachePath>
+				</File>
+				<File Id="61722497" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Button Press_SFX_10.wav</ShortName>
+					<CachePath>SFX/Player_Button Press_SFX_10_32513D82.wem</CachePath>
+				</File>
+				<File Id="87523064" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-012.wav</ShortName>
+					<CachePath>SFX/Damaged-012_32513D82.wem</CachePath>
+				</File>
+				<File Id="87743108" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-002.wav</ShortName>
+					<CachePath>SFX/Damaged-002_32513D82.wem</CachePath>
+				</File>
+				<File Id="108288308" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damage 1_SFX_2.wav</ShortName>
+					<CachePath>SFX/Player_Damage 1_SFX_2_32513D82.wem</CachePath>
+				</File>
+				<File Id="121143607" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jump-001.wav</ShortName>
+					<CachePath>SFX/Jump-001_32513D82.wem</CachePath>
+				</File>
+				<File Id="123732449" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-001.wav</ShortName>
+					<CachePath>SFX/BulletExplode-001_32513D82.wem</CachePath>
+				</File>
+				<File Id="200669082" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Turret_Rivet.wav</ShortName>
+					<CachePath>SFX/Turret_Rivet_32513D82.wem</CachePath>
+				</File>
+				<File Id="211177115" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Land_SFX_2.wav</ShortName>
+					<CachePath>SFX/Land_SFX_2_32513D82.wem</CachePath>
+				</File>
+				<File Id="244295874" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Press on pad_SFX_11.wav</ShortName>
+					<CachePath>SFX/Player_Press on pad_SFX_11_32513D82.wem</CachePath>
+				</File>
+				<File Id="266531675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level_1_bgm_demo_v2.wav</ShortName>
+					<CachePath>SFX/level_1_bgm_demo_v2_F2BF74AC.wem</CachePath>
+				</File>
+				<File Id="346110309" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Dash_Glide Loop_SFX_4.wav</ShortName>
+					<CachePath>SFX/Dash_Glide Loop_SFX_4_809B1F16.wem</CachePath>
+				</File>
+				<File Id="359950720" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Acid-001.wav</ShortName>
+					<CachePath>SFX/Acid-001_32513D82.wem</CachePath>
+				</File>
+				<File Id="466389316" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ingots-001.wav</ShortName>
+					<CachePath>SFX/Ingots-001_32513D82.wem</CachePath>
+				</File>
+				<File Id="491728714" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Acid-002.wav</ShortName>
+					<CachePath>SFX/Acid-002_32513D82.wem</CachePath>
+				</File>
+				<File Id="499161104" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Respawn.wav</ShortName>
+					<CachePath>SFX/Player_Respawn_32513D82.wem</CachePath>
+				</File>
+				<File Id="537644221" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>NPC_Trap.wav</ShortName>
+					<CachePath>SFX/NPC_Trap_32513D82.wem</CachePath>
+				</File>
+				<File Id="577939512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Mouse_Over_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Mouse_Over_SFX_1_32513D82.wem</CachePath>
+				</File>
+				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
+					<CachePath>SFX/Player_Damage 3_SFX_4_32513D82.wem</CachePath>
+				</File>
+				<File Id="604732285" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-006.wav</ShortName>
+					<CachePath>SFX/Damaged-006_32513D82.wem</CachePath>
+				</File>
+				<File Id="611082514" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damage 2_SFX_3.wav</ShortName>
+					<CachePath>SFX/Player_Damage 2_SFX_3_32513D82.wem</CachePath>
+				</File>
+				<File Id="693302685" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-008.wav</ShortName>
+					<CachePath>SFX/Damaged-008_32513D82.wem</CachePath>
+				</File>
+				<File Id="778160072" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Gears-001.wav</ShortName>
+					<CachePath>SFX/Gears-001_8AAE516F.wem</CachePath>
+				</File>
+				<File Id="779989710" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Land_SFX_1.wav</ShortName>
+					<CachePath>SFX/Player_Land_SFX_1_32513D82.wem</CachePath>
+				</File>
+				<File Id="798414008" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Lever pull_SFX_8.wav</ShortName>
+					<CachePath>SFX/Player_Lever pull_SFX_8_32513D82.wem</CachePath>
+				</File>
+				<File Id="863198133" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-003.wav</ShortName>
+					<CachePath>SFX/Damaged-003_32513D82.wem</CachePath>
+				</File>
+				<File Id="872279965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Button_Click_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Button_Click_SFX_1_32513D82.wem</CachePath>
+				</File>
+				<File Id="879079641" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-004.wav</ShortName>
+					<CachePath>SFX/Damaged-004_32513D82.wem</CachePath>
+				</File>
+				<File Id="888702899" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-004.wav</ShortName>
+					<CachePath>SFX/BulletExplode-004_32513D82.wem</CachePath>
+				</File>
+				<File Id="906798711" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Arm swing_SFX_0.wav</ShortName>
+					<CachePath>SFX/Player_Arm swing_SFX_0_32513D82.wem</CachePath>
+				</File>
+				<File Id="922165199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Player_Damage 4_SFX_5.wav</ShortName>
+					<CachePath>SFX/Player_Damage 4_SFX_5_32513D82.wem</CachePath>
+				</File>
+				<File Id="934996487" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-002.wav</ShortName>
+					<CachePath>SFX/BulletExplode-002_32513D82.wem</CachePath>
+				</File>
+				<File Id="962036437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-010.wav</ShortName>
+					<CachePath>SFX/Damaged-010_32513D82.wem</CachePath>
+				</File>
+				<File Id="998468921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BulletExplode-003.wav</ShortName>
+					<CachePath>SFX/BulletExplode-003_32513D82.wem</CachePath>
+				</File>
+				<File Id="998952339" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Acid-003.wav</ShortName>
+					<CachePath>SFX/Acid-003_32513D82.wem</CachePath>
+				</File>
+				<File Id="1016834625" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-001.wav</ShortName>
+					<CachePath>SFX/Damaged-001_32513D82.wem</CachePath>
+				</File>
+				<File Id="1036243180" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-005.wav</ShortName>
+					<CachePath>SFX/Damaged-005_32513D82.wem</CachePath>
+				</File>
+				<File Id="1045332651" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Damaged-011.wav</ShortName>
+					<CachePath>SFX/Damaged-011_32513D82.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="2532590645" Name="Play_Acid" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6678542" DurationMax="0.667875">
+					<MediaRefs>
+						<MediaRef Id="359950720"/>
+						<MediaRef Id="491728714"/>
+						<MediaRef Id="998952339"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2913963765" Name="Play_Dash_Glide_Loop_SFX_01" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="346110309"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="616075970" Name="Play_Enemy_Turret_Fire" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3757240376" Name="Play_Factory" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="24055890"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="789689882" Name="Play_Gearrs" MaxAttenuation="100" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="778160072"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4172536178" Name="Play_Ingots" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.37588164" DurationMax="0.39823276">
+					<MediaRefs>
+						<MediaRef Id="466389316"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3659125941" Name="Play_Level1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="266531675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1849873131" Name="Play_NPC_BullerHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1828542" DurationMax="1.182875">
+					<MediaRefs>
+						<MediaRef Id="123732449"/>
+						<MediaRef Id="888702899"/>
+						<MediaRef Id="934996487"/>
+						<MediaRef Id="998468921"/>
+					</MediaRefs>
+					<ActionPostEvent>
+						<ActionPostEventEntry Id="746833256" Name="Stop_NPC_TurretFire_01"/>
+					</ActionPostEvent>
+				</Event>
+				<Event Id="2380288232" Name="Play_NPC_TurretFire" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.6915" DurationMax="0.6915">
+					<MediaRefs>
+						<MediaRef Id="200669082"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2846104837" Name="Play_Piston" MaxAttenuation="100" DurationType="OneShot" DurationMin="2.3390036" DurationMax="2.4780881">
+					<MediaRefs>
+						<MediaRef Id="537644221"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1726909165" Name="Play_Player_Arm_Swing" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.0742917" DurationMax="1.0742917">
+					<MediaRefs>
+						<MediaRef Id="906798711"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="128901360" Name="Play_Player_Button_Press" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.409875" DurationMax="0.409875">
+					<MediaRefs>
+						<MediaRef Id="61722497"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2301987285" Name="Play_Player_Damaged" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.4194375" DurationMax="0.8399792">
+					<MediaRefs>
+						<MediaRef Id="32054300"/>
+						<MediaRef Id="41468466"/>
+						<MediaRef Id="87523064"/>
+						<MediaRef Id="87743108"/>
+						<MediaRef Id="604732285"/>
+						<MediaRef Id="693302685"/>
+						<MediaRef Id="863198133"/>
+						<MediaRef Id="879079641"/>
+						<MediaRef Id="962036437"/>
+						<MediaRef Id="1016834625"/>
+						<MediaRef Id="1036243180"/>
+						<MediaRef Id="1045332651"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="562256996" Name="Play_Player_Jump" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.126126" DurationMax="0.13362585">
+					<MediaRefs>
+						<MediaRef Id="121143607"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4249207015" Name="Play_Player_Land" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.450375" DurationMax="0.450375">
+					<MediaRefs>
+						<MediaRef Id="779989710"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3228691145" Name="Play_Player_Press_On_Pad" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.92889583" DurationMax="0.92889583">
+					<MediaRefs>
+						<MediaRef Id="244295874"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2186439036" Name="Play_Player_Pull_Lever" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.8876042" DurationMax="0.8876042">
+					<MediaRefs>
+						<MediaRef Id="798414008"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4238880044" Name="Play_Player_Respawn" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.40014583" DurationMax="0.40014583">
+					<MediaRefs>
+						<MediaRef Id="499161104"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1172205655" Name="Play_Player_Take_Damage" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.5620625" DurationMax="1.0479167">
+					<MediaRefs>
+						<MediaRef Id="108288308"/>
+						<MediaRef Id="599656409"/>
+						<MediaRef Id="611082514"/>
+						<MediaRef Id="922165199"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="937438432" Name="Play_Player_WallJump" MaxAttenuation="100" DurationType="OneShot" DurationMin="0.463572" DurationMax="0.49113742">
+					<MediaRefs>
+						<MediaRef Id="211177115"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1749424733" Name="Play_UI_Click" DurationType="OneShot" DurationMin="0.34005642" DurationMax="0.3602772">
+					<MediaRefs>
+						<MediaRef Id="872279965"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1362934681" Name="Play_UI_Mouse_Over" DurationType="OneShot" DurationMin="0.195625" DurationMax="0.195625">
+					<MediaRefs>
+						<MediaRef Id="577939512"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="746833256" Name="Stop_NPC_TurretFire_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0A429104-FFB3-7241-1865-BEBB154B3579}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="77978275" Name="Ambient"/>
+				<Bus Id="833916109" Name="NPCs"/>
+				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1551306167" Name="UI"/>
+				<Bus Id="2804607001" Name="Collectibles_Interact"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="3991942870" Name="Music"/>
+			</Busses>
+			<AuxBusses>
+				<AuxBus Id="1398521715" Name="FX_sends"/>
+			</AuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{198A450B-AE0F-6E56-4657-A40D6DD0E530}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="396692590" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>main menu 135bpm 4_4.wav</ShortName>
+					<CachePath>SFX/main menu 135bpm 4_4_F2BF74AC.wem</CachePath>
+				</File>
+				<File Id="577939512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Mouse_Over_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Mouse_Over_SFX_1_32513D82.wem</CachePath>
+				</File>
+				<File Id="872279965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Button_Click_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Button_Click_SFX_1_32513D82.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1278378707" Name="Play_Menu" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="396692590"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1749424733" Name="Play_UI_Click" DurationType="OneShot" DurationMin="0.34005642" DurationMax="0.3602772">
+					<MediaRefs>
+						<MediaRef Id="872279965"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1362934681" Name="Play_UI_Mouse_Over" DurationType="OneShot" DurationMin="0.195625" DurationMax="0.195625">
+					<MediaRefs>
+						<MediaRef Id="577939512"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{887A0368-5ECC-A24A-56BE-9C59521C2FAD}</FileHash>
+	<FileHash>{ADAEED27-0FD7-CFD0-522D-CC898909E509}</FileHash>
 </SoundBanksInfo>
