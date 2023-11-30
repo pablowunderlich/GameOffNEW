@@ -3169,15 +3169,15 @@ MonoBehaviour:
   _scoreLvl1:
     _useConstant: 0
     _constantValue: 0
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 674caded84223b44c9c49a0b41b7c49e, type: 2}
   _scoreLvl2:
     _useConstant: 0
     _constantValue: 0
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 74a393983770baf469ceb37f6e27c074, type: 2}
   _scoreLvl3:
     _useConstant: 0
     _constantValue: 0
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 4a59a2b577d5b80429a51357f3c7d6bd, type: 2}
 --- !u!4 &2089546303
 Transform:
   m_ObjectHideFlags: 0
