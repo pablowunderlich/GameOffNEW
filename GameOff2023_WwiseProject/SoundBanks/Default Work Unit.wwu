@@ -5,7 +5,32 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{598857DE-B1DE-4715-8008-8ADFC6CC709E}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Default Work Unit" ID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Menu" ID="{2492EA90-A309-43BE-8929-C805AF4DC428}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{6CCD0339-3123-4616-A50C-1E8B89A116CE}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Lvl1" ID="{9A1CE05A-1891-4D0D-9601-9B1783DCCA07}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Level1" ID="{E0A860DE-BA09-406F-ABF0-F0457029EF37}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Collectibles_Interact" ID="{1A2E4D33-0614-42D2-8D6E-F8D26509302D}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{6CCD0339-3123-4616-A50C-1E8B89A116CE}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Events" ID="{00EEA589-9F2F-46A8-8402-E27E60869025}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambient" ID="{171EF431-095E-4E08-AA00-595F1F2D55AB}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Lvl2" ID="{3810BC73-D47F-4A38-9562-1CFB0471C2C6}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Collectibles_Interact" ID="{1A2E4D33-0614-42D2-8D6E-F8D26509302D}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{6CCD0339-3123-4616-A50C-1E8B89A116CE}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Events" ID="{00EEA589-9F2F-46A8-8402-E27E60869025}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Ambient" ID="{171EF431-095E-4E08-AA00-595F1F2D55AB}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Enemy_Events" ID="{D8A7D1E8-B516-4E34-993F-F1D291AA25F3}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Level2" ID="{2E680282-0487-4F96-BCE8-9F8F7340F2F8}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

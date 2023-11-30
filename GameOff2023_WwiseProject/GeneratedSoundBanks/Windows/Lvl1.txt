@@ -1,0 +1,70 @@
+Event	ID	Name			Wwise Object Path	Notes
+	128901360	Play_Player_Button_Press			\Default Work Unit\Player_Events\Play_Player_Button_Press	
+	562256996	Play_Player_Jump			\Default Work Unit\Player_Events\Play_Player_Jump	
+	616075970	Play_Enemy_Turret_Fire			\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire	
+	746833256	Stop_NPC_TurretFire_01			\Default Work Unit\Enemy_Events\Stop_NPC_TurretFire_01	
+	789689882	Play_Gearrs			\Default Work Unit\Ambient\Play_Gearrs	
+	937438432	Play_Player_WallJump			\Default Work Unit\Player_Events\Play_Player_WallJump	
+	1172205655	Play_Player_Take_Damage			\Default Work Unit\Player_Events\Play_Player_Take_Damage	
+	1362934681	Play_UI_Mouse_Over			\Default Work Unit\UI\Play_UI_Mouse_Over	
+	1726909165	Play_Player_Arm_Swing			\Default Work Unit\Player_Events\Play_Player_Arm_Swing	
+	1749424733	Play_UI_Click			\Default Work Unit\UI\Play_UI_Click	
+	1849873131	Play_NPC_BullerHit			\Default Work Unit\Enemy_Events\Play_NPC_BullerHit	
+	2186439036	Play_Player_Pull_Lever			\Default Work Unit\Player_Events\Play_Player_Pull_Lever	
+	2187562616	Stop_Gearrs			\Default Work Unit\Ambient\Stop_Gearrs	
+	2301987285	Play_Player_Damaged			\Default Work Unit\Player_Events\Play_Player_Damaged	
+	2380288232	Play_NPC_TurretFire			\Default Work Unit\Enemy_Events\Play_NPC_TurretFire	
+	2532590645	Play_Acid			\Default Work Unit\Ambient\Play_Acid	
+	2846104837	Play_Piston			\Default Work Unit\Enemy_Events\Play_Piston	
+	2913963765	Play_Dash_Glide_Loop_SFX_01			\Default Work Unit\Player_Events\Play_Dash_Glide_Loop_SFX_01	
+	3228691145	Play_Player_Press_On_Pad			\Default Work Unit\Player_Events\Play_Player_Press_On_Pad	
+	3432329370	Stop_Dash_Glide_Loop_SFX_4			\Default Work Unit\Enemy_Events\Stop_Dash_Glide_Loop_SFX_4	
+	3588747354	Stop_Player_Jump			\Default Work Unit\Player_Events\Stop_Player_Jump	
+	3659125941	Play_Level1			\Default Work Unit\Music\Play_Level1	
+	3757240376	Play_Factory			\Default Work Unit\Ambient\Play_Factory	
+	4172536178	Play_Ingots			\Default Work Unit\Collectibles_Interact\Play_Ingots	
+	4238880044	Play_Player_Respawn			\Default Work Unit\Player_Events\Play_Player_Respawn	
+	4249207015	Play_Player_Land			\Default Work Unit\Player_Events\Play_Player_Land	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	24055890	Factory-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Factory-001_F2BF74AC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Factory\Factory-001		283259
+	32054300	Damaged-007	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-007_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-007		10838
+	41468466	Damaged-009	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-009_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-009		9152
+	61722497	Player_Button Press_SFX_10	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Button Press_SFX_10_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Button_Press\Player_Button Press_SFX_10		11426
+	87523064	Damaged-012	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-012_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-012		11443
+	87743108	Damaged-002	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-002_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-002		11520
+	108288308	Player_Damage 1_SFX_2	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 1_SFX_2_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 1_SFX_2		11125
+	121143607	Jump-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Jump-001_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Jump\Jump-001		4913
+	123732449	BulletExplode-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\BulletExplode-001_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\NPC_BullerHit\BulletExplode-001		33015
+	200669082	Turret_Rivet	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Turret_Rivet_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\NPC_TurretFire\Turret_Rivet		23083
+	211177115	Land_SFX_2	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Land_SFX_2_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_WallJump\Land_SFX_2		6429
+	244295874	Player_Press on pad_SFX_11	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Press on pad_SFX_11_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Press_On_Pad\Player_Press on pad_SFX_11		29562
+	266531675	Level1_1	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\level_1_bgm_demo_v2_F2BF74AC.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Level1\Level1\Level1_1		4831558
+	346110309	Dash_Glide Loop_SFX_4	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Dash_Glide Loop_SFX_4_809B1F16.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Dahs&Glide\Dash_Glide Loop_SFX_4		130083
+	359950720	Acid-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Acid-001_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-001		16039
+	466389316	Ingots-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Ingots-001_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Collectibles_Interact\Ingots\Ingots-001		7573
+	491728714	Acid-002	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Acid-002_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-002		16544
+	499161104	Player_Respawn	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Respawn_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Respawn\Player_Respawn		13913
+	537644221	NPC_Trap	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\NPC_Trap_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\Piston\NPC_Trap		60084
+	577939512	UI_Mouse_Over_SFX_1	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\UI_Mouse_Over_SFX_1_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Mouse_Over\UI_Mouse_Over_SFX_1		6108
+	599656409	Player_Damage 3_SFX_4	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 3_SFX_4_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 3_SFX_4		10562
+	604732285	Damaged-006	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-006_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-006		9583
+	611082514	Player_Damage 2_SFX_3	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 2_SFX_3_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 2_SFX_3		12719
+	693302685	Damaged-008	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-008_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-008		9305
+	778160072	Gears-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Gears-001_8AAE516F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Gearrs\Gears-001		49088
+	779989710	Player_Land_SFX_1	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Land_SFX_1_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Land\Player_Land_SFX_1		12594
+	798414008	Player_Lever pull_SFX_8	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Lever pull_SFX_8_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Pull_Lever\Player_Lever pull_SFX_8		20148
+	863198133	Damaged-003	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-003_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-003		17307
+	872279965	UI_Button_Click_SFX_1	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\UI_Button_Click_SFX_1_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_Click\UI_Button_Click_SFX_1		10418
+	879079641	Damaged-004	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-004_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-004		11089
+	888702899	BulletExplode-004	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\BulletExplode-004_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\NPC_BullerHit\BulletExplode-004		33840
+	906798711	Player_Arm swing_SFX_0	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Arm swing_SFX_0_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Arm_Swing\Player_Arm swing_SFX_0		31435
+	922165199	Player_Damage 4_SFX_5	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Player_Damage 4_SFX_5_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Take_Damage\Player_Damage 4_SFX_5		10318
+	934996487	BulletExplode-002	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\BulletExplode-002_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\NPC_BullerHit\BulletExplode-002		35543
+	962036437	Damaged-010	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-010_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-010		9740
+	998468921	BulletExplode-003	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\BulletExplode-003_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\NPC_SFX\NPC_BullerHit\BulletExplode-003		31934
+	998952339	Acid-003	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Acid-003_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambient_Sounds\Acid\Acid-003		16335
+	1016834625	Damaged-001	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-001_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-001		10045
+	1036243180	Damaged-005	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-005_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-005		17835
+	1045332651	Damaged-011	C:\Users\guate\Desktop\GameOff3.0\GameOffNEW\GameOff2023_WwiseProject\.cache\Windows\SFX\Damaged-011_32513D82.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player_SFX\Player_Damaged\Damaged-011		19159
+
