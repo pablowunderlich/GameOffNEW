@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e77fbde5329104bb2b761abb384a5ec
     GuidInternal: 
-    m_lastTime: -8585002567609961451
+    m_lastTime: -8585002545430738676
     List:
     - name: Ambient
       guid: e81ca27a3ebbb049ac18dda45cc7cc6f
@@ -185,8 +185,36 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0982ab1750ce649b118815ca958edbf
     GuidInternal: 
-    m_lastTime: -8585002567609626316
+    m_lastTime: -8585002242474923542
     List:
+    - name: Lvl1
+      guid: 5ae01c9a91180d4d96019b1783dcca07
+      id: 141331490
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c0982ab1750ce649b118815ca958edbf
+      - ElementName: Lvl1
+        ObjectType: 7
+        guid: 5ae01c9a91180d4d96019b1783dcca07
+      Path: SoundBanks\Default Work Unit\Lvl1
+    - name: Lvl2
+      guid: 73bc10387fd4384a95621cfb0471c2c6
+      id: 141331489
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: c0982ab1750ce649b118815ca958edbf
+      - ElementName: Lvl2
+        ObjectType: 7
+        guid: 73bc10387fd4384a95621cfb0471c2c6
+      Path: SoundBanks\Default Work Unit\Lvl2
     - name: Main
       guid: de578859deb1154780088adfc6cc709e
       id: 3161908922
@@ -213,7 +241,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585002567624511409
+    m_lastTime: -8585002545433228852
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -858,8 +886,8 @@ MonoBehaviour:
         guid: 1255478c04e28b4e8db62222a8cda4e6
       Path: Events\Default Work Unit\Music\Stop_Level1
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Level2
       guid: 70f177191aa9b6498e095f6d5e6590a3
       id: 1761439788
@@ -878,8 +906,8 @@ MonoBehaviour:
         guid: 70f177191aa9b6498e095f6d5e6590a3
       Path: Events\Default Work Unit\Music\Stop_Level2
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Level3
       guid: 054c04ff543e92428d79ea4bbf03a05b
       id: 1761439789
@@ -898,8 +926,8 @@ MonoBehaviour:
         guid: 054c04ff543e92428d79ea4bbf03a05b
       Path: Events\Default Work Unit\Music\Stop_Level3
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Menu
       guid: cae8e4f4b7956846b2f242f48e902eb7
       id: 2914981333
@@ -918,8 +946,8 @@ MonoBehaviour:
         guid: cae8e4f4b7956846b2f242f48e902eb7
       Path: Events\Default Work Unit\Music\Stop_Menu
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_NPC_TurretFire_01
       guid: 612a449977fd1549aae65e17ef09296c
       id: 746833256
