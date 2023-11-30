@@ -52,6 +52,7 @@ public class PistonEnemy : MonoBehaviour
     void MoveDown()
     {
         movingDown = true;
+        AkSoundEngine.PostEvent("Play_Piston", this.gameObject);
     }
     void MoveUp()
     {
