@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 // This script follows the singleton pattern, meaning that i create an
 // instance of this class that is static and can be 
@@ -155,7 +156,9 @@ public class Player : MonoBehaviour
     private Sprite _spriteReference; // reference to the player sprite
     private SpriteRenderer _spriteRenderer; // reference to player sprite renderer to blink on taking damage
     [SerializeField] private Checkpoint _startPoint;
-
+    bool canOpenExitMenu = true;
+    bool canMove = true;
+    [SerializeField] GameObject exitMenuUI;
     public Rigidbody2D RB { get; private set; } // Player rigidbody
 
     public bool isFacingRight { get; private set; } // Check the direction the character is facing
@@ -191,12 +194,12 @@ public class Player : MonoBehaviour
         if (Instance == null) // check if there is not already an instance of this class in the scene
         {
             Instance = this; // if there is no instance, create one 
-            DontDestroyOnLoad(gameObject); // Don't remove this object when changing scene (can be changed if need be)
+        //    DontDestroyOnLoad(gameObject); // Don't remove this object when changing scene (can be changed if need be)
         }
-        else
-        {
-            Destroy(gameObject); // remove this gameObject, cause you cant have two instances. Destruction would be imminent
-        }
+        //else
+        //{
+        //    Destroy(gameObject); // remove this gameObject, cause you cant have two instances. Destruction would be imminent
+        //}
 
         RB = GetComponent<Rigidbody2D>();
         _spriteRenderer = transform.Find("PlayerSprite").GetComponent<SpriteRenderer>();
@@ -264,8 +267,11 @@ public class Player : MonoBehaviour
     #region Handlers
     private void HandleInput()
     {
-        _moveInput.x = Input.GetAxisRaw("Horizontal");
-        _moveInput.y = Input.GetAxisRaw("Vertical");
+        if(canMove)
+        {
+            _moveInput.x = Input.GetAxisRaw("Horizontal");
+            _moveInput.y = Input.GetAxisRaw("Vertical");
+        }
 
         if (_moveInput.x != 0) // if there is imput with intention of moving left or right
         {
@@ -274,12 +280,19 @@ public class Player : MonoBehaviour
         }
 
         // checks to see if the jump button is pressed and released (second one could be used for short jumps etc
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canMove)
         {
             OnJumpInput();
         }
-
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            EscapeMenu();
+        }
+        if (Input.GetKeyDown(KeyCode.Space) && !canOpenExitMenu)
+        {
+            LoadMainMenu();
+        }
+        if (Input.GetKeyUp(KeyCode.Space) && canMove)
         {
             if (canJumpCut.Value)
             {
@@ -563,10 +576,29 @@ public class Player : MonoBehaviour
     public void OnJumpInput() // call when jump is pressed
     {
         LastPressedJumpTime = jumpInputBufferTime.Value;
-
-
     }
-
+    private void EscapeMenu()
+    {
+        if(canOpenExitMenu)
+        {
+            _moveInput.x = 0;
+            _moveInput.y = 0;
+            canMove = false;
+            canOpenExitMenu=false;
+            exitMenuUI.SetActive(true);
+        }
+        else
+        {
+            canMove = true;
+            canOpenExitMenu=true;
+            exitMenuUI.SetActive(false);
+        }
+    }
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        Debug.Log("Back to main");
+    }
     public void OnJumpUpInput()
     {
         if (CanJumpCut() || CanWallJumpCut())

@@ -35,7 +35,6 @@ public class Checkpoint : MonoBehaviour
     {
         if (col.GetComponent<Player>())
         {
-            Debug.Log("something is happning");
             if (gameObject.CompareTag("StartPoint"))
             {
                 // do nothing i guess? Might be used to initialize things
@@ -43,7 +42,7 @@ public class Checkpoint : MonoBehaviour
             if (gameObject.CompareTag("CheckPoint"))
             {
                 // refresh lives?
-                Player.Instance.currentHealth.Value = 2;
+                Player.Instance.currentHealth.Value = 3;
                 //play sound
                 // set new respawnn location
 
