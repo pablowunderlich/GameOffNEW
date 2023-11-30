@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EA76318C-6E5D-0C24-99F0-1DAB98CC7066}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{81A4DBEC-E286-6A2C-40A4-D749649624DE}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -22,6 +22,7 @@
 				<Bus Id="77978275" Name="Ambient"/>
 				<Bus Id="833916109" Name="NPCs"/>
 				<Bus Id="1069431850" Name="Player"/>
+				<Bus Id="1551306167" Name="UI"/>
 				<Bus Id="2804607001" Name="Collectibles_Interact"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 				<Bus Id="3991942870" Name="Music"/>
@@ -30,7 +31,7 @@
 				<AuxBus Id="1398521715" Name="FX_sends"/>
 			</AuxBusses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3CF325F7-7B8E-3526-B12C-1D6BE9B7F786}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E71B6B4C-2EF8-11FD-5B1C-634F23A910D5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -49,6 +50,10 @@
 				<File Id="61722497" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Button Press_SFX_10.wav</ShortName>
 					<CachePath>SFX/Player_Button Press_SFX_10_10C4C929.wem</CachePath>
+				</File>
+				<File Id="72470847" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level 3 134bpm 4_4.wav</ShortName>
+					<CachePath>SFX/level 3 134bpm 4_4_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="87523064" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-012.wav</ShortName>
@@ -69,6 +74,10 @@
 				<File Id="123732449" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BulletExplode-001.wav</ShortName>
 					<CachePath>SFX/BulletExplode-001_10C4C929.wem</CachePath>
+				</File>
+				<File Id="126233366" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>level 2 140bpm 4_4.wav</ShortName>
+					<CachePath>SFX/level 2 140bpm 4_4_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="200669082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Turret_Rivet.wav</ShortName>
@@ -106,6 +115,10 @@
 					<ShortName>Player_Respawn.wav</ShortName>
 					<CachePath>SFX/Player_Respawn_10C4C929.wem</CachePath>
 				</File>
+				<File Id="577939512" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Mouse_Over_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Mouse_Over_SFX_1_10C4C929.wem</CachePath>
+				</File>
 				<File Id="599656409" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Player_Damage 3_SFX_4.wav</ShortName>
 					<CachePath>SFX/Player_Damage 3_SFX_4_10C4C929.wem</CachePath>
@@ -137,6 +150,10 @@
 				<File Id="863198133" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-003.wav</ShortName>
 					<CachePath>SFX/Damaged-003_10C4C929.wem</CachePath>
+				</File>
+				<File Id="872279965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_Button_Click_SFX_1.wav</ShortName>
+					<CachePath>SFX/UI_Button_Click_SFX_1_10C4C929.wem</CachePath>
 				</File>
 				<File Id="879079641" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Damaged-004.wav</ShortName>
@@ -215,6 +232,21 @@
 				<Event Id="3659125941" Name="Play_Level1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="266531675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3659125942" Name="Play_Level2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="126233366"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3659125943" Name="Play_Level3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="72470847"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1278378707" Name="Play_Menu" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="72470847"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1849873131" Name="Play_NPC_BullerHit" MaxAttenuation="100" DurationType="OneShot" DurationMin="1.1828542" DurationMax="1.182875">
@@ -297,12 +329,26 @@
 						<MediaRef Id="211177115"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1749424733" Name="Play_UI_Click" DurationType="OneShot" DurationMin="0.35002083" DurationMax="0.35002083">
+					<MediaRefs>
+						<MediaRef Id="872279965"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1362934681" Name="Play_UI_Mouse_Over" DurationType="OneShot" DurationMin="0.195625" DurationMax="0.195625">
+					<MediaRefs>
+						<MediaRef Id="577939512"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3432329370" Name="Stop_Dash_Glide_Loop_SFX_4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2187562616" Name="Stop_Gearrs" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439791" Name="Stop_Level1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439788" Name="Stop_Level2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761439789" Name="Stop_Level3" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2914981333" Name="Stop_Menu" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="746833256" Name="Stop_NPC_TurretFire_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3588747354" Name="Stop_Player_Jump" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{98535AD8-F9E3-2B7E-F622-4A96CBE698D6}</FileHash>
+	<FileHash>{3F89C6A2-8D4D-0AF7-CB09-7C0DA65053E7}</FileHash>
 </SoundBanksInfo>
