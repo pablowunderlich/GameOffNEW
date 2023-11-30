@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e77fbde5329104bb2b761abb384a5ec
     GuidInternal: 
-    m_lastTime: -8585005631534868365
+    m_lastTime: -8585002567609961451
     List:
     - name: Ambient
       guid: e81ca27a3ebbb049ac18dda45cc7cc6f
@@ -185,7 +185,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0982ab1750ce649b118815ca958edbf
     GuidInternal: 
-    m_lastTime: -8585005631527042957
+    m_lastTime: -8585002567609626316
     List:
     - name: Main
       guid: de578859deb1154780088adfc6cc709e
@@ -213,7 +213,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585005631540389672
+    m_lastTime: -8585002567624511409
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -523,6 +523,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.6915
       minDuration: 0.6915
+    - name: Play_Piston
+      guid: 2ec79e034c3ba44d9d88b321427056f3
+      id: 2846104837
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_Piston
+        ObjectType: 3
+        guid: 2ec79e034c3ba44d9d88b321427056f3
+      Path: Events\Default Work Unit\Enemy_Events\Play_Piston
+      maxAttenuation: 100
+      maxDuration: 2.4780881
+      minDuration: 2.3390036
     - name: Play_Player_Arm_Swing
       guid: afc1ce9364ac424b8ec24005d4c66e85
       id: 1726909165
@@ -741,8 +761,8 @@ MonoBehaviour:
         guid: b802d0720c2fa747ba8eb4c5754daba8
       Path: Events\Default Work Unit\UI\Play_UI_Click
       maxAttenuation: 0
-      maxDuration: 0.35002083
-      minDuration: 0.35002083
+      maxDuration: 0.3602772
+      minDuration: 0.34005642
     - name: Play_UI_Mouse_Over
       guid: ca3215f8d554cc4795f0eff68dd86a42
       id: 1362934681
@@ -995,7 +1015,8 @@ MonoBehaviour:
       ObjectType: 12
       guid: 651ac4c810342a42b4fcd7e9cefe389e
     ParentPath: Switches\Default Work Unit
-    guid: 651ac4c810342a42b4
+    guid: 651ac4c810342a42b4fcd7e9cefe389e
+    GuidInternal: 
     m_lastTime: -8585005631527032947
     List: []
   TriggerWwu:
