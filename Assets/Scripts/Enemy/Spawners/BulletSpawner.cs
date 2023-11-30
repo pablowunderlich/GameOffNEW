@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     public float velocity;
+    public Transform spawnPoint;
     public bool isSpawningToLeft;
     public float interval;
 
@@ -17,7 +18,7 @@ public class BulletSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject BulletToSpawn = Instantiate(Bullet, transform.position, Quaternion.identity);
+        GameObject BulletToSpawn = Instantiate(Bullet, spawnPoint.position, Quaternion.identity);
         Rigidbody2D RB = BulletToSpawn.GetComponent<Rigidbody2D>();
         AkSoundEngine.PostEvent("Play_NPC_TurretFire", this.gameObject);
 
