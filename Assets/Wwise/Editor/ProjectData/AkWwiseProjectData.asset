@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: e849a8c9a992944ea48f70a09123e439
     GuidInternal: 
-    m_lastTime: -8585005630712101360
+    m_lastTime: -8585005557698193908
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 9e77fbde5329104bb2b761abb384a5ec
     GuidInternal: 
-    m_lastTime: -8585005630718591147
+    m_lastTime: -8585002831172181869
     List:
     - name: Ambient
       guid: e81ca27a3ebbb049ac18dda45cc7cc6f
@@ -156,6 +156,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: 083950211d38274e99237def7bb54fc9
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Player
+    - name: UI
+      guid: 720022ce78d2b745b1ce611cc2df26a4
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9e77fbde5329104bb2b761abb384a5ec
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: UI
+        ObjectType: 2
+        guid: 720022ce78d2b745b1ce611cc2df26a4
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\UI
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -168,7 +185,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: c0982ab1750ce649b118815ca958edbf
     GuidInternal: 
-    m_lastTime: -8585005630712151374
+    m_lastTime: -8585002850675524298
     List:
     - name: Main
       guid: de578859deb1154780088adfc6cc709e
@@ -196,7 +213,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 24a1bccfa938e34192cf38a8bf5cf67d
     GuidInternal: 
-    m_lastTime: -8585005591971791951
+    m_lastTime: -8585002824377145808
     List:
     - name: Ambient
       guid: 31f41e175e09084eaa00595f1f2d55ab
@@ -323,29 +340,9 @@ MonoBehaviour:
         ObjectType: 3
         guid: 2aaddc0e3fd5a14bb24ce004a031f5ae
       Path: Events\Default Work Unit\Player_Events\Play_Enemy_Turret_Fire
-      maxAttenuation: 100
-      maxDuration: 1.3710834
-      minDuration: 1.3710834
-    - name: Play_Enemy_Turret_Fire_01
-      guid: 448e8b0ac6d55a4f88b712c6fc4141b6
-      id: 3364672736
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 24a1bccfa938e34192cf38a8bf5cf67d
-      - ElementName: Enemy_Events
-        ObjectType: 4
-        guid: e8d1a7d816b5344e993ff1d291aa25f3
-      - ElementName: Play_Enemy_Turret_Fire_01
-        ObjectType: 3
-        guid: 448e8b0ac6d55a4f88b712c6fc4141b6
-      Path: Events\Default Work Unit\Enemy_Events\Play_Enemy_Turret_Fire_01
-      maxAttenuation: 100
-      maxDuration: 1.3710834
-      minDuration: 1.3710834
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Factory
       guid: 0f6b988e34a9b24fa9031e1387ed0023
       id: 3757240376
@@ -426,6 +423,126 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_Level2
+      guid: 8202682e8704964fbce89f8f7340f2f8
+      id: 3659125942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Play_Level2
+        ObjectType: 3
+        guid: 8202682e8704964fbce89f8f7340f2f8
+      Path: Events\Default Work Unit\Music\Play_Level2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Level3
+      guid: 1d61250526e6b04298e4b7a1f7e882e9
+      id: 3659125943
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Play_Level3
+        ObjectType: 3
+        guid: 1d61250526e6b04298e4b7a1f7e882e9
+      Path: Events\Default Work Unit\Music\Play_Level3
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Menu
+      guid: 90ea922409a3be438929c805af4dc428
+      id: 1278378707
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Play_Menu
+        ObjectType: 3
+        guid: 90ea922409a3be438929c805af4dc428
+      Path: Events\Default Work Unit\Music\Play_Menu
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_NPC_BullerHit
+      guid: ce43d36c16321346abbb409185c62fbe
+      id: 1849873131
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_NPC_BullerHit
+        ObjectType: 3
+        guid: ce43d36c16321346abbb409185c62fbe
+      Path: Events\Default Work Unit\Enemy_Events\Play_NPC_BullerHit
+      maxAttenuation: 100
+      maxDuration: 1.182875
+      minDuration: 1.1828542
+    - name: Play_NPC_TurretFire
+      guid: 9361f98af713be42b5dfb462a7b9d622
+      id: 2380288232
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_NPC_TurretFire
+        ObjectType: 3
+        guid: 9361f98af713be42b5dfb462a7b9d622
+      Path: Events\Default Work Unit\Enemy_Events\Play_NPC_TurretFire
+      maxAttenuation: 100
+      maxDuration: 0.6915
+      minDuration: 0.6915
+    - name: Play_Piston
+      guid: 2ec79e034c3ba44d9d88b321427056f3
+      id: 2846104837
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Play_Piston
+        ObjectType: 3
+        guid: 2ec79e034c3ba44d9d88b321427056f3
+      Path: Events\Default Work Unit\Enemy_Events\Play_Piston
+      maxAttenuation: 100
+      maxDuration: 2.4780881
+      minDuration: 2.3390036
     - name: Play_Player_Arm_Swing
       guid: afc1ce9364ac424b8ec24005d4c66e85
       id: 1726909165
@@ -626,6 +743,46 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 0.49113742
       minDuration: 0.463572
+    - name: Play_UI_Click
+      guid: b802d0720c2fa747ba8eb4c5754daba8
+      id: 1749424733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: UI
+        ObjectType: 4
+        guid: 3903cd6c23311646a50c1e8b89a116ce
+      - ElementName: Play_UI_Click
+        ObjectType: 3
+        guid: b802d0720c2fa747ba8eb4c5754daba8
+      Path: Events\Default Work Unit\UI\Play_UI_Click
+      maxAttenuation: 0
+      maxDuration: 0.3602772
+      minDuration: 0.34005642
+    - name: Play_UI_Mouse_Over
+      guid: ca3215f8d554cc4795f0eff68dd86a42
+      id: 1362934681
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: UI
+        ObjectType: 4
+        guid: 3903cd6c23311646a50c1e8b89a116ce
+      - ElementName: Play_UI_Mouse_Over
+        ObjectType: 3
+        guid: ca3215f8d554cc4795f0eff68dd86a42
+      Path: Events\Default Work Unit\UI\Play_UI_Mouse_Over
+      maxAttenuation: 0
+      maxDuration: 0.195625
+      minDuration: 0.195625
     - name: Player_Events
       guid: 89a5ee002f9fa8468402e27e60869025
       id: 2993354578
@@ -683,6 +840,106 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Level1
+      guid: 1255478c04e28b4e8db62222a8cda4e6
+      id: 1761439791
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Stop_Level1
+        ObjectType: 3
+        guid: 1255478c04e28b4e8db62222a8cda4e6
+      Path: Events\Default Work Unit\Music\Stop_Level1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Level2
+      guid: 70f177191aa9b6498e095f6d5e6590a3
+      id: 1761439788
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Stop_Level2
+        ObjectType: 3
+        guid: 70f177191aa9b6498e095f6d5e6590a3
+      Path: Events\Default Work Unit\Music\Stop_Level2
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Level3
+      guid: 054c04ff543e92428d79ea4bbf03a05b
+      id: 1761439789
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Stop_Level3
+        ObjectType: 3
+        guid: 054c04ff543e92428d79ea4bbf03a05b
+      Path: Events\Default Work Unit\Music\Stop_Level3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Menu
+      guid: cae8e4f4b7956846b2f242f48e902eb7
+      id: 2914981333
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Music
+        ObjectType: 4
+        guid: c5dd0ccefa066e49be5fd2f764d9123b
+      - ElementName: Stop_Menu
+        ObjectType: 3
+        guid: cae8e4f4b7956846b2f242f48e902eb7
+      Path: Events\Default Work Unit\Music\Stop_Menu
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_NPC_TurretFire_01
+      guid: 612a449977fd1549aae65e17ef09296c
+      id: 746833256
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: Enemy_Events
+        ObjectType: 4
+        guid: e8d1a7d816b5344e993ff1d291aa25f3
+      - ElementName: Stop_NPC_TurretFire_01
+        ObjectType: 3
+        guid: 612a449977fd1549aae65e17ef09296c
+      Path: Events\Default Work Unit\Enemy_Events\Stop_NPC_TurretFire_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Player_Jump
       guid: 0ae1c0249041e64bb8b5868c07655ea4
       id: 3588747354
@@ -703,6 +960,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: UI
+      guid: 3903cd6c23311646a50c1e8b89a116ce
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24a1bccfa938e34192cf38a8bf5cf67d
+      - ElementName: UI
+        ObjectType: 4
+        guid: 3903cd6c23311646a50c1e8b89a116ce
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -715,7 +989,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 78902fe67f13e34d886e38595a4c8919
     GuidInternal: 
-    m_lastTime: -8585005630723009337
+    m_lastTime: -8585005557707930266
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -729,7 +1003,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 8381769859dbb944a116f733ab5f4bf4
     GuidInternal: 
-    m_lastTime: -8585005630712131372
+    m_lastTime: -8585005557698203903
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -743,7 +1017,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 651ac4c810342a42b4fcd7e9cefe389e
     GuidInternal: 
-    m_lastTime: -8585005630712121371
+    m_lastTime: -8585005557698203903
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -757,10 +1031,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: d416b16a19e550428d5b7a0b809ba9f3
     GuidInternal: 
-    m_lastTime: -8585005630712111367
+    m_lastTime: -8585005557698193908
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000d0000000f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

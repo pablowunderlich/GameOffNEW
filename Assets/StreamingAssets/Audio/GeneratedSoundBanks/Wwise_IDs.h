@@ -16,11 +16,12 @@ namespace AK
         static const AkUniqueID PLAY_ACID = 2532590645U;
         static const AkUniqueID PLAY_DASH_GLIDE_LOOP_SFX_01 = 2913963765U;
         static const AkUniqueID PLAY_ENEMY_TURRET_FIRE = 616075970U;
-        static const AkUniqueID PLAY_ENEMY_TURRET_FIRE_01 = 3364672736U;
         static const AkUniqueID PLAY_FACTORY = 3757240376U;
         static const AkUniqueID PLAY_GEARRS = 789689882U;
         static const AkUniqueID PLAY_INGOTS = 4172536178U;
         static const AkUniqueID PLAY_LEVEL1 = 3659125941U;
+        static const AkUniqueID PLAY_NPC_BULLERHIT = 1849873131U;
+        static const AkUniqueID PLAY_NPC_TURRETFIRE = 2380288232U;
         static const AkUniqueID PLAY_PLAYER_ARM_SWING = 1726909165U;
         static const AkUniqueID PLAY_PLAYER_BUTTON_PRESS = 128901360U;
         static const AkUniqueID PLAY_PLAYER_DAMAGED = 2301987285U;
@@ -33,6 +34,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_WALLJUMP = 937438432U;
         static const AkUniqueID STOP_DASH_GLIDE_LOOP_SFX_4 = 3432329370U;
         static const AkUniqueID STOP_GEARRS = 2187562616U;
+        static const AkUniqueID STOP_NPC_TURRETFIRE_01 = 746833256U;
         static const AkUniqueID STOP_PLAYER_JUMP = 3588747354U;
     } // namespace EVENTS
 

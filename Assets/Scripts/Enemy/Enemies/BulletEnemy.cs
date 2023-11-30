@@ -19,8 +19,10 @@ public class BulletEnemy : MonoBehaviour
         {
             //destroy object
 
-
+            
             Destroy(gameObject);
+            AkSoundEngine.PostEvent("Play_NPC_BullerHit", gameObject);
+
         }
     }
 

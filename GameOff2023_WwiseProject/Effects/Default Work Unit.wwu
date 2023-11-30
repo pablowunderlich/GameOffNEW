@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4DD6F08B-7D57-4960-B2E4-46DDFF331527}" SchemaVersion="110">
 	<Effects>
-		<WorkUnit Name="Default Work Unit" ID="{4DD6F08B-7D57-4960-B2E4-46DDFF331527}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4DD6F08B-7D57-4960-B2E4-46DDFF331527}" PersistMode="Standalone">
+			<ChildrenList>
+				<Effect Name="Low_Pass" ID="{ABB6ABF4-E2D0-4286-927B-8E664D711702}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FrequencyBand3" Type="Real32" Value="4363"/>
+						<Property Name="OnOffBand1" Type="bool" Value="False"/>
+						<Property Name="OnOffBand2" Type="bool" Value="False"/>
+					</PropertyList>
+				</Effect>
+			</ChildrenList>
+		</WorkUnit>
 	</Effects>
 </WwiseDocument>

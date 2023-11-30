@@ -25,6 +25,14 @@
 							<ObjectRef Name="Stop_Gearrs" ID="{6BFE5BD9-F032-45C0-BBCB-402526B37C83}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
 							<Position X="3" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_TurretFire" ID="{8AF96193-13F7-42BE-B5DF-B462A7B9D622}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_NPC_BullerHit" ID="{6CD343CE-3216-4613-ABBB-409185C62FBE}" WorkUnitID="{CFBCA124-38A9-41E3-92CF-38A8BF5CF67D}"/>
+							<Position X="5" Y="0"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
