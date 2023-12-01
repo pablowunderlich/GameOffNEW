@@ -173,6 +173,9 @@ public class Player : MonoBehaviour
     float _scoreLvl3Start; 
     [Range(1, 3)][SerializeField] int currentLevel;
     [SerializeField] GameObject exitMenuUI;
+    [SerializeField] GameObject BarkBubbles;
+    [SerializeField] BubbleEnable BarkBubblesScript;
+    [SerializeField] GameObject playerSpriteGO;
     public Rigidbody2D RB { get; private set; } // Player rigidbody
 
     public bool isFacingRight { get; private set; } // Check the direction the character is facing
@@ -482,9 +485,9 @@ public class Player : MonoBehaviour
     private void Turn()
     {
         //store the scale and flip the character along the x axis
-        Vector3 scale = transform.localScale;
+        Vector3 scale = playerSpriteGO.transform.localScale;
         scale.x *= -1;
-        transform.localScale = scale; // change direction
+        playerSpriteGO.transform.localScale = scale; // change direction
 
         isFacingRight = !isFacingRight; //change bool value
     }
@@ -681,6 +684,11 @@ public class Player : MonoBehaviour
             return false;
         }
 
+    }
+    public void Bark(string textToSay)
+    {
+        BarkBubbles.gameObject.SetActive(true);
+        BarkBubblesScript.BarkTextChange(textToSay);
     }
     #endregion
     #region taking damage and death
