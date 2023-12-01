@@ -42,7 +42,7 @@ public class Checkpoint : MonoBehaviour
             if (gameObject.CompareTag("CheckPoint"))
             {
                 // refresh lives?
-                Player.Instance.currentHealth.Value = 3;
+                //Player.Instance.currentHealth.Value = 3;
                 //play sound
                 // set new respawnn location
 

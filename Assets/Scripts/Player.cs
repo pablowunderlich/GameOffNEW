@@ -753,6 +753,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(0, LoadSceneMode.Single);
             return;
         }
+        currentHealth.Value = 3;
         transform.position = GetSpawnLocation();
         #region Pablo
         AkSoundEngine.PostEvent("Play_Player_Respawn", this.gameObject);
