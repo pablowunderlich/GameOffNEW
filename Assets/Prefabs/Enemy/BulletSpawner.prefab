@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee246ee1c6ebc844ca9b6a8504321e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 8
+  velocity: 11
   spawnPoint: {fileID: 3725460493453269224}
   isSpawningToLeft: 0
   interval: 2
