@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 // This script follows the singleton pattern, meaning that i create an
 // instance of this class that is static and can be 
@@ -112,6 +113,10 @@ public class Player : MonoBehaviour
 
     [Tooltip("Current Health")]
     public IntReference currentHealth; // Current player health
+
+    [Tooltip("Current lives")]
+    public IntReference currentLives; // Current player health
+    public TMP_Text livesCounterText;
     public Image heart1; 
     public Image heart2; 
     public Image heart3;
@@ -158,6 +163,15 @@ public class Player : MonoBehaviour
     [SerializeField] private Checkpoint _startPoint;
     bool canOpenExitMenu = true;
     bool canMove = true;
+    
+    [Header("IngotCounter references")]
+    [SerializeField] FloatReference _scoreLvl1;
+    [SerializeField] FloatReference _scoreLvl2;
+    [SerializeField] FloatReference _scoreLvl3; 
+    float _scoreLvl1Start;
+    float _scoreLvl2Start;
+    float _scoreLvl3Start; 
+    [Range(1, 3)][SerializeField] int currentLevel;
     [SerializeField] GameObject exitMenuUI;
     public Rigidbody2D RB { get; private set; } // Player rigidbody
 
@@ -217,6 +231,10 @@ public class Player : MonoBehaviour
     }
     void Start()
     {
+        _scoreLvl1Start = _scoreLvl1.Value;
+        _scoreLvl2Start = _scoreLvl2.Value;
+        _scoreLvl3Start = _scoreLvl3.Value;
+        livesCounterText.text = currentLives.Value.ToString();
         SetGravityScale(_gravityScale); // Set the gravity scale
         isFacingRight = true; //Start game with player facing right
         _enemyCheckSize = transform.localScale;
@@ -596,6 +614,21 @@ public class Player : MonoBehaviour
     }
     private void LoadMainMenu()
     {
+            switch (currentLevel)
+            {
+            case 3:
+                _scoreLvl3.Value = _scoreLvl3Start;
+                break;
+            case 2:
+                _scoreLvl2.Value = _scoreLvl2Start;
+                break;
+            case 1:
+                _scoreLvl1.Value = _scoreLvl1Start;
+                break;
+            default:
+                print ("Error in the ingot lvl switch for player");
+                break;
+            }
         SceneManager.LoadScene(1, LoadSceneMode.Single);
         Debug.Log("Back to main");
     }
@@ -705,6 +738,13 @@ public class Player : MonoBehaviour
 
     public void Respawn()
     {
+        currentLives.Value--;
+        livesCounterText.text = currentLives.Value.ToString();
+        if(currentLives.Value <= 0)
+        {
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+            return;
+        }
         transform.position = GetSpawnLocation();
         #region Pablo
         AkSoundEngine.PostEvent("Play_Player_Respawn", this.gameObject);

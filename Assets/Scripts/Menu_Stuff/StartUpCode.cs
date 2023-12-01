@@ -8,6 +8,7 @@ class Example : MonoBehaviour
     [SerializeField] FloatReference _scoreLvl1;
     [SerializeField] FloatReference _scoreLvl2;
     [SerializeField] FloatReference _scoreLvl3; 
+    [SerializeField] IntReference currentLives; 
     void Start()
     {
         if (Application.isPlaying)
@@ -15,6 +16,7 @@ class Example : MonoBehaviour
             _scoreLvl1.Value = 0;
             _scoreLvl2.Value = 0;
             _scoreLvl3.Value = 0;
+            currentLives.Value = 5;
         }
             SceneManager.LoadScene(1, LoadSceneMode.Single);
     }

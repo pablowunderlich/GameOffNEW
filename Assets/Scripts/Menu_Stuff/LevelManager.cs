@@ -21,4 +21,8 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(4, LoadSceneMode.Single);
     }
+    public void LoadIntroMenu()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+    }
 }

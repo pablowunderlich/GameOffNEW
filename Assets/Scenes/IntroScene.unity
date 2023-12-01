@@ -730,6 +730,10 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 4a59a2b577d5b80429a51357f3c7d6bd, type: 2}
+  currentLives:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 0369badd2f475ac4db4efcc548fd34c5, type: 2}
 --- !u!4 &1911628742
 Transform:
   m_ObjectHideFlags: 0

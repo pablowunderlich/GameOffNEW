@@ -79,7 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: 8
   spawnPoint: {fileID: 3725460493453269224}
-  isSpawningToLeft: 1
+  isSpawningToLeft: 0
   interval: 2
   Bullet: {fileID: 210203102804043545, guid: 618e997014573b14496e279253c110dc, type: 3}
 --- !u!1 &8140006020446776553

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using ScriptableObjectArchitecture;
+using TMPro;
 
 public class CheckForLvlUnlock : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class CheckForLvlUnlock : MonoBehaviour
     [SerializeField] Button lvl2;
     //[SerializeField] GameObject lock3;
     [SerializeField] Button lvl3;
+    [SerializeField] TMP_Text ingotsScore1;
+    [SerializeField] TMP_Text ingotsScore2;
+
     // Start is called before the first frame update
     void OnEnable()
     {      
@@ -21,10 +25,18 @@ public class CheckForLvlUnlock : MonoBehaviour
             //lock2.SetActive(false);
             lvl2.interactable=true;
         }
-        if(_scoreLvl2.Value >= 25)
+        if(_scoreLvl2.Value >= 200)
         {
             //lock3.SetActive(false);
-            lvl2.interactable=true;
+            lvl3.interactable=true;
+        }
+        if(ingotsScore1 != null)
+        {
+            ingotsScore1.text=_scoreLvl1.Value.ToString();
+        }
+        if(ingotsScore2 != null)
+        {
+            ingotsScore2.text=_scoreLvl2.Value.ToString();
         }
     }
 }
