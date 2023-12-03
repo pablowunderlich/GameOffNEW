@@ -13,6 +13,7 @@ public class BarkTrigger : MonoBehaviour
             #region Pablo
             AkSoundEngine.PostEvent("Play_Ingots", this.gameObject);
             #endregion
+            Destroy(gameObject);
         }
     }
 }

@@ -8,7 +8,6 @@ public class DeathZone : MonoBehaviour
     {
         if(collision.GetComponent<Player>())
         {
-            Player.Instance.currentHealth.Value = 2;
             Player.Instance.Respawn();
         }
     }

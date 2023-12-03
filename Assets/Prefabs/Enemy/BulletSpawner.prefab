@@ -77,10 +77,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee246ee1c6ebc844ca9b6a8504321e3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 11
+  velocity: 22
   spawnPoint: {fileID: 3725460493453269224}
   isSpawningToLeft: 0
-  interval: 2
+  interval: 1.5
   Bullet: {fileID: 210203102804043545, guid: 618e997014573b14496e279253c110dc, type: 3}
 --- !u!1 &8140006020446776553
 GameObject:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PistonEnemy : MonoBehaviour
 {
     [Header("Waiting times")]
+    [Tooltip("Time it takes for the piston to go up")][SerializeField] float startingDelay;
     [Tooltip("Time it takes for the piston to go down")][SerializeField] float waitTimeToGoDown;
     [Tooltip("Time it takes for the piston to go up")][SerializeField] float waitTimeToGoUp;
     [Header("Movement speed")]
@@ -20,7 +21,7 @@ public class PistonEnemy : MonoBehaviour
     void Start()
     {
         // Starts the script by moving the piston towards the "down" position.
-        MoveDown();
+        Invoke("MoveDown", startingDelay);
     }
 
     void Update()
