@@ -11,13 +11,14 @@ class Example : MonoBehaviour
     [SerializeField] IntReference currentLives; 
     void Start()
     {
-        if (Application.isPlaying)
-        {
-            _scoreLvl1.Value = 0;
-            _scoreLvl2.Value = 0;
-            _scoreLvl3.Value = 0;
-            currentLives.Value = 5;
-        }
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+        _scoreLvl1.Value = 0;
+        _scoreLvl2.Value = 0;
+        _scoreLvl3.Value = 0;
+        currentLives.Value = 5;
+        Invoke("SetupAll",1f);
+    }
+    void SetupAll()
+    {
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }

@@ -115,7 +115,7 @@ public class Player : MonoBehaviour
     public IntReference currentHealth; // Current player health
 
     [Tooltip("Current lives")]
-    public IntReference currentLives; // Current player health
+    [SerializeField] IntReference currentLives; // Current player health
     public TMP_Text livesCounterText;
     public Image heart1; 
     public Image heart2; 
@@ -753,6 +753,8 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(0, LoadSceneMode.Single);
             return;
         }
+        heart3.gameObject.SetActive(true);
+        heart2.gameObject.SetActive(true);
         currentHealth.Value = 3;
         transform.position = GetSpawnLocation();
         #region Pablo

@@ -16,9 +16,14 @@ public class exitFlag : MonoBehaviour
             if (ingotCounter.Value >= 25)
             {
                 if(endgame)
-                SceneManager.LoadScene(5, LoadSceneMode.Single);
+                {
+                    SceneManager.LoadScene(5, LoadSceneMode.Single);
+                }
+                else
+                {
+                    SceneManager.LoadScene(1, LoadSceneMode.Single);
+                }
                 
-                SceneManager.LoadScene(1, LoadSceneMode.Single);
             }
             else
             {
