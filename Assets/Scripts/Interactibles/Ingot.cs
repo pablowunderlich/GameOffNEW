@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Ingot : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Rigidbody2D _rb;
     [Range(1, 3)][SerializeField] int currentLevel;
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         
